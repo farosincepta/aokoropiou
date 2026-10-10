@@ -24,3 +24,15 @@ a.clickable-card{display:block;color:inherit;text-decoration:none;height:100%;bo
 .header .language-switch a:hover{color:#a17b1e!important}
 @media(max-width:1250px){.header .menu-btn{display:block;background:none;border:0;font-size:28px;color:#092a60;cursor:pointer;margin-left:auto}.header nav{display:none;position:absolute;top:86px;left:0;right:0;background:white;flex-direction:column;gap:0;align-items:stretch;padding:15px 25px;box-shadow:0 8px 15px #0002;z-index:20}.header nav.open{display:flex}.header nav a{padding:12px;border-bottom:1px solid #e6e9ef}.header .nav-row{flex-wrap:nowrap}}
 @media(max-width:650px){.header .nav-row{gap:8px}.header .logo img{height:85px;max-width:78px}.header .header-tools{gap:4px}.header .social-icon{width:24px;height:24px}.header .social-icon svg{width:19px;height:19px}.header .language-switch{gap:3px;font-size:11px}.header .menu-btn{font-size:24px}}
+
+/* Flag language selector */
+.header .language-switch{gap:9px!important}
+.header .language-switch a{display:inline-flex;align-items:center;justify-content:center;padding:5px!important;border-bottom:2px solid transparent;border-radius:2px}
+.header .language-switch a[aria-current="page"]{border-bottom:2px solid #dcae37!important}
+.header .language-switch img{display:block;width:27px;height:18px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.16)}
+
+/* Version 8: three-language selector */
+.header .language-switch{gap:7px!important;white-space:nowrap}
+.header .language-switch a{min-width:31px;min-height:30px}
+.header .language-switch a:focus-visible{outline:2px solid #0b3774;outline-offset:2px}
+@media(max-width:650px){.header .language-switch{gap:2px!important}.header .language-switch a{min-width:25px;padding:3px!important}.header .language-switch img{width:23px;height:16px}.header .header-tools{gap:2px}}
