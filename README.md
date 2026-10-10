@@ -19,3 +19,12 @@ All articles, players, match data and related content are demonstration placehol
 
 ## Updating GitHub
 Upload all changed/new HTML files and the updated `styles.css` to the repository root, retaining the existing `assets` directory. Keep the repository private until you decide to publish.
+
+
+## Version 7
+- Facebook and Instagram header links (open in a new tab)
+- Greek / English language selector, with equivalent page in `en/`
+- New `stadium.html` and `en/stadium.html` pages
+- The Greek pages remain the default. English pages mirror the original page structure and links.
+- All fixtures, player names, results and stadium specifics remain placeholders pending club confirmation.
+- For publishing on GitHub Pages, upload the full contents of this folder, including the `en/` directory.
