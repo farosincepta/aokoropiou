@@ -1,17 +1,21 @@
-# Α.Ο. Κορωπίου — Demo Version 5
+# Α.Ο. Κορωπίου — Demo Version 6
 
-Greek-language multipage prototype inspired by modern European football club websites.
+Static multi-page demo for local preview / GitHub Pages when publishing is approved.
+
+## What's new in V6
+- All four homepage news cards open their own complete demonstration article pages.
+- News listing cards and featured story also open article pages.
+- All 19 player cards open individual demonstration profiles; three staff cards have detail pages.
+- Fixtures include a match-details link.
+- Home match-center buttons link to `matches.html#programme` and `matches.html#standings`.
+- Matches page includes programme/results/standings quick links.
+- Navigation stays in the same tab.
 
 ## Preview
-Open `index.html` in a browser. All navigation links open in the same tab.
+Open `index.html` in a browser. Keep `assets/`, all HTML files, `styles.css`, and `script.js` together.
 
-## Pages
-`index.html` Home, `news.html` News, `team.html` Team, `matches.html` Matches, `academy.html` Academy, `history.html` History, `sponsors.html` Sponsors, `contact.html` Contact.
+## Important
+All articles, players, match data and related content are demonstration placeholders, **not official club information**. Replace after club approval.
 
-## Notes
-- Demonstration project; not an official club website.
-- Match data, news, player profiles, sponsor logos and contact details are placeholders, not factual claims.
-- Keep the `assets/` directory in place.
-- All eight pages share `styles.css` and `script.js`.
-- This version preserves the approved V4 homepage and team page.
-- Keep repository private until ready to publish; GitHub Pages availability depends on plan and repository visibility.
+## Updating GitHub
+Upload all changed/new HTML files and the updated `styles.css` to the repository root, retaining the existing `assets` directory. Keep the repository private until you decide to publish.
