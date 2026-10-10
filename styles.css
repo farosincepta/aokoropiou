@@ -12,3 +12,15 @@ a.clickable-card{display:block;color:inherit;text-decoration:none;height:100%;bo
 
 /* Version 7: header social links, language switch and stadium page */
 .nav-row{gap:14px}.header-tools{display:flex;align-items:center;gap:13px;flex-shrink:0}.social-icon{width:23px;height:23px;display:inline-flex;align-items:center;justify-content:center;color:#fff}.social-icon svg{width:21px;height:21px;fill:currentColor}.social-icon:hover{color:#e7bd60}.language-switch{display:flex;align-items:center;gap:5px;color:#d8e4f6;font-size:12px;font-weight:800;white-space:nowrap}.language-switch a{color:#fff;text-decoration:none}.language-switch a:hover{color:#e7bd60}.stadium-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:center;padding:45px 0 70px}.stadium-layout figure{margin:0}.stadium-layout img{width:100%;border-radius:8px;display:block}.stadium-layout figcaption{font-size:12px;opacity:.7;margin-top:9px}.stadium-layout p{line-height:1.8}@media(max-width:1150px){.nav-row{flex-wrap:wrap}.header-tools{margin-left:auto}header nav a{font-size:11px}}@media(max-width:800px){.header-tools{gap:10px}.stadium-layout{grid-template-columns:1fr}header nav.open{z-index:30}}
+
+/* Version 7 corrected: visible header controls and responsive navigation */
+.header-tools{display:flex;align-items:center;gap:12px;flex-shrink:0;position:relative;z-index:12}
+.header .social-icon{color:#0b3774!important;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center}
+.header .social-icon:hover,.header .social-icon:focus-visible{color:#b28a2e!important}
+.header .social-icon svg{width:23px;height:23px}
+.header .language-switch{color:#62718a!important;display:flex;align-items:center;gap:7px;font-size:13px}
+.header .language-switch a{color:#0b3774!important;padding:6px 4px}
+.header .language-switch a[aria-current="page"]{color:#a17b1e!important;border-bottom:2px solid #dcae37}
+.header .language-switch a:hover{color:#a17b1e!important}
+@media(max-width:1250px){.header .menu-btn{display:block;background:none;border:0;font-size:28px;color:#092a60;cursor:pointer;margin-left:auto}.header nav{display:none;position:absolute;top:86px;left:0;right:0;background:white;flex-direction:column;gap:0;align-items:stretch;padding:15px 25px;box-shadow:0 8px 15px #0002;z-index:20}.header nav.open{display:flex}.header nav a{padding:12px;border-bottom:1px solid #e6e9ef}.header .nav-row{flex-wrap:nowrap}}
+@media(max-width:650px){.header .nav-row{gap:8px}.header .logo img{height:85px;max-width:78px}.header .header-tools{gap:4px}.header .social-icon{width:24px;height:24px}.header .social-icon svg{width:19px;height:19px}.header .language-switch{gap:3px;font-size:11px}.header .menu-btn{font-size:24px}}
