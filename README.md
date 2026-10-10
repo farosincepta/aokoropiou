@@ -1,23 +1,17 @@
-# Α.Ο. Κορωπίου — Demo v2
+# Α.Ο. Κορωπίου — Demo Version 5
 
-A static eight-page Greek-language website designed for private presentation.
+Greek-language multipage prototype inspired by modern European football club websites.
 
 ## Preview
-Open `index.html` in your browser. Navigation links intentionally use `target="_blank"` and open a **new browser tab**. All eight pages have the same navigation.
+Open `index.html` in a browser. All navigation links open in the same tab.
 
-## Files
-- `index.html` — homepage
-- `news.html`, `team.html`, `matches.html`, `academy.html`, `history.html`, `sponsors.html`, `contact.html` — individual pages
-- `styles.css`, `script.js` — shared styles and mobile menu
-- `assets/crest.png` — supplied crest
-- `assets/stadium.jpg`, `assets/news-*.jpg` — **cropped visual assets from the concept mockup**, not actual club photographs. Replace with licensed, approved images before public release.
+## Pages
+`index.html` Home, `news.html` News, `team.html` Team, `matches.html` Matches, `academy.html` Academy, `history.html` History, `sponsors.html` Sponsors, `contact.html` Contact.
 
-## Content warning
-This is a **non-official demonstration**. Fixtures, standings, contact details, news, roster, and sponsors are placeholders. Do not publish as the club's official site without authorization and verified content.
-
-## GitHub
-Upload all files at repository root to the private `farosincepta/aokoropiou` repository. GitHub Pages publishing on GitHub Free normally requires a public repository; for Tuesday's presentation use a local preview. Configure the DNS subdomain only when ready to publish.
-
-
-## Version 3 navigation
-All internal links open their destination in the **same browser tab**, just like a conventional multi-page football club website. The eight pages remain separate files.
+## Notes
+- Demonstration project; not an official club website.
+- Match data, news, player profiles, sponsor logos and contact details are placeholders, not factual claims.
+- Keep the `assets/` directory in place.
+- All eight pages share `styles.css` and `script.js`.
+- This version preserves the approved V4 homepage and team page.
+- Keep repository private until ready to publish; GitHub Pages availability depends on plan and repository visibility.
