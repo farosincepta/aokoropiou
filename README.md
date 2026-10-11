@@ -1,10 +1,15 @@
-# Α.Ο. Κορωπίου — Version 8
+# Α.Ο. Κορωπίου — Version 9 (PWA)
 
-Static multilingual demonstration website. Greek pages are in the root, English pages in `en/`, Spanish pages in `es/`. All three languages share `assets/`, `styles.css`, and `script.js`.
+This is Version 8 with installable Progressive Web App functionality added. All Greek, English and Spanish pages remain.
 
-Open `index.html` to preview. Upload the **contents** of this directory to the repository root. Keep the site marked as a demonstration until official information is confirmed.
+## Publishing
+Upload **all** files and folders to the root of your website hosting. This includes `manifest.webmanifest`, `sw.js`, `icon-192.png`, and `icon-512.png`. Keep `/en/`, `/es/` and `/assets/`.
 
-Facebook: https://www.facebook.com/profile.php?id=61566966989607
-Instagram: https://www.instagram.com/ao_koropi_1903/
+The PWA requires **HTTPS** (or `localhost` for development). Opening `index.html` from your computer using `file://` lets you preview the pages but **cannot install the PWA** or enable offline caching.
 
-All player names, fixtures, news stories, sponsor slots, and stadium details marked as samples are placeholders.
+On Android Chrome, visit the published site and use **Install app** or **Add to Home screen** from the browser menu. On iPhone Safari, use **Share → Add to Home Screen** (and **Open as Web App** when offered). Installation options depend on browser and iOS version.
+
+The first successful online visit downloads the site for offline viewing; external Facebook/Instagram links still require connectivity. Offline content reflects the last downloaded version. A service worker update is downloaded when visitors revisit the website online.
+
+## Important
+This is a demonstration site with sample content, not verified club announcements. Do not represent it as an official club app without authorization. GitHub Pages deployment depends on repository settings and account eligibility; a private repository may not support Pages on a free plan.
