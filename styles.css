@@ -158,13 +158,3 @@ html body .aok-v15-links a{color:#fff!important;white-space:normal!important;lin
  html body .aok-v15-links .wrap{gap:6px!important}
  html body .aok-v15-links a{font-size:12px!important;padding:8px!important}
 }
-
-
-/* V22: stable two-row header; the icons and flags never share the top navigation row. */
-html body header.header{height:auto!important;min-height:0!important;display:block!important;overflow:visible!important}
-html body header.header>.nav-row{height:auto!important;min-height:102px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;position:relative!important}
-html body header.header>.aok-header-bottom-wrap{clear:both!important;display:flex!important;width:calc(100% - 72px)!important;min-height:62px!important;align-items:center!important;justify-content:center!important;position:relative!important;margin-left:auto!important;margin-right:auto!important;padding:0 0 12px!important}
-html body header.header .aok-header-bottom{position:relative!important;inset:auto!important;float:none!important;transform:none!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0 auto!important;width:max-content!important;max-width:100%!important;gap:14px!important;flex-wrap:wrap!important}
-html body header.header .aok-header-bottom .language-switch{display:flex!important;align-items:center!important;flex-wrap:nowrap!important}
-@media(max-width:1250px){html body header.header>.nav-row{min-height:83px!important}html body header.header>.aok-header-bottom-wrap{width:calc(100% - 40px)!important}}
-@media(max-width:650px){html body header.header>.nav-row{min-height:75px!important}html body header.header>.aok-header-bottom-wrap{width:calc(100% - 12px)!important;min-height:50px!important}html body header.header .aok-header-bottom{gap:7px!important}}
