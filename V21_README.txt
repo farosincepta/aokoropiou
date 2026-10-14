@@ -1,0 +1,1 @@
+V21 repairs fixed 86px header height which caused social and language icons to overlap the blue navigation. White header now grows naturally and keeps a dedicated second row for icons/flags. Preserves five languages, crest, stadium, PWA, sponsorship pages. Upload complete extracted contents, replacing previous files. PWA cache name bumped.
