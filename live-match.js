@@ -119,11 +119,10 @@ document.addEventListener("DOMContentLoaded", async () => {
           if (strongScore && rm.score) {
             strongScore.textContent = rm.score;
           }
-          const oppName = rm.is_home ? getTeam(nm => nm, rm.is_home ? rm.away : rm.home, rm.is_home ? rm.away_latin : rm.home_latin);
-          const actualOppName = rm.is_home ? getTeam(rm.away, rm.away_latin) : getTeam(rm.home, rm.home_latin);
+          const oppName = rm.is_home ? getTeam(rm.away, rm.away_latin) : getTeam(rm.home, rm.home_latin);
           const oppSpan = card.querySelector(".versus span:last-of-type");
           if (oppSpan) {
-            oppSpan.innerHTML = `${getLogoHtml(actualOppName, 36)}<b>${actualOppName}</b>`;
+            oppSpan.innerHTML = `${getLogoHtml(oppName, 36)}<b>${oppName}</b>`;
           }
           const smallNote = card.querySelector("small");
           if (smallNote && data.recent_match_details) {
