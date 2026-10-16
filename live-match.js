@@ -28,14 +28,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     const assetBase = isSub ? "../assets/" : "assets/";
 
     const teamLogos = {
+      // Official Club Crest
       "ΑΟ ΚΟΡΩΠΙ": "crest.png",
       "Α.Ο. ΚΟΡΩΠΙΟΥ": "crest.png",
       "AO KOROPI": "crest.png",
       "A.O. KOROPIOU": "crest.png",
+
+      // .png Opponent
       "ΔΙΟΝΥΣΟΣ ΑΤΤΙΚΗΣ": "dionysos.png",
       "DIONYSOS ATTIKIS": "dionysos.png",
-      "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ": "olympiakos-varis.jpeg",
-      "APS OLYMPIAKOS VARIS": "olympiakos-varis.jpeg",
+
+      // .jpg Opponents
+      "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ": "olympiakos-varis.jpg",
+      "APS OLYMPIAKOS VARIS": "olympiakos-varis.jpg",
+      "Α.Π.Ο ΝΙΚΗΦΟΡΟΣ": "nikiforos.jpg",
+      "APO NIKIFOROS": "nikiforos.jpg",
+      "Α.Ο ΦΟΙΒΟΣ ΒΑΡΗΣ": "foivos-varis.jpg",
+      "AO FOIVOS VARIS": "foivos-varis.jpg",
+      "ΓΙΑΝΝΗΣ ΠΑΘΙΑΚΑΚΗΣ": "pathiakakis.jpg",
+      "GIANNIS PATHIAKAKIS": "pathiakakis.jpg",
+      "ΑΠΕΣ ΚΑΠΑΝΔΡΙΤΙΟΥ": "kapandriti.jpg",
+      "APES KAPANDRITIOU": "kapandriti.jpg",
+
+      // .jpeg Opponents
       "ΑΠΕ ΛΑΥΡΕΩΤΙΚΗ": "lavreotiki.jpeg",
       "APE LAVREOTIKI": "lavreotiki.jpeg",
       "ΑΟ ΚΟΥΒΑΡΑ": "kouvara.jpeg",
@@ -48,20 +63,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       "TRIGLIAS RAFINAS AO": "triglia-rafinas.jpeg",
       "ΑΟ ΠΑΙΑΝΙΑΣ": "paiania.jpeg",
       "AO PAIANIAS": "paiania.jpeg",
-      "Α.Π.Ο ΝΙΚΗΦΟΡΟΣ": "nikiforos.jpeg",
-      "APO NIKIFOROS": "nikiforos.jpeg",
-      "Α.Ο ΦΟΙΒΟΣ ΒΑΡΗΣ": "foivos-varis.jpeg",
-      "AO FOIVOS VARIS": "foivos-varis.jpeg",
       "ΝΙΚΗ ΔΡΟΣΙΑΣ": "niki-drosias.jpeg",
       "NIKI DROSIAS": "niki-drosias.jpeg",
       "ΠΑΟ ΚΑΛΥΒΙΩΝ": "kalyvia.jpeg",
       "PAO KALYVION": "kalyvia.jpeg",
       "ΜΑΧΗ ΜΑΡΑΘΩΝΑ": "machi-marathona.jpeg",
-      "MACHI MARATHONA": "machi-marathona.jpeg",
-      "ΓΙΑΝΝΗΣ ΠΑΘΙΑΚΑΚΗΣ": "pathiakakis.jpeg",
-      "GIANNIS PATHIAKAKIS": "pathiakakis.jpeg",
-      "ΑΠΕΣ ΚΑΠΑΝΔΡΙΤΙΟΥ": "kapandriti.jpeg",
-      "APES KAPANDRITIOU": "kapandriti.jpeg"
+      "MACHI MARATHONA": "machi-marathona.jpeg"
     };
 
     function getLogoHtml(name, size = 32) {
@@ -75,26 +82,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
       }
       if (!file) return `<span class="fixture-question" style="display:inline-flex;width:${size}px;height:${size}px;align-items:center;justify-content:center;">⚽</span>`;
-      return `<img src="${assetBase}${file}" alt="${name}" style="width:${size}px; height:${size}px; object-fit:contain; vertical-align:middle; border-radius:4px;" onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='${assetBase}${file.replace('.jpeg','.jpg')}';}"/>`;
-    }
-
-    const res = await fetch(`${jsonPath}?v=${Date.now()}`);
-    if (!res.ok) return;
-    const data = await res.json();
-
-    const getTeam = (teamEl, teamLatin) => (isGreek ? teamEl : teamLatin);
-    const getPlayer = (p) => (isGreek ? p.name_el : p.name_latin);
-
-    // 1. Next Match Widget
-    if (data.next_match) {
-      const nm = data.next_match;
-      document.querySelectorAll(".match-card").forEach(card => {
-        const text = card.textContent.toUpperCase();
-        if (text.includes("ΕΠΟΜΕΝΟΣ") || text.includes("NEXT") || text.includes("PRÓXIMO") || text.includes("PROSSIMO") || text.includes("NÄCHSTES")) {
-          const dateP = card.querySelector("p");
-          if (dateP) {
-            const venueTxt = isGreek ? nm.venue : nm.venue_latin;
-            dateP.textContent = `${nm.date} • ${nm.time} (${venueTxt})`;
+      return `<img src="${assetBase}${file}" alt="${name}" style="width:${size}px; height:${size}px; object-fit:contain; vertical-align:middle; border-radius:4px;"/>`; }  const res = await fetch(`${jsonPath}?v=${Date.now()}`); if (!res.ok) return; const data = await res.json();  const getTeam = (teamEl, teamLatin) => (isGreek ? teamEl : teamLatin); const getPlayer = (p) => (isGreek ? p.name_el : p.name_latin);  // 1. Next Match Widget (Home page & Matches page top card) if (data.next_match) { const nm = data.next_match; document.querySelectorAll(".match-card").forEach(card => { const text = card.textContent.toUpperCase(); if (text.includes("ΕΠΟΜΕΝΟΣ") \vert{}\vert{} text.includes("NEXT") \vert{}\vert{} text.includes("PRÓXIMO") \vert{}\vert{} text.includes("PROSSIMO") \vert{}\vert{} text.includes("NÄCHSTES")) { const dateP = card.querySelector("p"); if (dateP) { const venueTxt = isGreek ? nm.venue : nm.venue_latin; dateP.textContent = `${nm.date} • ${nm.time} (${venueTxt})`;
           }
           const oppName = nm.is_home ? getTeam(nm.away, nm.away_latin) : getTeam(nm.home, nm.home_latin);
           const oppSpan = card.querySelector(".versus span:last-of-type");
@@ -105,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
-    // 2. Recent Match Widget
+    // 2. Recent Match Widget (Home page & Matches page top card)
     if (data.recent_match) {
       const rm = data.recent_match;
       document.querySelectorAll(".match-card").forEach(card => {
@@ -145,7 +133,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
-    // 3. Mini Standings (Top 5 teams on the widget card)
+    // 3. Mini Standings (Top 5 teams on the widget card with logos)
     if (data.standings && data.standings.length > 0) {
       document.querySelectorAll(".match-card.standings").forEach(card => {
         const topTeams = data.standings.slice(0, 5);
@@ -176,7 +164,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
-    // 4. Full Standings Table (matches.html)
+    // 4. Full Standings Table with Logos (matches.html)
     const wideStandings = document.querySelector(".standings-wide");
     if (wideStandings && data.standings) {
       const heading = isGreek 
@@ -200,7 +188,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       wideStandings.innerHTML = heading + rows;
     }
 
-    // 5. Full Fixtures List (matches.html)
+    // 5. Full Fixtures List with Logos for Both Teams (matches.html)
     const fixtureList = document.querySelector(".fixture-list");
     if (fixtureList && data.schedule) {
       const rows = data.schedule.map(m => {
