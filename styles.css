@@ -166,3 +166,9 @@ html body header.header > .aok-header-bottom-wrap {order:1!important;width:calc(
 html body header.header > .aok-header-bottom-wrap > .aok-header-bottom {position:static!important;inset:auto!important;transform:none!important;float:none!important;margin:0 auto!important;display:flex!important;justify-content:center!important;align-items:center!important;max-width:100%!important;}
 html body header.header > .aok-header-bottom-wrap .language-switch {display:flex!important;align-items:center!important;flex-wrap:wrap!important;justify-content:center!important;}
 @media(max-width:650px){html body header.header > .nav-row,html body header.header > .aok-header-bottom-wrap{width:calc(100% - 24px)!important;}html body header.header > .aok-header-bottom-wrap > .aok-header-bottom{width:100%!important;gap:7px!important;}}
+
+/* Version 24: official EPSANA fixture and standings panels */
+.aok-official-panel{margin:16px 0;padding:18px;border:1px solid #d9e2ed;border-radius:12px;background:#fff;color:#172c4d}.aok-official-panel h3{margin:0 0 12px;color:#123b83}.aok-official-panel a{color:#123b83;font-weight:700}.aok-ranking-scroll{overflow-x:auto;max-width:100%}.aok-ranking-table{width:100%;border-collapse:collapse;font-size:14px;min-width:540px}.aok-ranking-table th,.aok-ranking-table td{padding:8px;border-bottom:1px solid #dce4ef;text-align:left}.aok-ranking-table th{background:#123b83;color:white}.aok-ranking-table .aok-highlight{background:#e9f1fc;font-weight:700}
+
+/* Version 25: automated EPSANA panels */
+#aok-epsana-auto{display:grid;gap:16px;margin:24px 0}#aok-epsana-auto .aok-official-panel{min-width:0}#aok-epsana-auto .aok-auto-report{padding-top:12px}#aok-epsana-auto .aok-auto-report h3{margin:14px 0 5px;font-size:1rem}#aok-epsana-auto .aok-ranking-scroll{overflow-x:auto}#aok-epsana-auto .aok-ranking-table{width:100%;min-width:460px}#aok-epsana-auto a{text-decoration:underline}
