@@ -1,8 +1,5 @@
 name: Update official EPSANA data
 on:
-  schedule:
-    - cron: '17,47 * * * *'  # every 30 minutes, UTC
-    - cron: '5 6 * * 1'     # Monday 06:05 UTC, full reports
   workflow_dispatch:
     inputs:
       details:
