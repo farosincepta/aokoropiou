@@ -35,6 +35,7 @@ jobs:
             python scripts/update_epsana.py
           fi
       - name: Commit verified changes
+      if: ${{ false }}
         run: |
           git add data/epsana.json
           if ! git diff --cached --quiet; then
