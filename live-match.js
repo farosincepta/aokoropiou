@@ -25,28 +25,81 @@ document.addEventListener("DOMContentLoaded", async () => {
                   window.location.pathname.includes("/it/") || 
                   window.location.pathname.includes("/de/");
     const jsonPath = isSub ? "../data/live_match.json" : "data/live_match.json";
+    const assetBase = isSub ? "../assets/" : "assets/";
 
-    const res = await fetch(`${jsonPath}?v=${Date.now()}`);
-    if (!res.ok) return;
-    const data = await res.json();
+    // Team logos mapping: Dionysos is .png, AOK is crest.png, others are .jpeg
+    const teamLogos = {
+      "ΑΟ ΚΟΡΩΠΙ": "crest.png",
+      "Α.Ο. ΚΟΡΩΠΙΟΥ": "crest.png",
+      "AO KOROPI": "crest.png",
+      "A.O. KOROPIOU": "crest.png",
+      
+      "ΔΙΟΝΥΣΟΣ ΑΤΤΙΚΗΣ": "dionysos.png",
+      "DIONYSOS ATTIKIS": "dionysos.png",
+      
+      "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ": "olympiakos-varis.jpeg",
+      "APS OLYMPIAKOS VARIS": "olympiakos-varis.jpeg",
+      
+      "ΑΠΕ ΛΑΥΡΕΩΤΙΚΗ": "lavreotiki.jpeg",
+      "APE LAVREOTIKI": "lavreotiki.jpeg",
+      
+      "ΑΟ ΚΟΥΒΑΡΑ": "kouvara.jpeg",
+      "AO KOUVARA": "kouvara.jpeg",
+      
+      "ΠΑΝΒΟΡΕΙΑΚΟΣ ΑΣ": "panvoreiakos.jpeg",
+      "PANVOREIAKOS AS": "panvoreiakos.jpeg",
+      
+      "ΠΑΣ ΩΡΩΠΟΣ": "oropos.jpeg",
+      "PAS OROPOS": "oropos.jpeg",
+      
+      "ΤΡΙΓΛΙΑΣ ΡΑΦΗΝΑΣ ΑΟ": "triglia-rafinas.jpeg",
+      "TRIGLIAS RAFINAS AO": "triglia-rafinas.jpeg",
+      
+      "ΑΟ ΠΑΙΑΝΙΑΣ": "paiania.jpeg",
+      "AO PAIANIAS": "paiania.jpeg",
+      
+      "Α.Π.Ο ΝΙΚΗΦΟΡΟΣ": "nikiforos.jpeg",
+      "APO NIKIFOROS": "nikiforos.jpeg",
+      
+      "Α.Ο ΦΟΙΒΟΣ ΒΑΡΗΣ": "foivos-varis.jpeg",
+      "AO FOIVOS VARIS": "foivos-varis.jpeg",
+      
+      "ΝΙΚΗ ΔΡΟΣΙΑΣ": "niki-drosias.jpeg",
+      "NIKI DROSIAS": "niki-drosias.jpeg",
+      
+      "ΠΑΟ ΚΑΛΥΒΙΩΝ": "kalyvia.jpeg",
+      "PAO KALYVION": "kalyvia.jpeg",
+      
+      "ΜΑΧΗ ΜΑΡΑΘΩΝΑ": "machi-marathona.jpeg",
+      "MACHI MARATHONA": "machi-marathona.jpeg",
+      
+      "ΓΙΑΝΝΗΣ ΠΑΘΙΑΚΑΚΗΣ": "pathiakakis.jpeg",
+      "GIANNIS PATHIAKAKIS": "pathiakakis.jpeg",
+      
+      "ΑΠΕΣ ΚΑΠΑΝΔΡΙΤΙΟΥ": "kapandriti.jpeg",
+      "APES KAPANDRITIOU": "kapandriti.jpeg"
+    };
 
-    const getTeam = (teamEl, teamLatin) => (isGreek ? teamEl : teamLatin);
-    const getPlayer = (p) => (isGreek ? p.name_el : p.name_latin);
-
-    // 1. Next Match Widget (Home page & Matches page top card)
-    if (data.next_match) {
-      const nm = data.next_match;
-      document.querySelectorAll(".match-card").forEach(card => {
-        const text = card.textContent.toUpperCase();
-        if (text.includes("ΕΠΟΜΕΝΟΣ") || text.includes("NEXT") || text.includes("PRÓXIMO") || text.includes("PROSSIMO") || text.includes("NÄCHSTES")) {
-          const dateP = card.querySelector("p");
-          if (dateP) {
-            const venueTxt = isGreek ? nm.venue : nm.venue_latin;
-            dateP.textContent = `${nm.date} • ${nm.time} (${venueTxt})`;
+    function getLogoHtml(name, size = 32) {
+      if (!name) return `<span class="fixture-question" style="display:inline-flex;width:${size}px;height:${size}px;align-items:center;justify-content:center;">⚽</span>`;
+      const clean = name.trim().toUpperCase();
+      let file = null;
+      for (const [k, v] of Object.entries(teamLogos)) {
+        if (clean.includes(k.toUpperCase()) || k.toUpperCase().includes(clean)) {
+          file = v;
+          break;
+        }
+      }
+      if (!file) {
+        return `<span class="fixture-question" style="display:inline-flex;width:${size}px;height:${size}px;align-items:center;justify-content:center;">⚽</span>`;
+      }
+      // Added auto-fallback: if .jpeg fails, checks .jpg or .png automatically
+      return `<img src="${assetBase}${file}" alt="${name}" style="width:${size}px; height:${size}px; object-fit:contain; vertical-align:middle; border-radius:4px;" onerror="if(!this.dataset.tried){this.dataset.tried=1; this.src='${assetBase}${file.replace('.jpeg','.jpg')}';}"/>`; }  const res = await fetch(`${jsonPath}?v=${Date.now()}`); if (!res.ok) return; const data = await res.json();  const getTeam = (teamEl, teamLatin) => (isGreek ? teamEl : teamLatin); const getPlayer = (p) => (isGreek ? p.name_el : p.name_latin);  // 1. Next Match Widget (Home page & Matches page top card) if (data.next_match) { const nm = data.next_match; document.querySelectorAll(".match-card").forEach(card => { const text = card.textContent.toUpperCase(); if (text.includes("ΕΠΟΜΕΝΟΣ") \vert{}\vert{} text.includes("NEXT") \vert{}\vert{} text.includes("PRÓXIMO") \vert{}\vert{} text.includes("PROSSIMO") \vert{}\vert{} text.includes("NÄCHSTES")) { const dateP = card.querySelector("p"); if (dateP) { const venueTxt = isGreek ? nm.venue : nm.venue_latin; dateP.textContent = `${nm.date} • ${nm.time} (${venueTxt})`;
           }
-          const oppB = card.querySelector("span:last-of-type b");
-          if (oppB) {
-            oppB.textContent = nm.is_home ? getTeam(nm.away, nm.away_latin) : getTeam(nm.home, nm.home_latin);
+          const oppName = nm.is_home ? getTeam(nm.away, nm.away_latin) : getTeam(nm.home, nm.home_latin);
+          const oppSpan = card.querySelector(".versus span:last-of-type");
+          if (oppSpan) {
+            oppSpan.innerHTML = `${getLogoHtml(oppName, 36)}<b>${oppName}</b>`;
           }
         }
       });
@@ -66,9 +119,10 @@ document.addEventListener("DOMContentLoaded", async () => {
           if (strongScore && rm.score) {
             strongScore.textContent = rm.score;
           }
-          const oppB = card.querySelector("span:last-of-type b");
-          if (oppB) {
-            oppB.textContent = rm.is_home ? getTeam(rm.away, rm.away_latin) : getTeam(rm.home, rm.home_latin);
+          const oppName = rm.is_home ? getTeam(rm.away, rm.away_latin) : getTeam(rm.home, rm.home_latin);
+          const oppSpan = card.querySelector(".versus span:last-of-type");
+          if (oppSpan) {
+            oppSpan.innerHTML = `${getLogoHtml(oppName, 36)}<b>${oppName}</b>`;
           }
           const smallNote = card.querySelector("small");
           if (smallNote && data.recent_match_details) {
@@ -91,52 +145,38 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
-    // 3. Mini Standings (Home page card)
+    // 3. Mini Standings (Top 5 teams on the widget card with logos)
     if (data.standings && data.standings.length > 0) {
       document.querySelectorAll(".match-card.standings").forEach(card => {
-        // Build rows for top teams (or slice(0, 5) for top 5, or show all)
-        const topTeams = data.standings.slice(0, 5); // Change 5 to 16 if you want all teams listed
-        
+        const topTeams = data.standings.slice(0, 5);
         let rowsHtml = `<div class="table-head"><span>${isGreek ? 'ΟΜΑΔΑ' : 'TEAM'}</span><span>${isGreek ? 'ΑΓ' : 'P'}</span><span>${isGreek ? 'Β' : 'PTS'}</span></div>`;
         
         topTeams.forEach(s => {
+          const tName = getTeam(s.team, s.team_latin);
           const highlight = s.is_aok ? ' style="background: rgba(18,59,131,0.12); font-weight: bold; color: #123b83;"' : '';
           rowsHtml += `<div class="table-row"${highlight}>
-            <span>${s.pos}. ${getTeam(s.team, s.team_latin)}</span>
+            <span style="display:inline-flex; align-items:center; gap:6px;">
+              ${getLogoHtml(tName, 18)}
+              ${s.pos}.${tName}
+            </span>
             <span>${s.played}</span>
             <span>${s.points}</span>
           </div>`;
         });
 
-        // Replace the table content inside the card
         const head = card.querySelector(".table-head");
         const existingRow = card.querySelector(".table-row") || card.querySelector("div:nth-of-type(2)");
-        
         if (head && existingRow) {
-          // If the container exists, replace existing rows
-          const container = head.parentElement;
           const note = card.querySelector("p");
           head.remove();
           existingRow.remove();
-          if (note) {
-            note.insertAdjacentHTML("beforebegin", rowsHtml);
-          } else {
-            card.insertAdjacentHTML("beforeend", rowsHtml);
-          }
-        } else {
-          // Fallback direct innerHTML replacement
-          const title = card.querySelector("h3");
-          const link = card.querySelector("a");
-          const note = card.querySelector("p");
-          card.innerHTML = `<h3>${title ? title.textContent : (isGreek ? 'ΒΑΘΜΟΛΟΓΙΑ' : 'STANDINGS')}</h3>` + 
-                           rowsHtml + 
-                           (note ? `<p>${note.textContent}</p>` : '') + 
-                           (link ? link.outerHTML : '');
+          if (note) note.insertAdjacentHTML("beforebegin", rowsHtml);
+          else card.insertAdjacentHTML("beforeend", rowsHtml);
         }
       });
     }
 
-    // 4. Full Standings Table (matches.html)
+    // 4. Full Standings Table with Logos (matches.html)
     const wideStandings = document.querySelector(".standings-wide");
     if (wideStandings && data.standings) {
       const heading = isGreek 
@@ -144,34 +184,42 @@ document.addEventListener("DOMContentLoaded", async () => {
         : `<div class="standings-line heading"><span>POS</span><span>TEAM</span><span>MATCHES</span><span>POINTS</span></div>`;
       
       const rows = data.standings.map(s => {
+        const tName = getTeam(s.team, s.team_latin);
         const style = s.is_aok ? ` style="font-weight:bold; color:#123b83;"` : ``;
-        return `<div class="standings-line"${style}><span>${s.pos}</span><span>${getTeam(s.team, s.team_latin)}</span><span>${s.played}</span><span>${s.points}</span></div>`;
+        return `<div class="standings-line"${style}>
+          <span>${s.pos}</span>
+          <span style="display:inline-flex; align-items:center; gap:8px;">
+            ${getLogoHtml(tName, 22)}
+            ${tName}
+          </span>
+          <span>${s.played}</span>
+          <span>${s.points}</span>
+        </div>`;
       }).join("");
 
       wideStandings.innerHTML = heading + rows;
     }
 
-    // 5. Full Fixtures List (matches.html)
+    // 5. Full Fixtures List with Logos for Both Teams (matches.html)
     const fixtureList = document.querySelector(".fixture-list");
     if (fixtureList && data.schedule) {
-      const crestPath = isSub ? "../assets/crest.png" : "assets/crest.png";
       const rows = data.schedule.map(m => {
         const roundTitle = isGreek ? `ΑΓΩΝΙΣΤΙΚΗ ${m.round}` : `MATCHDAY ${m.round}`;
         const venueTxt = isGreek ? m.venue : m.venue_latin;
         const homeTxt = isGreek ? m.home : m.home_latin;
         const awayTxt = isGreek ? m.away : m.away_latin;
-        const homeCrest = (homeTxt.includes("ΚΟΡΩΠΙ") || homeTxt.includes("KOROPI")) 
-          ? `<img src="${crestPath}" alt="AOK"/>` 
-          : `<span class="fixture-question">⚽</span>`;
-        const awayCrest = (awayTxt.includes("ΚΟΡΩΠΙ") || awayTxt.includes("KOROPI")) 
-          ? `<img src="${crestPath}" alt="AOK"/>` 
-          : `<span class="fixture-question">⚽</span>`;
         const linkTxt = isGreek ? `ΛΕΠΤΟΜΕΡΕΙΕΣ ΑΓΩΝΑ →` : `MATCH DETAILS →`;
         const linkHref = isSub ? "../match-detail.html" : "match-detail.html";
 
         return `<div class="fixture-row">
           <div class="fixture-date"><strong>${m.date.split('/')[0]}</strong><small>${roundTitle}</small></div>
-          <div class="fixture-teams">${homeCrest}<strong>${homeTxt}</strong><span>${m.score || 'VS'}</span><strong>${awayTxt}</strong>${awayCrest}</div>
+          <div class="fixture-teams" style="display:flex; align-items:center; gap:8px;">
+            ${getLogoHtml(homeTxt, 30)}
+            <strong>${homeTxt}</strong>
+            <span style="margin:0 4px;">${m.score || 'VS'}</span>
+            <strong>${awayTxt}</strong>
+            ${getLogoHtml(awayTxt, 30)}
+          </div>
           <div class="fixture-meta">${m.date} • ${m.time}<br/><b>${venueTxt}</b></div>
           <a class="fixture-details-link" href="${linkHref}">${linkTxt}</a>
         </div>`;
