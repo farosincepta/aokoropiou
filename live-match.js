@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     };
 
-    const isSubfolder = window.location.pathname.includes("/en/") || 
-                        window.location.pathname.includes("/es/") || 
-                        window.location.pathname.includes("/it/") || 
-                        window.location.pathname.includes("/de/");
-    const jsonPath = isSubfolder ? "../data/live_match.json" : "data/live_match.json";
+    const isSub = window.location.pathname.includes("/en/") || 
+                  window.location.pathname.includes("/es/") || 
+                  window.location.pathname.includes("/it/") || 
+                  window.location.pathname.includes("/de/");
+    const jsonPath = isSub ? "../data/live_match.json" : "data/live_match.json";
 
     const res = await fetch(`${jsonPath}?v=${Date.now()}`);
     if (!res.ok) return;
@@ -33,52 +33,44 @@ document.addEventListener("DOMContentLoaded", async () => {
     const getTeam = (teamEl, teamLatin) => (isGreek ? teamEl : teamLatin);
     const getPlayer = (p) => (isGreek ? p.name_el : p.name_latin);
 
-    // 1. Next Match Widget
+    // 1. Next Match Widget (Home page & Matches page top card)
     if (data.next_match) {
       const nm = data.next_match;
-      const cards = document.querySelectorAll("section div h3");
-      cards.forEach(h3 => {
-        const parent = h3.closest("div");
-        if (!parent) return;
-        const text = h3.textContent.toUpperCase();
+      document.querySelectorAll(".match-card").forEach(card => {
+        const text = card.textContent.toUpperCase();
         if (text.includes("ΕΠΟΜΕΝΟΣ") || text.includes("NEXT") || text.includes("PRÓXIMO") || text.includes("PROSSIMO") || text.includes("NÄCHSTES")) {
-          const dateP = parent.querySelector("p");
+          const dateP = card.querySelector("p");
           if (dateP) {
             const venueTxt = isGreek ? nm.venue : nm.venue_latin;
             dateP.textContent = `${nm.date} • ${nm.time} (${venueTxt})`;
           }
-          const oppB = parent.querySelector("span:last-of-type b");
+          const oppB = card.querySelector("span:last-of-type b");
           if (oppB) {
-            const oppName = nm.is_home ? getTeam(nm.away, nm.away_latin) : getTeam(nm.home, nm.home_latin);
-            oppB.textContent = oppName;
+            oppB.textContent = nm.is_home ? getTeam(nm.away, nm.away_latin) : getTeam(nm.home, nm.home_latin);
           }
         }
       });
     }
 
-    // 2. Recent Match Widget
+    // 2. Recent Match Widget (Home page & Matches page top card)
     if (data.recent_match) {
       const rm = data.recent_match;
-      const cards = document.querySelectorAll("section div h3");
-      cards.forEach(h3 => {
-        const parent = h3.closest("div");
-        if (!parent) return;
-        const text = h3.textContent.toUpperCase();
+      document.querySelectorAll(".match-card").forEach(card => {
+        const text = card.textContent.toUpperCase();
         if (text.includes("ΤΕΛΕΥΤΑΙΟΣ") || text.includes("LAST") || text.includes("ÚLTIMO") || text.includes("ULTIMA") || text.includes("LETZTES")) {
-          const dateP = parent.querySelector("p");
+          const dateP = card.querySelector("p");
           if (dateP) {
             dateP.textContent = `${rm.date} (${isGreek ? rm.venue : rm.venue_latin})`;
           }
-          const strongScore = parent.querySelector("strong");
+          const strongScore = card.querySelector("strong");
           if (strongScore && rm.score) {
             strongScore.textContent = rm.score;
           }
-          const oppB = parent.querySelector("span:last-of-type b");
+          const oppB = card.querySelector("span:last-of-type b");
           if (oppB) {
-            const oppName = rm.is_home ? getTeam(rm.away, rm.away_latin) : getTeam(rm.home, rm.home_latin);
-            oppB.textContent = oppName;
+            oppB.textContent = rm.is_home ? getTeam(rm.away, rm.away_latin) : getTeam(rm.home, rm.home_latin);
           }
-          const smallNote = parent.querySelector("small");
+          const smallNote = card.querySelector("small");
           if (smallNote && data.recent_match_details) {
             const det = data.recent_match_details;
             const scTitle = i18n.scorersTitle[lang] || i18n.scorersTitle.en;
@@ -87,39 +79,76 @@ document.addEventListener("DOMContentLoaded", async () => {
             let html = "";
             if (det.scorers && det.scorers.length > 0) {
               const scStr = det.scorers.map(s => `⚽ ${isGreek ? s.player_el : s.player_latin} (${s.minute}')`).join(", ");
-              html += `<div style="margin-top:6px; color:#d4af37; font-weight:600;">${scTitle}: ${scStr}</div>`;
+              html += `<div style="margin-top:6px; color:#d4af37; font-weight:600;">${scTitle}:${scStr}</div>`;
             }
             if (det.lineup && det.lineup.length > 0) {
               const luStr = det.lineup.map(p => `${p.number ? p.number + '.' : ''} ${getPlayer(p)}`).join(", ");
-              html += `<div style="margin-top:4px; opacity:0.9; font-size:0.75rem;"><strong>${luTitle}:</strong> ${luStr}</div>`;
+              html += `<div style="margin-top:4px; opacity:0.9; font-size:0.75rem;"><strong>${luTitle}:</strong>${luStr}</div>`;
             }
-            if (html) {
-              smallNote.innerHTML = html;
-            }
+            if (html) smallNote.innerHTML = html;
           }
         }
       });
     }
 
-    // 3. Standings Table
+    // 3. Mini Standings (Home page card)
     if (data.standings && data.standings.length > 0) {
       const aok = data.standings.find(s => s.is_aok);
       if (aok) {
-        const cards = document.querySelectorAll("section div h3");
-        cards.forEach(h3 => {
-          const parent = h3.closest("div");
-          if (!parent) return;
-          const text = h3.textContent.toUpperCase();
-          if (text.includes("ΒΑΘΜΟΛΟΓΙΑ") || text.includes("STANDINGS") || text.includes("CLASIFICACIÓN") || text.includes("CLASSIFICA") || text.includes("TABELLE")) {
-            const row = parent.querySelector("div:nth-of-type(2)");
-            if (row) {
-              row.innerHTML = `<span>${aok.pos}. ${getTeam(aok.team, aok.team_latin)}</span><span>${aok.played}</span><span>${aok.points}</span>`;
-            }
+        document.querySelectorAll(".match-card.standings").forEach(card => {
+          const row = card.querySelector(".table-row") || card.querySelector("div:nth-of-type(2)");
+          if (row) {
+            row.innerHTML = `<span>${aok.pos}.${getTeam(aok.team, aok.team_latin)}</span><span>${aok.played}</span><span>${aok.points}</span>`;
           }
         });
       }
     }
-  } catch (e) {
-    console.error("Live match data loading error:", e);
+
+    // 4. Full Standings Table (matches.html)
+    const wideStandings = document.querySelector(".standings-wide");
+    if (wideStandings && data.standings) {
+      const heading = isGreek 
+        ? `<div class="standings-line heading"><span>ΘΕΣΗ</span><span>ΟΜΑΔΑ</span><span>ΑΓΩΝΕΣ</span><span>ΒΑΘΜΟΙ</span></div>`
+        : `<div class="standings-line heading"><span>POS</span><span>TEAM</span><span>MATCHES</span><span>POINTS</span></div>`;
+      
+      const rows = data.standings.map(s => {
+        const style = s.is_aok ? ` style="font-weight:bold; color:#123b83;"` : ``;
+        return `<div class="standings-line"${style}><span>${s.pos}</span><span>${getTeam(s.team, s.team_latin)}</span><span>${s.played}</span><span>${s.points}</span></div>`;
+      }).join("");
+
+      wideStandings.innerHTML = heading + rows;
+    }
+
+    // 5. Full Fixtures List (matches.html)
+    const fixtureList = document.querySelector(".fixture-list");
+    if (fixtureList && data.schedule) {
+      const crestPath = isSub ? "../assets/crest.png" : "assets/crest.png";
+      const rows = data.schedule.map(m => {
+        const roundTitle = isGreek ? `ΑΓΩΝΙΣΤΙΚΗ ${m.round}` : `MATCHDAY ${m.round}`;
+        const venueTxt = isGreek ? m.venue : m.venue_latin;
+        const homeTxt = isGreek ? m.home : m.home_latin;
+        const awayTxt = isGreek ? m.away : m.away_latin;
+        const homeCrest = (homeTxt.includes("ΚΟΡΩΠΙ") || homeTxt.includes("KOROPI")) 
+          ? `<img src="${crestPath}" alt="AOK"/>` 
+          : `<span class="fixture-question">⚽</span>`;
+        const awayCrest = (awayTxt.includes("ΚΟΡΩΠΙ") || awayTxt.includes("KOROPI")) 
+          ? `<img src="${crestPath}" alt="AOK"/>` 
+          : `<span class="fixture-question">⚽</span>`;
+        const linkTxt = isGreek ? `ΛΕΠΤΟΜΕΡΕΙΕΣ ΑΓΩΝΑ →` : `MATCH DETAILS →`;
+        const linkHref = isSub ? "../match-detail.html" : "match-detail.html";
+
+        return `<div class="fixture-row">
+          <div class="fixture-date"><strong>${m.date.split('/')[0]}</strong><small>${roundTitle}</small></div>
+          <div class="fixture-teams">${homeCrest}<strong>${homeTxt}</strong><span>${m.score || 'VS'}</span><strong>${awayTxt}</strong>${awayCrest}</div>
+          <div class="fixture-meta">${m.date} • ${m.time}<br/><b>${venueTxt}</b></div>
+          <a class="fixture-details-link" href="${linkHref}">${linkTxt}</a>
+        </div>`;
+      }).join("");
+
+      fixtureList.innerHTML = rows;
+    }
+
+  } catch (err) {
+    console.error("Match center error:", err);
   }
 });
