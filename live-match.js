@@ -93,15 +93,47 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // 3. Mini Standings (Home page card)
     if (data.standings && data.standings.length > 0) {
-      const aok = data.standings.find(s => s.is_aok);
-      if (aok) {
-        document.querySelectorAll(".match-card.standings").forEach(card => {
-          const row = card.querySelector(".table-row") || card.querySelector("div:nth-of-type(2)");
-          if (row) {
-            row.innerHTML = `<span>${aok.pos}.${getTeam(aok.team, aok.team_latin)}</span><span>${aok.played}</span><span>${aok.points}</span>`;
-          }
+      document.querySelectorAll(".match-card.standings").forEach(card => {
+        // Build rows for top teams (or slice(0, 5) for top 5, or show all)
+        const topTeams = data.standings.slice(0, 5); // Change 5 to 16 if you want all teams listed
+        
+        let rowsHtml = `<div class="table-head"><span>${isGreek ? 'ΟΜΑΔΑ' : 'TEAM'}</span><span>${isGreek ? 'ΑΓ' : 'P'}</span><span>${isGreek ? 'Β' : 'PTS'}</span></div>`;
+        
+        topTeams.forEach(s => {
+          const highlight = s.is_aok ? ' style="background: rgba(18,59,131,0.12); font-weight: bold; color: #123b83;"' : '';
+          rowsHtml += `<div class="table-row"${highlight}>
+            <span>${s.pos}. ${getTeam(s.team, s.team_latin)}</span>
+            <span>${s.played}</span>
+            <span>${s.points}</span>
+          </div>`;
         });
-      }
+
+        // Replace the table content inside the card
+        const head = card.querySelector(".table-head");
+        const existingRow = card.querySelector(".table-row") || card.querySelector("div:nth-of-type(2)");
+        
+        if (head && existingRow) {
+          // If the container exists, replace existing rows
+          const container = head.parentElement;
+          const note = card.querySelector("p");
+          head.remove();
+          existingRow.remove();
+          if (note) {
+            note.insertAdjacentHTML("beforebegin", rowsHtml);
+          } else {
+            card.insertAdjacentHTML("beforeend", rowsHtml);
+          }
+        } else {
+          // Fallback direct innerHTML replacement
+          const title = card.querySelector("h3");
+          const link = card.querySelector("a");
+          const note = card.querySelector("p");
+          card.innerHTML = `<h3>${title ? title.textContent : (isGreek ? 'ΒΑΘΜΟΛΟΓΙΑ' : 'STANDINGS')}</h3>` + 
+                           rowsHtml + 
+                           (note ? `<p>${note.textContent}</p>` : '') + 
+                           (link ? link.outerHTML : '');
+        }
+      });
     }
 
     // 4. Full Standings Table (matches.html)
