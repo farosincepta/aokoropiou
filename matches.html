@@ -174,4 +174,84 @@
 
     <section class="editorial-section" id="standings">
       <div class="squad-heading">
-        <h3>ΒΑΘ
+        <h3>ΒΑΘΜΟΛΟΓΙΑ ΠΡΩΤΑΘΛΗΜΑΤΟΣ</h3>
+        <span>ΑΝΑΜΕΝΟΝΤΑΙ ΕΠΙΣΗΜΑ ΣΤΟΙΧΕΙΑ</span>
+      </div>
+      <div class="standings-wide">
+        <div class="standings-line heading"><span>ΘΕΣΗ</span><span>ΟΜΑΔΑ</span><span>ΑΓΩΝΕΣ</span><span>ΒΑΘΜΟΙ</span></div>
+        <div class="standings-line"><span>—</span><span>Α.Ο. ΚΟΡΩΠΙΟΥ</span><span>—</span><span>—</span></div>
+      </div>
+    </section>
+
+    <section class="editorial-section" id="results">
+      <div class="squad-heading"><h3>ΑΠΟΤΕΛΕΣΜΑΤΑ</h3></div>
+      <p class="lead">Τα επίσημα αποτελέσματα θα αναρτηθούν εδώ μόλις επιβεβαιωθούν.</p>
+      <a class="blue-btn" href="match-detail.html">ΔΕΙΤΕ ΕΝΔΕΙΚΤΙΚΗ ΚΑΡΤΕΛΑ ΑΓΩΝΑ →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <img alt="" src="assets/crest.png"/>
+      <div>
+        <strong>Α.Ο. ΚΟΡΩΠΙΟΥ</strong>
+        <p>1903 · Κορωπί, Αττική</p>
+        <small>Δοκιμαστική παρουσίαση. Δεν αποτελεί επίσημη ιστοσελίδα του συλλόγου.</small>
+      </div>
+      <a href="index.html">ΑΡΧΙΚΗ ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    window.AOK_I18N={"home": "Αρχική", "matches": "Αγώνες", "news": "Νέα", "team": "Ομάδα", "more": "Μενού", "install": "ΕΓΚΑΤΑΣΤΑΣΗ ΕΦΑΡΜΟΓΗΣ", "installhint": "Προσθέστε τον Α.Ο. Κορωπίου στο κινητό σας", "ios": "Σε iPhone: πατήστε Κοινή χρήση → Προσθήκη στην οθόνη Αφετηρίας (ή Άνοιγμα ως εφαρμογή).", "android": "Από το μενού του προγράμματος περιήγησης επιλέξτε Εγκατάσταση εφαρμογής.", "installed": "Η εφαρμογή είναι ήδη εγκατεστημένη.", "notify": "ΕΙΔΟΠΟΙΗΣΕΙΣ", "notifyhint": "Ενημερώσεις συλλόγου, υπενθυμίσεις αγώνων και αποτελέσματα.", "enable": "Ενεργοποίηση ειδοποιήσεων", "unsupported": "Αυτό το πρόγραμμα περιήγησης δεν υποστηρίζει ειδοποιήσεις push.", "needs": "Οι πραγματικές ειδοποιήσεις θα ενεργοποιηθούν όταν συνδεθεί η υπηρεσία αποστολής του συλλόγου.", "denied": "Οι ειδοποιήσεις είναι απενεργοποιημένες στις ρυθμίσεις της συσκευής.", "granted": "Η άδεια ειδοποιήσεων ενεργοποιήθηκε. Η αποστολή απαιτεί σύνδεση με υπηρεσία push.", "offline": "Είστε εκτός σύνδεσης — εμφανίζεται αποθηκευμένο περιεχόμενο.", "online": "Η σύνδεση αποκαταστάθηκε.", "mc": "ΚΕΝΤΡΟ ΑΓΩΝΩΝ", "fixtures": "Πρόγραμμα", "results": "Αποτελέσματα", "standings": "Βαθμολογία", "pending": "Αναμένονται επιβεβαιωμένα στοιχεία αγώνων. Δεν εμφανίζονται πραγματικά αποτελέσματα.", "view": "Δείτε το κέντρο αγώνων", "demo": "Δοκιμαστική παρουσίαση — όχι επίσημα δεδομένα."};
+  </script>
+  
+  <script>
+    (function() {
+      fetch('data/epsana.json?v=' + Date.now())
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (!data || !data.fixtures) return;
+          var container = document.querySelector('.fixture-list');
+          if (!container) return;
+          var html = '';
+          data.fixtures.forEach(function(m) {
+            var dateParts = m.date ? m.date.split('-') : [];
+            var day = dateParts.length === 3 ? dateParts[2] : '—';
+            var formattedDate = dateParts.length === 3 ? (dateParts[2] + '/' + dateParts[1] + '/' + dateParts[0]) : '';
+            var timeStr = m.time ? (' • ' + m.time) : '';
+            var scoreText = 'VS';
+            if (m.score && m.score.length === 2 && m.score[0] !== null) {
+              scoreText = m.score[0] + ' - ' + m.score[1];
+            }
+            html += '<div class="fixture-row">' +
+              '<div class="fixture-date"><strong>' + day + '</strong><small>ΑΓΩΝΙΣΤΙΚΗ ' + (m.round || '') + '</small></div>' +
+              '<div class="fixture-teams">' +
+                '<img alt="" src="assets/crest.png"/><strong>' + m.home + '</strong>' +
+                '<span>' + scoreText + '</span>' +
+                '<strong>' + m.away + '</strong>' +
+              '</div>' +
+              '<div class="fixture-meta">' + formattedDate + timeStr + '<br/><b>' + (m.venue || '') + '</b></div>' +
+              '<a class="fixture-details-link" href="' + (m.detail_url || 'match-detail.html') + '">ΛΕΠΤΟΜΕΡΕΙΕΣ ΑΓΩΝΑ →</a>' +
+            '</div>';
+          });
+          if (html) container.innerHTML = html;
+        })
+        .catch(function(err) {
+          console.warn('Could not refresh fixture schedule:', err);
+        });
+    })();
+  </script>
+
+  <script src="script.js"></script>
+  <nav aria-label="Mobile app navigation" class="aok-app-nav">
+    <a href="index.html"><span class="aok-nav-symbol">⌂</span><span>Αρχική</span></a>
+    <a aria-current="page" href="matches.html"><span class="aok-nav-symbol">⚽</span><span>Αγώνες</span></a>
+    <a href="news.html"><span class="aok-nav-symbol">▤</span><span>Νέα</span></a>
+    <a href="team.html"><span class="aok-nav-symbol">♙</span><span>Ομάδα</span></a>
+    <a href="contact.html"><span class="aok-nav-symbol">☰</span><span>Μενού</span></a>
+  </nav>
+  <script defer="True" src="install-guide.js"></script>
+  <script src="live-match.js" defer></script>
+</body>
+</html>
