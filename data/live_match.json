@@ -1,27 +1,25 @@
 {
   "updated_at": "2026-10-15T18:00:00Z",
-  "next_match": {
+  "recent_match": {
+    "date": "18/10/2026",
     "home": "ΑΟ ΚΟΡΩΠΙ",
+    "home_latin": "AO Koropi",
     "away": "ΠΑΝΒΟΡΕΙΑΚΟΣ ΑΣ",
-    "home_latin": "AO KOROPI",
-    "away_latin": "PANVOREIAKOS AS",
-    "venue": "Κορωπίου «Αντώνης Πρίφτης»",
-    "venue_latin": "Koropi «Antonis Priftis»",
-    "date": "18/10/26",
-    "time": "16:00",
-    "score": null,
+    "away_latin": "Panvoreiakos AS",
+    "score": "2 - 0",
+    "venue": "Κορωπίου Αντώνης Πρίφτης",
+    "venue_latin": "Antonis Priftis Stadium, Koropi",
     "is_home": true
   },
-  "recent_match": {
-    "home": "ΔΙΟΝΥΣΟΣ ΑΤΤΙΚΗΣ",
+  "next_match": {
+    "date": "24/10/2026",
+    "time": "15:00",
+    "home": "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ",
+    "home_latin": "APS Olympiakos Varis",
     "away": "ΑΟ ΚΟΡΩΠΙ",
-    "home_latin": "DIONYSOS ATTIKIS",
-    "away_latin": "AO KOROPI",
-    "venue": "Διονύσου",
-    "venue_latin": "Dionysos",
-    "date": "10/10/26",
-    "time": "16:15",
-    "score": "3 - 4",
+    "away_latin": "AO Koropi",
+    "venue": "Βάρης",
+    "venue_latin": "Vari Municipal Stadium",
     "is_home": false
   },
   "recent_match_details": {
