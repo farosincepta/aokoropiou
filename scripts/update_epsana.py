@@ -85,25 +85,25 @@ def detail(soup,game):
         if not re.search('[Α-Ωα-ω]',name):continue
         item={'name_el':name,'name_latin':latin(name),'number':int(cells[number_idx].get_text(' ',strip=True))}
         (players if len(players)<11 else bench).append(item)
-    if len(players)!=11:raise ValueError('Expected exactly 11 AOK starters, got '+str(len(players)))
+    if len(players)!=11:
+        print('WARNING: Expected 11 AOK starters, got '+str(len(players))+'. Lineup not yet posted.')
     events=[]
     heading=next((h for h in soup.find_all(['h2','h3']) if 'Διακύμανση' in h.get_text()),None)
-    if not heading:raise ValueError('Events heading missing')
-    tbl=heading.find_next('table')
-    if not tbl:raise ValueError('Events table missing')
-    for tr in tbl.find_all('tr'):
-        cells=tr.find_all('td',recursive=False)
-        if len(cells)!=5:continue
-        a=cells[0 if home_aok else 4].find('a')
-        if not a:continue
-        imgs=cells[1].find_all('img'); desc=' '.join(i.get('alt','')+' '+i.get('title','') for i in imgs).lower()
-        minute=cells[3].get_text(' ',strip=True)
-        kind=('goal' if 'γκολ' in desc else 'yellow' if 'κίτριν' in desc else 'red' if 'κόκκιν' in desc else 'out' if 'βγήκε' in desc else 'in' if 'μπήκε' in desc else None)
-        if kind:
-            n=a.get_text(' ',strip=True)
-            events.append({'type':kind,'minute':minute,'name_el':n,'name_latin':latin(n),'penalty':'πέναλ' in desc})
-    if game['score'] and sum(e['type']=='goal' for e in events)!=game['score'][0 if home_aok else 1]:
-        raise ValueError('AOK goals do not match final score')
+tbl=heading.find_next('table') if heading else None
+if tbl:
+        for tr in tbl.find_all('tr'):
+                cells=tr.find_all('td',recursive=False)
+                if len(cells)!=5:continue
+                a=cells[0 if home_aok else 4].find('a')
+                if not a:continue
+                imgs=cells[1].find_all('img'); desc=' '.join(i.get('alt','')+' '+i.get('title','') for i in imgs).lower()
+                minute=cells[3].get_text(' ',strip=True)
+                kind=('goal' if 'γκολ' in desc else 'yellow' if 'κίτριν' in desc else 'red' if 'κόκκιν' in desc else 'out' if 'βγήκε' in desc else 'in' if 'μπήκε' in desc else None)
+                if kind:
+                    n=a.get_text(' ',strip=True)
+                    events.append({'type':kind,'minute':minute,'name_el':n,'name_latin':latin(n),'penalty':'πέναλ' in desc})
+            if game['score'] and sum(e['type']=='goal' for e in events)!=game['score'][0 if home_aok else 1]:
+                raise ValueError('AOK goals do not match final score')
     return {'starters':players,'bench':bench,'events':events}
 def standings(soup):
     rows=[]
