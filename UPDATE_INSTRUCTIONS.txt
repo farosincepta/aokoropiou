@@ -1,0 +1,1 @@
+Upload the CONTENTS of this folder to your GitHub repository root. Enable GitHub Actions, then run "Update official EPSANA data" using Run workflow. The site reads data/epsana.json, refreshed by the workflow. EPSANA must be reachable by GitHub Actions. Until its first successful run, official data cannot be displayed.
