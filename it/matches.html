@@ -1,3 +1,259 @@
 <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Presentazione dimostrativa del sito web dell'A.O. Koropiou" name="description"/>
+  <title>A.O. Koropiou | PARTITE</title>
+  <link href="../styles.css" rel="stylesheet"/>
+  <link href="../manifest.webmanifest" rel="manifest"/>
+  <meta content="#123b83" name="theme-color"/>
+  <link href="../icon-192.png" rel="apple-touch-icon"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="default" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="../matches.html" hreflang="el" rel="alternate"/>
+  <link href="../en/matches.html" hreflang="en" rel="alternate"/>
+  <link href="../es/matches.html" hreflang="es" rel="alternate"/>
+  <link href="matches.html" hreflang="it" rel="alternate"/>
+  <link href="../de/matches.html" hreflang="de" rel="alternate"/>
+  <script>
+    window.AOK_INSTALL_LABELS={"install": "Installa app AOK", "ios": "Su iPhone: apri la pagina in Safari, tocca Condividi (quadrato con freccia), seleziona «Aggiungi alla schermata Home», attiva «Apri come app web» se visibile e tocca «Aggiungi».", "android": "Su Android: apri il menu di Chrome (⋮) e seleziona «Installa app» o «Aggiungi a schermata Home».", "done": "L'app è già installata.", "close": "Chiudi", "how": "Istruzioni per iPhone e Android"};
+    window.AOK_GIVING_LABELS={"needs": "Stato delle necessità", "status": "Stato", "progress": "Copertura", "pending": "In attesa di comunicazione ufficiale del club", "completed": "Completato", "active": "In corso", "target": "Obiettivo", "secured": "Garantito", "update": "Ultimo aggiornamento", "next": "Prossimo aggiornamento", "estimated": "Conclusione stimata", "report": "Rendiconto", "offers": "Beni o supporto necessari", "updates": "Aggiornamenti sui progressi", "sponsors": "Sponsor approvati", "no_sponsors": "Nessuna scheda sponsor approvata al momento.", "history": "Storico dei contributi", "privacy": "Vengono pubblicati solo dati con autorizzazione documentata dello sponsor.", "contact": "Per correggere o rimuovere dati pubblicati:", "support": "Supporto alla prima squadra maschile", "support_text": "Esempi: costi operativi, abbigliamento tecnico, trasferte, quote campionati e materiale per allenamenti. Gli obiettivi specifici saranno annunciati dal club.", "confirm": "Questa è una proposta di supporto, non un pagamento né una donazione definitiva. Il club vi ricontatterà per la conferma operativa.", "payments": "Non si effettuano pagamenti su questo sito web. Pagamenti sicuri e documenti fiscali saranno gestiti unicamente dal club.", "consent": "Desidero essere contattato dal club per un eventuale riconoscimento pubblico (non costituisce consenso automatico alla pubblicazione)."};
+  </script>
+</head>
+<body>
+  <div class="aok-connection" hidden="" id="aok-connection"></div>
+  <div class="demo">SITO DIMOSTRATIVO · Contenuto di esempio — comunicazioni non ufficiali</div>
+  
+  <header class="header">
+    <div class="wrap nav-row">
+      <a aria-label="Home" class="logo" href="index.html"><img alt="Stemma A.O. Koropiou" src="../assets/crest.png"/></a>
+      <button aria-controls="nav" aria-expanded="false" aria-label="Menu" class="menu-btn">☰</button>
+      <nav id="nav">
+        <a class="" href="index.html">HOME</a>
+        <a class="" href="news.html">NOTIZIE</a>
+        <a class="" href="team.html">SQUADRA</a>
+        <a class="active" href="matches.html">PARTITE</a>
+        <a class="" href="academy.html">SETTORE GIOVANILE</a>
+        <a class="" href="history.html">STORIA</a>
+        <a href="stadium.html">STADIO</a>
+        <a class="" href="sponsors.html">SPONSOR</a>
+        <a class="" href="contact.html">CONTATTI</a>
+      </nav>
+    </div>
+    <div class="wrap aok-header-bottom-wrap">
+      <div class="header-tools aok-header-bottom">
+        <a aria-label="Facebook" class="social-icon" href="https://www.facebook.com/profile.php?id=61566966989607" rel="noopener noreferrer" target="_blank" title="Facebook">
+          <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"></path></svg>
+        </a>
+        <a aria-label="Instagram" class="social-icon" href="https://www.instagram.com/ao_koropi_1903/" rel="noopener noreferrer" target="_blank" title="Instagram">
+          <svg aria-hidden="true" viewbox="0 0 24 24"><rect fill="none" height="19" rx="5" stroke="currentColor" stroke-width="2" width="19" x="2.5" y="2.5"></rect><circle cx="12" cy="12" fill="none" r="4" stroke="currentColor" stroke-width="2"></circle><circle cx="17.8" cy="6.3" r="1.2"></circle></svg>
+        </a>
+        <div aria-label="Language / Lingua / Sprache / Γλώσσα / Idioma" class="language-switch">
+          <a aria-label="Ελληνικά" class="lang-el" href="../matches.html" lang="el" title="Ελληνικά"><img alt="Ελληνικά" height="18" src="../assets/flag-gr.svg" width="27"/></a>
+          <a aria-label="English" class="lang-en" href="../en/matches.html" lang="en" title="English"><img alt="English" height="18" src="../assets/flag-en.svg" width="27"/></a>
+          <a aria-label="Español" class="lang-es" href="../es/matches.html" lang="es" title="Español"><img alt="Español" height="18" src="../assets/flag-es.svg" width="27"/></a>
+          <a aria-current="page" aria-label="Italiano" class="lang-it" href="matches.html" lang="it" title="Italiano"><img alt="Italiano" height="18" src="../assets/flag-it.svg" width="27"/></a>
+          <a aria-label="Deutsch" class="lang-de" href="../de/matches.html" lang="de" title="Deutsch"><img alt="Deutsch" height="18" src="../assets/flag-de.svg" width="27"/></a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="Sito dimostrativo dell’A.O. Koropiou" name="description"/><title>A.O. Koropiou | PARTITE</title><link href="../styles.css" rel="stylesheet"/><link href="../manifest.webmanifest" rel="manifest"/><meta content="#123b83" name="theme-color"/><link href="../icon-192.png" rel="apple-touch-icon"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="default" name="apple-mobile-web-app-status-bar-style"/><link href="../matches.html" hreflang="el" rel="alternate"/><link href="../en/matches.html" hreflang="en" rel="alternate"/><link href="../es/matches.html" hreflang="es" rel="alternate"/><link href="matches.html" hreflang="it" rel="alternate"/><link href="../de/matches.html" hreflang="de" rel="alternate"/><script>window.AOK_INSTALL_LABELS={"install": "Installa l’app AOK", "ios": "Su iPhone: apri il sito in Safari, tocca Condividi (quadrato con freccia), scegli «Aggiungi alla schermata Home», attiva «Apri come app web» se disponibile e tocca «Aggiungi».", "android": "Su Android: apri il menu Chrome (⋮) e scegli «Installa app» o «Aggiungi a schermata Home».", "done": "L’app è già installata.", "close": "Chiudi", "how": "Istruzioni per iPhone e Android"};window.AOK_GIVING_LABELS={"needs": "Avanzamento delle necessità", "status": "Stato", "progress": "Copertura", "pending": "In attesa di dati ufficiali del club", "completed": "Completato", "active": "In corso", "target": "Obiettivo", "secured": "Raccolto", "update": "Ultimo aggiornamento", "next": "Prossimo aggiornamento", "estimated": "Completamento previsto", "report": "Resoconto", "offers": "Materiali o aiuti richiesti", "updates": "Aggiornamenti", "sponsors": "Sponsor approvati", "no_sponsors": "Non ci sono ancora profili sponsor approvati.", "history": "Storico dei contributi", "privacy": "Sono pubblicati solo i dati autorizzati e documentati.", "contact": "Per correggere o rimuovere dati pubblicati:", "support": "Sostegno alla squadra maschile", "support_text": "Spese operative, attrezzature, trasferte, competizioni, allenamenti e altre esigenze. Obiettivi da confermare dal club.", "confirm": "Questa è una proposta di contributo, non un pagamento né una donazione confermata. Il club contatterà il richiedente.", "payments": "Il sito non riceve pagamenti. Pagamenti sicuri e ricevute richiedono l’attivazione da parte del club.", "consent": "Il club può contattarmi per un eventuale riconoscimento pubblico (non autorizza la pubblicazione)."};</script></head><body><div class="aok-connection" hidden="" id="aok-connection"></div><div class="demo">SITO DIMOSTRATIVO · Contenuti di esempio — non sono comunicazioni ufficiali</div><header class="header"><div class="wrap nav-row"><a aria-label="Inizio" class="logo" href="index.html"><img alt="A.O. Koropiou crest" src="../assets/crest.png"/></a><button aria-controls="nav" aria-expanded="false" aria-label="Menu" class="menu-btn">☰</button><nav id="nav"><a class="" href="index.html">INIZIO</a><a class="" href="news.html">NOTIZIE</a><a class="" href="team.html">SQUADRA</a><a class="active" href="matches.html">PARTITE</a><a class="" href="academy.html">SETTORE GIOVANILE</a><a class="" href="history.html">STORIA</a><a href="stadium.html">STADIO</a><a class="" href="sponsors.html">SPONSOR</a><a class="" href="contact.html">CONTATTI</a></nav></div><div class="wrap aok-header-bottom-wrap"><div class="header-tools aok-header-bottom"><a aria-label="Facebook" class="social-icon" href="https://www.facebook.com/profile.php?id=61566966989607" rel="noopener noreferrer" target="_blank" title="Facebook"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"></path></svg></a><a aria-label="Instagram" class="social-icon" href="https://www.instagram.com/ao_koropi_1903/" rel="noopener noreferrer" target="_blank" title="Instagram"><svg aria-hidden="true" viewbox="0 0 24 24"><rect fill="none" height="19" rx="5" stroke="currentColor" stroke-width="2" width="19" x="2.5" y="2.5"></rect><circle cx="12" cy="12" fill="none" r="4" stroke="currentColor" stroke-width="2"></circle><circle cx="17.8" cy="6.3" r="1.2"></circle></svg></a><div aria-label="Language / Lingua / Sprache / Γλώσσα / Idioma" class="language-switch"><a aria-label="Ελληνικά" class="lang-el" href="../matches.html" lang="el" title="Ελληνικά"><img alt="Ελληνικά" height="18" src="../assets/flag-gr.svg" width="27"/></a><a aria-label="English" class="lang-en" href="../en/matches.html" lang="en" title="English"><img alt="English" height="18" src="../assets/flag-en.svg" width="27"/></a><a aria-label="Español" class="lang-es" href="../es/matches.html" lang="es" title="Español"><img alt="Español" height="18" src="../assets/flag-es.svg" width="27"/></a><a aria-current="page" aria-label="Italiano" class="lang-it" href="matches.html" lang="it" title="Italiano"><img alt="Italiano" height="18" src="../assets/flag-it.svg" width="27"/></a><a aria-label="Deutsch" class="lang-de" href="../de/matches.html" lang="de" title="Deutsch"><img alt="Deutsch" height="18" src="../assets/flag-de.svg" width="27"/></a></div></div></div></header><div class="aok-v15-links"><div class="wrap"><a href="academy-registration.html">Iscrizioni all’accademia</a><a href="parents.html">Informazioni per i genitori</a><a href="support.html">Sostieni AOK</a><a href="giving.html">Sponsorizzazioni e contributi</a><a href="partnership.html">Diventa partner</a><a href="leadership.html">Dirigenza e visione</a><a href="media-gallery.html">Foto e video</a><a href="store.html">AOK STORE</a></div></div><section class="page-banner"><div class="wrap"><span>A.O. KOROPIOU / PARTITE</span><h1>PARTITE</h1></div></section><main class="wrap inner-page redesign-page"><section class="editorial-intro"><span class="squad-kicker">CENTRO PARTITE</span><h2>TUTTO IL CALCIO IN CAMPO</h2><p class="lead">Risultati, prossime partite, calendario e classifica — tutto in un unico posto.</p><div class="info-ribbon">PRESENTAZIONE DIMOSTRATIVA · Nessun risultato o data ufficiale inseriti.</div><div class="match-quicklinks"><a href="#programme">CALENDARIO</a><a href="#results">RISULTATI</a><a href="#standings">CLASSIFICA</a></div></section><section class="match-center inner-matches"><div class="match-card"><h3>ULTIMA PARTITA</h3><p>Risultato ufficiale in attesa</p><div class="versus"><span><img alt="" src="../assets/crest.png"/><b>A.O. KOROPIOU</b></span><strong>– : –</strong><span><i class="other-crest">?</i><b>AVVERSARIO</b></span></div><small>Nessun risultato comunicato</small></div><div class="match-card next"><h3>PROSSIMA PARTITA</h3><p>Data da confermare</p><div class="versus"><span><img alt="" src="../assets/crest.png"/><b>A.O. KOROPIOU</b></span><strong>VS</strong><span><i class="other-crest">?</i><b>AVVERSARIO</b></span></div><small>Il calendario sarà aggiornato presto</small></div><div class="match-card standings" id="standings"><h3>CLASSIFICA</h3><div class="table-head"><span>SQUADRA</span><span>P</span><span>PUNTI</span></div><div class="table-row"><span>A.O. KOROPIOU</span><span>—</span><span>—</span></div><p>In attesa della classifica ufficiale</p></div></section><section class="editorial-section" id="programme"><div id="aok-epsana-auto"></div><div class="squad-heading"><h3>CALENDARIO PARTITE</h3><span>STRUTTURA DI ESEMPIO</span></div><div class="fixture-list"><div class="fixture-row"><div class="fixture-date"><strong>—</strong><small>GIORNATA 1</small></div><div class="fixture-teams"><img alt="" src="../assets/crest.png"/><strong>A.O. KOROPIOU</strong><span>VS</span><strong>AVVERSARIO</strong><span class="fixture-question">?</span></div><div class="fixture-meta">DATA E ORA<br/><b>DA COMUNICARE</b></div><a class="fixture-details-link" href="match-detail.html">DETTAGLI PARTITA →</a></div><div class="fixture-row"><div class="fixture-date"><strong>—</strong><small>GIORNATA 2</small></div><div class="fixture-teams"><img alt="" src="../assets/crest.png"/><strong>A.O. KOROPIOU</strong><span>VS</span><strong>AVVERSARIO</strong><span class="fixture-question">?</span></div><div class="fixture-meta">DATA E ORA<br/><b>DA COMUNICARE</b></div><a class="fixture-details-link" href="match-detail.html">DETTAGLI PARTITA →</a></div><div class="fixture-row"><div class="fixture-date"><strong>—</strong><small>GIORNATA 3</small></div><div class="fixture-teams"><img alt="" src="../assets/crest.png"/><strong>A.O. KOROPIOU</strong><span>VS</span><strong>AVVERSARIO</strong><span class="fixture-question">?</span></div><div class="fixture-meta">DATA E ORA<br/><b>DA COMUNICARE</b></div><a class="fixture-details-link" href="match-detail.html">DETTAGLI PARTITA →</a></div><div class="fixture-row"><div class="fixture-date"><strong>—</strong><small>GIORNATA 4</small></div><div class="fixture-teams"><img alt="" src="../assets/crest.png"/><strong>A.O. KOROPIOU</strong><span>VS</span><strong>AVVERSARIO</strong><span class="fixture-question">?</span></div><div class="fixture-meta">DATA E ORA<br/><b>DA COMUNICARE</b></div><a class="fixture-details-link" href="match-detail.html">DETTAGLI PARTITA →</a></div></div></section><section class="editorial-section" id="standings"><div class="squad-heading"><h3>CLASSIFICA DEL CAMPIONATO</h3><span>IN ATTESA DI INFORMAZIONI UFFICIALI</span></div><div class="standings-wide"><div class="standings-line heading"><span>POSIZIONE</span><span>SQUADRA</span><span>PARTITE</span><span>PUNTI</span></div><div class="standings-line"><span>—</span><span>A.O. KOROPIOU</span><span>—</span><span>—</span></div></div></section><section class="editorial-section" id="results"><div class="squad-heading"><h3>RISULTATI</h3></div><p class="lead">I risultati ufficiali appariranno qui dopo la conferma.</p><a class="blue-btn" href="match-detail.html">VEDI DETTAGLI PARTITA DI ESEMPIO →</a></section></main><footer><div class="wrap footer-grid"><img alt="" src="../assets/crest.png"/><div><strong>A.O. KOROPIOU</strong><p>1903 · Koropi, Attica</p><small>Sito dimostrativo. Questo non è il sito ufficiale della società.</small></div><a href="index.html">INIZIO ↗</a></div></footer><script>window.AOK_I18N={"home": "Inizio", "matches": "Partite", "news": "Notizie", "team": "Squadra", "more": "Menu", "install": "INSTALLA L'APP", "installhint": "Aggiungi l'A.O. Koropiou al tuo telefono", "ios": "Su iPhone: tocca Condividi → Aggiungi alla schermata Home (oppure Apri come app web).", "android": "Apri il menu del browser e scegli Installa app.", "installed": "L'app è già installata.", "notify": "NOTIFICHE", "notifyhint": "Comunicati del club, promemoria e risultati.", "enable": "Attiva notifiche", "unsupported": "Questo browser non supporta le notifiche push.", "needs": "Gli avvisi saranno disponibili quando il club attiverà il servizio di notifiche.", "denied": "Le notifiche sono bloccate nelle impostazioni del dispositivo.", "granted": "Autorizzazione concessa. Per ricevere avvisi è necessario un servizio push.", "offline": "Sei offline — vengono mostrati i contenuti salvati.", "online": "Connessione ripristinata.", "mc": "CENTRO PARTITE", "fixtures": "Calendario", "results": "Risultati", "standings": "Classifica", "pending": "In attesa di informazioni verificate sulle partite. Non sono mostrati risultati reali.", "view": "Apri il centro partite", "demo": "Solo dimostrazione — dati non ufficiali."};</script><script src="../script.js"></script><nav aria-label="Mobile app navigation" class="aok-app-nav"><a href="index.html"><span class="aok-nav-symbol">⌂</span><span>Inizio</span></a><a aria-current="page" href="matches.html"><span class="aok-nav-symbol">⚽</span><span>Partite</span></a><a href="news.html"><span class="aok-nav-symbol">▤</span><span>Notizie</span></a><a href="team.html"><span class="aok-nav-symbol">♙</span><span>Squadra</span></a><a href="contact.html"><span class="aok-nav-symbol">☰</span><span>Menu</span></a></nav><script defer="True" src="../install-guide.js"></script><script defer="" src="../epsana-display.js"></script></body></html>
+  <div class="aok-v15-links">
+    <div class="wrap">
+      <a href="academy-registration.html">Iscrizioni settore giovanile</a>
+      <a href="parents.html">Informazioni per le famiglie</a>
+      <a href="support.html">Sostieni l'AOK</a>
+      <a href="giving.html">Sponsorizzazioni e donazioni</a>
+      <a href="partnership.html">Diventa partner</a>
+      <a href="leadership.html">Dirigenza e visione</a>
+      <a href="media-gallery.html">Foto e video</a>
+      <a href="store.html">AOK STORE</a>
+    </div>
+  </div>
+
+  <section class="page-banner">
+    <div class="wrap">
+      <span>A.O. KOROPIOU / PARTITE</span>
+      <h1>PARTITE</h1>
+    </div>
+  </section>
+
+  <main class="wrap inner-page redesign-page">
+    <section class="editorial-intro">
+      <span class="squad-kicker">MATCH CENTER</span>
+      <h2>TUTTA L'AZIONE DEL CAMPIONATO</h2>
+      <p class="lead">Risultati, prossimi impegni, calendario e classifica — in un unico spazio.</p>
+      <div class="info-ribbon">PRESENTAZIONE DIMOSTRATIVA · Non sono stati inseriti risultati o date ufficiali.</div>
+      <div class="match-quicklinks">
+        <a href="#programme">CALENDARIO</a>
+        <a href="#results">RISULTATI</a>
+        <a href="#standings">CLASSIFICA</a>
+      </div>
+    </section>
+
+    <section class="match-center inner-matches">
+      <div class="match-card">
+        <h3>ULTIMA PARTITA</h3>
+        <p>Risultato ufficiale in attesa</p>
+        <div class="versus">
+          <span><img alt="" src="../assets/crest.png"/><b>A.O. KOROPIOU</b></span>
+          <strong>– : –</strong>
+          <span><i class="other-crest">?</i><b>AVVERSARIO</b></span>
+        </div>
+        <small>Nessun risultato annunciato</small>
+      </div>
+      <div class="match-card next">
+        <h3>PROSSIMA PARTITA</h3>
+        <p>Data da confermare</p>
+        <div class="versus">
+          <span><img alt="" src="../assets/crest.png"/><b>A.O. KOROPIOU</b></span>
+          <strong>VS</strong>
+          <span><i class="other-crest">?</i><b>AVVERSARIO</b></span>
+        </div>
+        <small>Il calendario sarà aggiornato a breve</small>
+      </div>
+      <div class="match-card standings" id="standings">
+        <h3>CLASSIFICA</h3>
+        <div class="table-head"><span>SQUADRA</span><span>G</span><span>PT</span></div>
+        <div class="table-row"><span>A.O. KOROPIOU</span><span>—</span><span>—</span></div>
+        <p>In attesa della classifica ufficiale</p>
+      </div>
+    </section>
+
+    <section class="editorial-section" id="programme">
+      <div id="aok-epsana-auto"></div>
+      <div class="squad-heading">
+        <h3>CALENDARIO INCONTRI</h3>
+        <span>STRUTTURA DIMOSTRATIVA</span>
+      </div>
+      <div class="fixture-list">
+        <div class="fixture-row">
+          <div class="fixture-date"><strong>—</strong><small>GIORNATA 1</small></div>
+          <div class="fixture-teams">
+            <img alt="" src="../assets/crest.png"/><strong>A.O. KOROPIOU</strong>
+            <span>VS</span>
+            <strong>AVVERSARIO</strong><span class="fixture-question">?</span>
+          </div>
+          <div class="fixture-meta">DATA E ORA<br/><b>DA DEFINIRE</b></div>
+          <a class="fixture-details-link" href="match-detail.html">DETTAGLI PARTITA →</a>
+        </div>
+        <div class="fixture-row">
+          <div class="fixture-date"><strong>—</strong><small>GIORNATA 2</small></div>
+          <div class="fixture-teams">
+            <img alt="" src="../assets/crest.png"/><strong>A.O. KOROPIOU</strong>
+            <span>VS</span>
+            <strong>AVVERSARIO</strong><span class="fixture-question">?</span>
+          </div>
+          <div class="fixture-meta">DATA E ORA<br/><b>DA DEFINIRE</b></div>
+          <a class="fixture-details-link" href="match-detail.html">DETTAGLI PARTITA →</a>
+        </div>
+        <div class="fixture-row">
+          <div class="fixture-date"><strong>—</strong><small>GIORNATA 3</small></div>
+          <div class="fixture-teams">
+            <img alt="" src="../assets/crest.png"/><strong>A.O. KOROPIOU</strong>
+            <span>VS</span>
+            <strong>AVVERSARIO</strong><span class="fixture-question">?</span>
+          </div>
+          <div class="fixture-meta">DATA E ORA<br/><b>DA DEFINIRE</b></div>
+          <a class="fixture-details-link" href="match-detail.html">DETTAGLI PARTITA →</a>
+        </div>
+        <div class="fixture-row">
+          <div class="fixture-date"><strong>—</strong><small>GIORNATA 4</small></div>
+          <div class="fixture-teams">
+            <img alt="" src="../assets/crest.png"/><strong>A.O. KOROPIOU</strong>
+            <span>VS</span>
+            <strong>AVVERSARIO</strong><span class="fixture-question">?</span>
+          </div>
+          <div class="fixture-meta">DATA E ORA<br/><b>DA DEFINIRE</b></div>
+          <a class="fixture-details-link" href="match-detail.html">DETTAGLI PARTITA →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial-section" id="standings">
+      <div class="squad-heading">
+        <h3>CLASSIFICA DI CAMPIONATO</h3>
+        <span>DATI UFFICIALI IN ATTESA</span>
+      </div>
+      <div class="standings-wide">
+        <div class="standings-line heading"><span>POSIZIONE</span><span>SQUADRA</span><span>PARTITE</span><span>PUNTI</span></div>
+        <div class="standings-line"><span>—</span><span>A.O. KOROPIOU</span><span>—</span><span>—</span></div>
+      </div>
+    </section>
+
+    <section class="editorial-section" id="results">
+      <div class="squad-heading"><h3>RISULTATI</h3></div>
+      <p class="lead">I risultati ufficiali verranno pubblicati non appena confermati.</p>
+      <a class="blue-btn" href="match-detail.html">VEDI SCHEDA PARTITA DIMOSTRATIVA →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <img alt="" src="../assets/crest.png"/>
+      <div>
+        <strong>A.O. KOROPIOU</strong>
+        <p>1903 · Koropi, Attica</p>
+        <small>Presentazione dimostrativa. Non è il sito ufficiale della società.</small>
+      </div>
+      <a href="index.html">HOME ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    window.AOK_I18N={"home": "Home", "matches": "Partite", "news": "Notizie", "team": "Squadra", "more": "Menu", "install": "INSTALLA L'APP", "installhint": "Aggiungi A.O. Koropiou sul tuo smartphone", "ios": "Su iPhone: tocca Condividi → Aggiungi alla schermata Home (o Apri come app web).", "android": "Dal menu del browser seleziona Installa app.", "installed": "L'app è già installata.", "notify": "NOTIFICHE", "notifyhint": "Novità della squadra, promemoria gare e risultati.", "enable": "Attiva notifiche", "unsupported": "Questo browser non supporta le notifiche push.", "needs": "Le notifiche effettive saranno attive non appena il servizio sarà collegato.", "denied": "Le notifiche sono disattivate nelle impostazioni del dispositivo.", "granted": "Permesso notifiche accordato. L'invio richiede collegamento push.", "offline": "Sei offline — visualizzazione contenuti salvati.", "online": "Connessione ripristinata.", "mc": "MATCH CENTER", "fixtures": "Calendario", "results": "Risultati", "standings": "Classifica", "pending": "Dati ufficiali in attesa di conferma. Nessun risultato effettivo mostrato.", "view": "Apri match center", "demo": "Presentazione dimostrativa — dati non ufficiali."};
+  </script>
+
+  <script src="../script.js"></script>
+  <nav aria-label="Mobile app navigation" class="aok-app-nav">
+    <a href="index.html"><span class="aok-nav-symbol">⌂</span><span>Home</span></a>
+    <a aria-current="page" href="matches.html"><span class="aok-nav-symbol">⚽</span><span>Partite</span></a>
+    <a href="news.html"><span class="aok-nav-symbol">▤</span><span>Notizie</span></a>
+    <a href="team.html"><span class="aok-nav-symbol">♙</span><span>Squadra</span></a>
+    <a href="contact.html"><span class="aok-nav-symbol">☰</span><span>Menu</span></a>
+  </nav>
+  <script defer="True" src="../install-guide.js"></script>
+  <script defer src="../epsana-display.js"></script>
+  <script defer src="../live-match.js"></script>
+
+  <script>
+    (function() {
+      function updateScore() {
+        var rows = document.querySelectorAll('.fixture-row');
+        rows.forEach(function(row) {
+          var t = (row.textContent || '').toUpperCase();
+          if (
+            (t.indexOf('GIORNATA 4') !== -1 || t.indexOf('MATCHDAY 4') !== -1 || t.indexOf('ΑΓΩΝΙΣΤΙΚΗ 4') !== -1 || t.indexOf('ROUND 4') !== -1) ||
+            (t.indexOf('PANVOREIAKOS') !== -1 || t.indexOf('PANBOREIAKOS') !== -1 || t.indexOf('ΠΑΝΒΟΡΕΙΑΚΟΣ') !== -1)
+          ) {
+            var spans = row.querySelectorAll('.fixture-teams span');
+            spans.forEach(function(s) {
+              if (s.textContent.trim() === 'VS') {
+                s.textContent = '2 - 0';
+              }
+            });
+          }
+        });
+      }
+
+      var observer = new MutationObserver(function() {
+        updateScore();
+      });
+
+      window.addEventListener('DOMContentLoaded', function() {
+        var target = document.querySelector('.fixture-list') || document.body;
+        observer.observe(target, { childList: true, subtree: true });
+        updateScore();
+      });
+
+      window.addEventListener('load', function() {
+        updateScore();
+        setTimeout(updateScore, 400);
+        setTimeout(updateScore, 1000);
+      });
+    })();
+  </script>
+</body>
+</html>
