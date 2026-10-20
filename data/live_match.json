@@ -1,76 +1,33 @@
 {
-  "updated_at": "2026-10-15T18:00:00Z",
-  "recent_match": {
-    "date": "18/10/2026",
-    "home": "ΑΟ ΚΟΡΩΠΙ",
-    "home_latin": "AO Koropi",
-    "away": "ΠΑΝΒΟΡΕΙΑΚΟΣ ΑΣ",
-    "away_latin": "Panvoreiakos AS",
-    "score": "2 - 0",
-    "venue": "Κορωπίου Αντώνης Πρίφτης",
-    "venue_latin": "Antonis Priftis Stadium, Koropi",
-    "is_home": true
+  "last_match": {
+    "date": "2026-10-18",
+    "time": "16:00",
+    "round": 4,
+    "home_team": "Α.Ο. ΚΟΡΩΠΙΟΥ",
+    "away_team": "ΠΑΝΒΟΡΕΙΑΚΟΣ ΑΣ",
+    "home_score": 2,
+    "away_score": 0,
+    "venue": "Κορωπίου «Αντώνης Πρίφτης»",
+    "status": "completed"
   },
   "next_match": {
-    "date": "24/10/2026",
+    "date": "2026-10-24",
     "time": "15:00",
-    "home": "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ",
-    "home_latin": "APS Olympiakos Varis",
-    "away": "ΑΟ ΚΟΡΩΠΙ",
-    "away_latin": "AO Koropi",
+    "round": 5,
+    "home_team": "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ",
+    "away_team": "Α.Ο. ΚΟΡΩΠΙΟΥ",
     "venue": "Βάρης",
-    "venue_latin": "Vari Municipal Stadium",
-    "is_home": false
+    "status": "upcoming"
   },
-  "recent_match_details": {
-    "scorers": [
-      { "player_el": "ΒΑΣΙΛΟΠΟΥΛΟΣ ΠΑΝΑΓΙΩΤΗΣ", "player_latin": "VASILOPOULOS PANAGIOTIS", "minute": "14" },
-      { "player_el": "ΜΠΟΥΡΜΠΟΥΛΗΣ ΜΟΣΧΟΝΑ ΓΕΡΑΣΙΜΟΣ", "player_latin": "MPOURMPOULIS MOSCHONA GERASIMOS", "minute": "50" },
-      { "player_el": "ΒΑΣΙΛΟΠΟΥΛΟΣ ΠΑΝΑΓΙΩΤΗΣ", "player_latin": "VASILOPOULOS PANAGIOTIS", "minute": "53" },
-      { "player_el": "ΒΑΣΙΛΟΠΟΥΛΟΣ ΠΑΝΑΓΙΩΤΗΣ", "player_latin": "VASILOPOULOS PANAGIOTIS", "minute": "90" }
-    ],
-    "lineup": [
-      { "number": "1", "name_el": "ΜΑΛΕΣΙΟΣ ΓΕΩΡΓΙΟΣ", "name_latin": "MALESIOS GEORGIOS" },
-      { "number": "2", "name_el": "ΝΑΝΑΙ ΦΑΜΠΙΟ", "name_latin": "NANAI FAMPio" },
-      { "number": "3", "name_el": "ΠΙΕΤΡΙ ΜΑΡΣΕΛ", "name_latin": "PIETRI MARSEL" },
-      { "number": "4", "name_el": "ΓΕΩΡΓΑΚΟΠΟΥΛΟΣ ΧΑΡΑΛΑΜΠΟΣ", "name_latin": "GEORGAKOPOULOS CHARALAMPOS" },
-      { "number": "5", "name_el": "ΜΠΕΝΕΚΟΣ ΘΕΟΦΑΝΗΣ", "name_latin": "MPENEKOS THEOFANIS" },
-      { "number": "6", "name_el": "ΚΑΓΙΑΣ ΕΥΘΥΜΙΟΣ", "name_latin": "KAGIAS EFTHYMIOS" },
-      { "number": "7", "name_el": "ΓΕΡΑΝΙΟΣ ΔΙΟΝΥΣΙΟΣ", "name_latin": "GERANIOS DIONYSIOS" },
-      { "number": "8", "name_el": "ΚΟΥΤΣΙΚΟΝΑΣ ΔΗΜΗΤΡΙΟΣ", "name_latin": "KOUTSIKONAS DIMITRIOS" },
-      { "number": "9", "name_el": "ΒΑΣΙΛΟΠΟΥΛΟΣ ΠΑΝΑΓΙΩΤΗΣ", "name_latin": "VASILOPOULOS PANAGIOTIS" },
-      { "number": "10", "name_el": "ΠΕΤΡΑΚΗΣ ΘΕΟΔΩΡΟΣ", "name_latin": "PETRAKIS THEODOROS" },
-      { "number": "11", "name_el": "ΜΠΟΥΡΜΠΟΥΛΗΣ ΜΟΣΧΟΝΑ ΓΕΡΑΣΙΜΟΣ", "name_latin": "MPOURMPOULIS MOSCHONA GERASIMOS" }
-    ]
-  },
-  "standings": [
-    { "pos": "1", "team": "ΑΟ ΚΟΡΩΠΙ", "team_latin": "AO KOROPI", "points": "9", "played": "3", "is_aok": true },
-    { "pos": "2", "team": "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ", "team_latin": "APS OLYMPIAKOS VARIS", "points": "9", "played": "3", "is_aok": false },
-    { "pos": "3", "team": "ΑΠΕ ΛΑΥΡΕΩΤΙΚΗ", "team_latin": "APE LAVREOTIKI", "points": "7", "played": "3", "is_aok": false },
-    { "pos": "4", "team": "ΑΟ ΚΟΥΒΑΡΑ", "team_latin": "AO KOUVARA", "points": "6", "played": "3", "is_aok": false },
-    { "pos": "5", "team": "ΠΑΝΒΟΡΕΙΑΚΟΣ ΑΣ", "team_latin": "PANVOREIAKOS AS", "points": "6", "played": "3", "is_aok": false },
-    { "pos": "6", "team": "ΠΑΣ ΩΡΩΠΟΣ", "team_latin": "PAS OROPOS", "points": "6", "played": "3", "is_aok": false },
-    { "pos": "7", "team": "ΔΙΟΝΥΣΟΣ ΑΤΤΙΚΗΣ", "team_latin": "DIONYSOS ATTIKIS", "points": "6", "played": "3", "is_aok": false },
-    { "pos": "8", "team": "ΤΡΙΓΛΙΑΣ ΡΑΦΗΝΑΣ ΑΟ", "team_latin": "TRIGLIAS RAFINAS AO", "points": "6", "played": "3", "is_aok": false },
-    { "pos": "9", "team": "ΑΟ ΠΑΙΑΝΙΑΣ", "team_latin": "AO PAIANIAS", "points": "4", "played": "3", "is_aok": false },
-    { "pos": "10", "team": "Α.Π.Ο ΝΙΚΗΦΟΡΟΣ", "team_latin": "APO NIKIFOROS", "points": "4", "played": "3", "is_aok": false },
-    { "pos": "11", "team": "Α.Ο ΦΟΙΒΟΣ ΒΑΡΗΣ", "team_latin": "AO FOIVOS VARIS", "points": "3", "played": "3", "is_aok": false },
-    { "pos": "12", "team": "ΝΙΚΗ ΔΡΟΣΙΑΣ", "team_latin": "NIKI DROSIAS", "points": "3", "played": "3", "is_aok": false },
-    { "pos": "13", "team": "ΠΑΟ ΚΑΛΥΒΙΩΝ", "team_latin": "PAO KALYVION", "points": "1", "played": "3", "is_aok": false },
-    { "pos": "14", "team": "ΜΑΧΗ ΜΑΡΑΘΩΝΑ", "team_latin": "MACHI MARATHONA", "points": "0", "played": "3", "is_aok": false },
-    { "pos": "15", "team": "ΓΙΑΝΝΗΣ ΠΑΘΙΑΚΑΚΗΣ", "team_latin": "GIANNIS PATHIAKAKIS", "points": "0", "played": "3", "is_aok": false },
-    { "pos": "16", "team": "ΑΠΕΣ ΚΑΠΑΝΔΡΙΤΙΟΥ", "team_latin": "APES KAPANDRITIOU", "points": "0", "played": "3", "is_aok": false }
-  ],
-  "schedule": [
-    { "round": 1, "date": "26/09/2026", "time": "16:30", "venue": "Βούλας", "venue_latin": "Voula", "home": "Α.Ο. ΦΟΙΒΟΣ ΒΑΡΗΣ", "home_latin": "AO FOIVOS VARIS", "away": "Α.Ο. ΚΟΡΩΠΙΟΥ", "away_latin": "A.O. KOROPIOU", "score": "1 - 3" },
-    { "round": 2, "date": "03/10/2026", "time": "16:30", "venue": "Κορωπίου «Αντώνης Πρίφτης»", "venue_latin": "Koropi «Antonis Priftis»", "home": "Α.Ο. ΚΟΡΩΠΙΟΥ", "home_latin": "A.O. KOROPIOU", "away": "ΤΡΙΓΛΙΑΣ ΡΑΦΗΝΑΣ ΑΟ", "away_latin": "TRIGLIAS RAFINAS AO", "score": "4 - 1" },
-    { "round": 3, "date": "10/10/2026", "time": "16:15", "venue": "Διονύσου", "venue_latin": "Dionysos", "home": "ΔΙΟΝΥΣΟΣ ΑΤΤΙΚΗΣ", "home_latin": "DIONYSOS ATTIKIS", "away": "Α.Ο. ΚΟΡΩΠΙΟΥ", "away_latin": "A.O. KOROPIOU", "score": "3 - 4" },
-    { "round": 4, "date": "18/10/2026", "time": "16:00", "venue": "Κορωπίου «Αντώνης Πρίφτης»", "venue_latin": "Koropi «Antonis Priftis»", "home": "Α.Ο. ΚΟΡΩΠΙΟΥ", "home_latin": "A.O. KOROPIOU", "away": "ΠΑΝΒΟΡΕΙΑΚΟΣ ΑΣ", "away_latin": "PANVOREIAKOS AS", "score": "VS" },
-    { "round": 5, "date": "25/10/2026", "time": "15:30", "venue": "Βάρης", "venue_latin": "Vari", "home": "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ", "home_latin": "APS OLYMPIAKOS VARIS", "away": "Α.Ο. ΚΟΡΩΠΙΟΥ", "away_latin": "A.O. KOROPIOU", "score": "VS" },
-    { "round": 6, "date": "01/11/2026", "time": "15:00", "venue": "Κορωπίου «Αντώνης Πρίφτης»", "venue_latin": "Koropi «Antonis Priftis»", "home": "Α.Ο. ΚΟΡΩΠΙΟΥ", "home_latin": "A.O. KOROPIOU", "away": "ΠΑΟ ΚΑΛΥΒΙΩΝ", "away_latin": "PAO KALYVION", "score": "VS" },
-    { "round": 7, "date": "08/11/2026", "time": "15:00", "venue": "Κορωπίου «Αντώνης Πρίφτης»", "venue_latin": "Koropi «Antonis Priftis»", "home": "Α.Ο. ΚΟΡΩΠΙΟΥ", "home_latin": "A.O. KOROPIOU", "away": "ΝΙΚΗ ΔΡΟΣΙΑΣ", "away_latin": "NIKI DROSIAS", "score": "VS" },
-    { "round": 8, "date": "15/11/2026", "time": "15:00", "venue": "Κουβαρά", "venue_latin": "Kouvaras", "home": "Α.Π.Ο ΝΙΚΗΦΟΡΟΣ", "home_latin": "APO NIKIFOROS", "away": "Α.Ο. ΚΟΡΩΠΙΟΥ", "away_latin": "A.O. KOROPIOU", "score": "VS" },
-    { "round": 9, "date": "22/11/2026", "time": "15:00", "venue": "Κορωπίου «Αντώνης Πρίφτης»", "venue_latin": "Koropi «Antonis Priftis»", "home": "Α.Ο. ΚΟΡΩΠΙΟΥ", "home_latin": "A.O. KOROPIOU", "away": "ΑΠΕ ΛΑΥΡΕΩΤΙΚΗ", "away_latin": "APE LAVREOTIKI", "score": "VS" },
-    { "round": 10, "date": "29/11/2026", "time": "15:00", "venue": "Νέων Παλατίων", "venue_latin": "Nea Palatia", "home": "ΠΑΣ ΩΡΩΠΟΣ", "home_latin": "PAS OROPOS", "away": "Α.Ο. ΚΟΡΩΠΙΟΥ", "away_latin": "A.O. KOROPIOU", "score": "VS" }
-  ]
+  "standings": {
+    "position": 1,
+    "total_teams": 16,
+    "points": 12,
+    "played": 4,
+    "wins": 4,
+    "draws": 0,
+    "losses": 0,
+    "goals_for": 13,
+    "goals_against": 5
+  }
 }
