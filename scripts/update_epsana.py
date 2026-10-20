@@ -55,50 +55,48 @@ def extract_game_id(a):
     return m.group(1) if m else None
 
 def schedule(soup):
+    """Read fixtures from EPSANA tables without assuming fixed column offsets."""
     out = []
     round_no = None
     for el in soup.find_all(['h2', 'h3', 'h4', 'table']):
         if el.name != 'table':
-            m = re.search(r'(\d+)η\s*Αγωνιστική', el.get_text(' ', strip=True), re.I)
-            if m:
-                round_no = int(m.group(1))
+            m = re.search(r'(\d+)\s*[ηΗ]\s*Αγωνιστικ', el.get_text(' ', strip=True), re.I)
+            if m: round_no = int(m.group(1))
             continue
         for tr in el.find_all('tr'):
-            cells = tr.find_all(['td'], recursive=False)
-            if len(cells) < 6:
+            cells = tr.find_all('td', recursive=False)
+            if len(cells) < 2: continue
+            values = [c.get_text(' ', strip=True) for c in cells]
+            full = ' '.join(values)
+            if not is_aok(full): continue
+            for value in values:
+                m = re.search(r'(.+?)\s+[-–—]\s+(.+)', value)
+                if m and is_aok(value):
+                    home, away = m.group(1).strip(), m.group(2).strip()
+                    break
+            else:
                 continue
-            teams = cells[0].get_text(' ', strip=True)
-            if not is_aok(teams):
-                continue
-            pieces = re.split(r'\s+[-–]\s+', teams, maxsplit=1)
-            if len(pieces) != 2:
-                continue
-            date = dateparse(' '.join(c.get_text(' ', strip=True) for c in cells[2:5]))
-            if not date:
-                continue
-            scorecell = cells[-1]
-            score = scorecell.get_text(' ', strip=True)
-            scorematch = re.search(r'(?<!\d)(\d{1,2})\s*[-–:]\s*(\d{1,2})(?!\d)', score)
-            a = scorecell.find('a', href=re.compile('display_game')) or cells[0].find('a', href=re.compile('display_game'))
+            date = dateparse(full)
+            if not date: continue
+            datecell = next((i for i,v in enumerate(values) if dateparse(v)), -1)
+            tm = re.search(r'(?<!\d)([01]?\d|2[0-3]):[0-5]\d(?!\d)', full)
+            score = None
+            # Score must come from a separate score/result column, not from a time or date.
+            for i, value in enumerate(values):
+                if i == datecell or re.search(r'\d{1,2}:\d{2}', value): continue
+                sm = re.fullmatch(r'\s*(\d{1,2})\s*[-–:]\s*(\d{1,2})\s*', value)
+                if sm: score = [int(sm.group(1)), int(sm.group(2))]; break
+            a = tr.find('a', href=re.compile(r'display_game|game_id=', re.I))
             gid = extract_game_id(a)
-            if scorematch and not gid:
-                raise ValueError('Completed AOK match lacks game detail link; stopping for review')
-            venue = cells[1].get_text(' ', strip=True)
-            t = re.search(r'\b\d{1,2}:\d{2}\b', cells[4].get_text(' ', strip=True))
-            out.append({
-                'id': gid or ('scheduled-' + date + '-' + norm(teams)),
-                'date': date,
-                'time': t.group() if t else None,
-                'home': pieces[0],
-                'away': pieces[1],
-                'venue': venue,
-                'round': round_no,
-                'score': [int(scorematch.group(1)), int(scorematch.group(2))] if scorematch else None,
-                'detail_url': urljoin(BASE, a['href']) if gid else None
-            })
-    if not out:
-        raise ValueError('No AOK fixtures parsed: page structure may have changed')
-    return sorted({x['id']: x for x in out}.values(), key=lambda x: (x['date'], x['time'] or '00:00'))
+            venue = next((v for v in values if re.search(r'ΓΗΠΕΔ|ΣΤΑΔΙ|ΔΗΜΟΤΙΚ', v, re.I)), '')
+            if not venue and len(values)>1: venue = values[1]
+            out.append({'id': gid or 'fixture-'+date+'-'+norm(home)+'-'+norm(away),
+                        'date':date,'time':tm.group() if tm else None,'home':home,'away':away,
+                        'venue':venue,'round':round_no,'score':score,
+                        'detail_url':urljoin(BASE,a['href']) if a and gid else None})
+    if not out: raise ValueError('No AOK fixtures parsed from EPSANA schedule')
+    return sorted({(g['date'],norm(g['home']),norm(g['away'])):g for g in out}.values(),
+                  key=lambda g:(g['date'],g['time'] or '00:00'))
 
 def latin(s):
     overrides = {
