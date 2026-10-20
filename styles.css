@@ -172,3 +172,6 @@ html body header.header > .aok-header-bottom-wrap .language-switch {display:flex
 
 /* Version 25: automated EPSANA panels */
 #aok-epsana-auto{display:grid;gap:16px;margin:24px 0}#aok-epsana-auto .aok-official-panel{min-width:0}#aok-epsana-auto .aok-auto-report{padding-top:12px}#aok-epsana-auto .aok-auto-report h3{margin:14px 0 5px;font-size:1rem}#aok-epsana-auto .aok-ranking-scroll{overflow-x:auto}#aok-epsana-auto .aok-ranking-table{width:100%;min-width:460px}#aok-epsana-auto a{text-decoration:underline}
+
+/* Official EPSANA match center */
+.aok-live-fixture{display:grid;grid-template-columns:50px 1fr 80px 1fr minmax(145px,1fr);gap:12px;align-items:center;padding:18px;border-bottom:1px solid #dce3ee;background:#fff;color:#102e63}.aok-live-fixture b{text-align:center;color:#bd9028;font-size:19px}.aok-live-fixture small{color:#50678c}.aok-table-scroll{overflow-x:auto}.aok-live-table{width:100%;border-collapse:collapse;background:#fff;color:#102e63}.aok-live-table th{background:#143a75;color:white}.aok-live-table td,.aok-live-table th{padding:12px 9px;text-align:left;border-bottom:1px solid #dce3ee}.aok-live-table .aok-highlight{background:#fff1cb;font-weight:bold}@media(max-width:750px){.aok-live-fixture{grid-template-columns:30px 1fr 55px 1fr;gap:5px;font-size:12px}.aok-live-fixture small{grid-column:2/-1}.aok-live-table{font-size:12px}}
