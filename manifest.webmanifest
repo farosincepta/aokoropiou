@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "Α.Ο. Κορωπίου | A.O. Koropiou",
+  "short_name": "Α.Ο. Κορωπίου",
+  "description": "Α.Ο. Κορωπίου — Ελληνικά, English, Español",
+  "lang": "el",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#123b83",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
