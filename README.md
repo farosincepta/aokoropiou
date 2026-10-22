@@ -91,7 +91,7 @@ The forms use **FormSubmit** (free, no account):
 | News | `data/news.json` | Newest first is automatic. `category`: `match`, `club`, `academy`. Add `"image": "assets/img/news/photo.jpg"` for a photo; without one, the `cover` (score/date) is shown on stripes. The first five articles describe real results from EPSANA; the Academy one should be checked by the club. |
 | Store | `data/store.json` | **Currently example products** with drawings instead of photos and no prices. Add real photos (square), set `price`, then `"example": false`. `category`: `kit` or `fan`. |
 | Sponsors | `data/sponsors.json` | Add `{ "name", "logo", "url" }`. Empty spaces invite new sponsors. |
-| Opponent names | `assets/js/teams.js` | Nice Greek/English names and badges for EPSANA club names. New clubs work automatically. |
+| Opponent names and logos | `assets/js/teams.js` + `assets/img/teams/` | Greek/English names and a `logo` for each EPSANA club name. For a new opponent, add a square transparent PNG to `assets/img/teams/` and its line here. Clubs without a logo show a short-name badge. |
 | Board members | `club.html` (the "Θα ανακοινωθεί" names) and `assets/js/i18n.js` | |
 | Page text | the `.html` files (Greek) and `assets/js/i18n.js` (English, same key as `data-i18n`) | |
 
