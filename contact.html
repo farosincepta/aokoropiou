@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Επικοινωνία · Α.Ο. Κορωπίου</title>
+<meta name="title-en" content="Contact · AO Koropiou">
+<meta name="description" content="Στοιχεία επικοινωνίας του Α.Ο. Κορωπίου.">
+<meta name="theme-color" content="#1d3768">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Επικοινωνία · Α.Ο. Κορωπίου">
+<meta property="og:description" content="Στοιχεία επικοινωνίας του Α.Ο. Κορωπίου.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_GB">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="contact">
+<a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-head"><div class="wrap"><h1 data-i18n="c.title">Επικοινωνία</h1><p data-i18n="c.lead">Γράψτε μας για οτιδήποτε αφορά τον σύλλογο, την ομάδα ή την Ακαδημία.</p></div></section>
+<section class="section tight"><div class="wrap contact-grid">
+  <div>
+    <ul class="contact-list" id="contact-list"></ul>
+    <div class="socials on-light" id="contact-socials" style="margin-top:20px;color:var(--navy)"></div>
+    <div class="map"><iframe title="Χάρτης: Γήπεδο Αντώνης Πρίφτης" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%CE%93%CE%AE%CF%80%CE%B5%CE%B4%CE%BF%20%CE%91%CE%BD%CF%84%CF%8E%CE%BD%CE%B7%CF%82%20%CE%A0%CF%81%CE%AF%CF%86%CF%84%CE%B7%CF%82%2C%20%CE%9A%CE%BF%CF%81%CF%89%CF%80%CE%AF&output=embed"></iframe></div>
+  </div>
+  <div>
+    <h2 style="font-size:var(--s3);margin-bottom:24px" data-i18n="c.formH">Στείλτε μήνυμα</h2>
+    <form class="form-card" data-form="contact" data-subject="Μήνυμα από την ιστοσελίδα" novalidate>
+      <div class="fields">
+        <div class="field"><label for="c-n" data-i18n="c.f.name">Ονοματεπώνυμο *</label><input id="c-n" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="c-e" data-i18n="c.f.email">Email *</label><input id="c-e" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="c-p" data-i18n="c.f.phone">Τηλέφωνο</label><input id="c-p" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="contact-topic" data-i18n="c.f.topic">Θέμα</label><select id="contact-topic" name="topic">
+          <option data-i18n="c.t.general">Γενική ερώτηση</option><option data-i18n="c.t.tickets">Εισιτήρια διαρκείας</option><option data-i18n="c.t.academy">Ακαδημία</option><option data-i18n="c.t.sponsor">Χορηγία</option><option data-i18n="c.t.press">Δημοσιογραφικό αίτημα</option></select></div>
+        <div class="field full"><label for="c-m" data-i18n="c.f.msg2">Μήνυμα *</label><textarea id="c-m" name="message" required></textarea></div>
+        <div class="field full"><label class="check"><input type="checkbox" name="consent" value="yes" required><span data-i18n="c.f.consent">Συμφωνώ με την <a class="link" href="privacy.html">πολιτική απορρήτου</a>. *</span></label></div>
+      </div>
+      <div class="hp" aria-hidden="true"><label>Website<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+      <div class="form-actions" style="margin-top:24px"><button class="btn btn-navy" type="submit" data-i18n="c.f.send">Αποστολή μηνύματος</button><p class="form-status" role="status" aria-live="polite"></p></div>
+    </form>
+  </div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/teams.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

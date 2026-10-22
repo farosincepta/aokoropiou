@@ -1,0 +1,12 @@
+{
+  "name": "Α.Ο. Κορωπίου 1903",
+  "short_name": "Α.Ο. Κορωπίου",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1d3768",
+  "icons": [
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

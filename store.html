@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Κατάστημα · Α.Ο. Κορωπίου</title>
+<meta name="title-en" content="Store · AO Koropiou">
+<meta name="description" content="Εμφανίσεις και είδη φιλάθλων του Α.Ο. Κορωπίου.">
+<meta name="theme-color" content="#1d3768">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Κατάστημα · Α.Ο. Κορωπίου">
+<meta property="og:description" content="Εμφανίσεις και είδη φιλάθλων του Α.Ο. Κορωπίου.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_GB">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="store">
+<a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-head"><div class="wrap"><h1 data-i18n="store.title">Κατάστημα</h1><p data-i18n="store.lead">Εμφανίσεις και είδη φιλάθλων του Α.Ο. Κορωπίου. Κάθε αγορά στηρίζει τον σύλλογο.</p></div></section>
+<section class="section tight"><div class="wrap">
+  <nav class="filters" id="store-filters" aria-label="Κατηγορίες" data-i18n-attr="aria-label:store.catAria"></nav>
+  <div class="products" id="products"></div>
+</div></section>
+<section class="section cloud" id="order"><div class="wrap narrow">
+  <div class="section-head" style="display:block"><h2 data-i18n="store.formH">Παραγγελία</h2><p data-i18n="store.formP">Διαλέξτε προϊόν και μέγεθος. Θα επικοινωνήσουμε μαζί σας για τη διαθεσιμότητα, την πληρωμή και την παραλαβή από τη γραμματεία.</p></div>
+  <form class="form-card" data-form="store" data-to="sales" data-subject="Παραγγελία καταστήματος" novalidate>
+    <div class="fields">
+      <div class="field full"><label for="o-product" data-i18n="store.f.product">Προϊόν *</label><select id="o-product" name="product" required></select></div>
+      <div class="field"><label for="o-size" data-i18n="store.f.size">Μέγεθος</label><select id="o-size" name="size"><option value="">–</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option data-i18n="store.f.kids">Παιδικό</option></select></div>
+      <div class="field"><label for="o-qty" data-i18n="store.f.qty">Ποσότητα *</label><input id="o-qty" name="quantity" type="number" min="1" max="20" value="1" required></div>
+      <div class="field"><label for="o-n" data-i18n="c.f.name">Ονοματεπώνυμο *</label><input id="o-n" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="o-p" data-i18n="tk.f.phone">Κινητό τηλέφωνο *</label><input id="o-p" name="phone" type="tel" autocomplete="tel" required></div>
+      <div class="field full"><label for="o-e" data-i18n="c.f.email">Email *</label><input id="o-e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field full"><label for="o-m" data-i18n="store.f.notes">Σημειώσεις</label><textarea id="o-m" name="notes" data-i18n-attr="placeholder:store.f.notesPh" placeholder="π.χ. όνομα και νούμερο στη φανέλα"></textarea></div>
+      <div class="field full"><label class="check"><input type="checkbox" name="consent" value="yes" required><span data-i18n="c.f.consent">Συμφωνώ με την <a class="link" href="privacy.html">πολιτική απορρήτου</a>. *</span></label></div>
+    </div>
+    <div class="hp" aria-hidden="true"><label>Website<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+    <div class="form-actions" style="margin-top:24px"><button class="btn btn-navy" type="submit" data-i18n="store.f.send">Αποστολή παραγγελίας</button><p class="form-status" role="status" aria-live="polite"></p></div>
+  </form>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/teams.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

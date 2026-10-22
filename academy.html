@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ακαδημία · Α.Ο. Κορωπίου</title>
+<meta name="title-en" content="Academy · AO Koropiou">
+<meta name="description" content="Η Ακαδημία ποδοσφαίρου του Α.Ο. Κορωπίου για παιδιά 4–17 ετών. Δήλωση συμμετοχής online.">
+<meta name="theme-color" content="#1d3768">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ακαδημία · Α.Ο. Κορωπίου">
+<meta property="og:description" content="Η Ακαδημία ποδοσφαίρου του Α.Ο. Κορωπίου για παιδιά 4–17 ετών. Δήλωση συμμετοχής online.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_GB">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="academy">
+<a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-head"><div class="wrap"><h1 data-i18n="ac.title">Ακαδημία</h1><p data-i18n="ac.lead">Ποδόσφαιρο για παιδιά 4 έως 17 ετών στο «Αντώνης Πρίφτης». Η πρώτη προπόνηση είναι δοκιμαστική και δωρεάν.</p></div></section>
+<section class="section"><div class="wrap split" style="align-items:start">
+  <div>
+    <h2 style="font-size:var(--s3)" data-i18n="ac.whyH">Πώς δουλεύουμε</h2>
+    <div class="prose" style="margin-top:18px">
+      <p data-i18n="ac.why1">Τα παιδιά μαθαίνουν το παιχνίδι με τη σειρά που το χρειάζονται: πρώτα την μπάλα και τη χαρά του παιχνιδιού, μετά την τεχνική, και αργότερα την τακτική και τον αγώνα.</p>
+      <p data-i18n="ac.why2">Κάθε τμήμα έχει δικό του προπονητή και σταθερό πρόγραμμα. Οι γονείς ενημερώνονται για την πρόοδο του παιδιού και για τους αγώνες του τμήματος.</p>
+    </div>
+  </div>
+  <div id="groups"><h2 style="font-size:var(--s3);margin-bottom:18px" data-i18n="ac.groupsH">Τμήματα ηλικιών</h2>
+    <div class="on-light"><ul class="age-groups" id="age-groups"></ul></div>
+    <p class="table-note" data-i18n="ac.groupsNote">Τα τμήματα ορίζονται με βάση το έτος γέννησης. Ο αριθμός και οι ώρες προπονήσεων ανακοινώνονται από τη γραμματεία στην αρχή της σεζόν.</p>
+  </div>
+</div></section>
+
+<section class="section cloud" id="register"><div class="wrap narrow">
+  <div class="section-head" style="display:block"><h2 data-i18n="ac.formH">Δήλωση συμμετοχής</h2><p data-i18n="ac.formP">Συμπληρώστε τη φόρμα και η γραμματεία της Ακαδημίας θα επικοινωνήσει μαζί σας μέσα σε λίγες ημέρες.</p></div>
+  <form class="form-card" data-form="academy" data-subject="Δήλωση Ακαδημίας" novalidate>
+    <fieldset><legend data-i18n="ac.f.child">Στοιχεία παιδιού</legend>
+      <div class="fields">
+        <div class="field"><label for="f-cn" data-i18n="ac.f.cname">Ονοματεπώνυμο παιδιού *</label><input id="f-cn" name="child_name" autocomplete="off" required></div>
+        <div class="field"><label for="f-cd" data-i18n="ac.f.dob">Ημερομηνία γέννησης *</label><input id="f-cd" name="child_dob" type="date" required></div>
+        <div class="field full"><p class="age-out" id="age-group-out" hidden></p><input type="hidden" name="age_group"></div>
+        <div class="field"><label for="f-cg" data-i18n="ac.f.gender">Φύλο</label><select id="f-cg" name="child_gender"><option value="" data-i18n="ac.f.choose">Επιλέξτε</option><option data-i18n="ac.f.boy">Αγόρι</option><option data-i18n="ac.f.girl">Κορίτσι</option></select></div>
+        <div class="field"><label for="f-cs" data-i18n="ac.f.school">Σχολείο</label><input id="f-cs" name="school"></div>
+        <div class="field"><label for="f-exp" data-i18n="ac.f.exp">Έχει αγωνιστεί σε άλλη ομάδα;</label><select id="f-exp" name="previous_club"><option data-i18n="ac.f.no">Όχι</option><option data-i18n="ac.f.yes">Ναι</option></select></div>
+        <div class="field"><label for="f-pos" data-i18n="ac.f.pos">Θέση που προτιμά</label><select id="f-pos" name="position"><option value="" data-i18n="ac.f.any">Δεν έχει σημασία</option><option data-i18n="pos2.gk">Τερματοφύλακας</option><option data-i18n="pos2.df">Άμυνα</option><option data-i18n="pos2.mf">Μέσος</option><option data-i18n="pos2.fw">Επίθεση</option></select></div>
+      </div>
+    </fieldset>
+    <fieldset><legend data-i18n="ac.f.parent">Στοιχεία γονέα ή κηδεμόνα</legend>
+      <div class="fields">
+        <div class="field"><label for="f-pn" data-i18n="ac.f.pname">Ονοματεπώνυμο *</label><input id="f-pn" name="parent_name" autocomplete="name" required></div>
+        <div class="field"><label for="f-pp" data-i18n="ac.f.phone">Κινητό τηλέφωνο *</label><input id="f-pp" name="parent_phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="f-pe" data-i18n="ac.f.email">Email *</label><input id="f-pe" name="parent_email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-pa" data-i18n="ac.f.area">Περιοχή κατοικίας</label><input id="f-pa" name="area" autocomplete="address-level2"></div>
+        <div class="field full"><label for="f-notes" data-i18n="ac.f.notes">Σημειώσεις</label><textarea id="f-notes" name="notes" data-i18n-attr="placeholder:ac.f.notesPh" placeholder="Ό,τι χρειάζεται να γνωρίζουν οι προπονητές, π.χ. μια αλλεργία, προτιμώμενες ημέρες"></textarea></div>
+      </div>
+    </fieldset>
+    <fieldset style="margin-bottom:20px">
+      <label class="check"><input type="checkbox" name="medical_note" value="yes"><span data-i18n="ac.f.med">Γνωρίζω ότι για τη συμμετοχή απαιτείται Κάρτα Υγείας Αθλητή σε ισχύ.</span></label>
+      <label class="check" style="margin-top:12px"><input type="checkbox" name="consent" value="yes" required><span data-i18n="ac.f.consent">Συμφωνώ να χρησιμοποιηθούν τα στοιχεία μόνο για την εγγραφή και την επικοινωνία της Ακαδημίας, σύμφωνα με την <a class="link" href="privacy.html">πολιτική απορρήτου</a>. *</span></label>
+    </fieldset>
+    <div class="hp" aria-hidden="true"><label>Website<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+    <div class="form-actions"><button class="btn btn-navy" type="submit" data-i18n="ac.f.submit">Αποστολή δήλωσης</button><p class="form-status" role="status" aria-live="polite"></p></div>
+  </form>
+</div></section>
+
+<section class="section" id="faq"><div class="wrap narrow">
+  <h2 style="font-size:var(--s3);margin-bottom:12px" data-i18n="ac.faqH">Συχνές ερωτήσεις</h2>
+  <div class="faq">
+    <details><summary data-i18n="ac.q1">Από ποια ηλικία μπορεί να ξεκινήσει ένα παιδί;</summary><p data-i18n="ac.a1">Από 4 ετών, στο νηπιακό τμήμα, όπου το ποδόσφαιρο γίνεται μέσα από παιχνίδι.</p></details>
+    <details><summary data-i18n="ac.q2">Τι χρειάζεται για την εγγραφή;</summary><p data-i18n="ac.a2">Τη δήλωση συμμετοχής, Κάρτα Υγείας Αθλητή σε ισχύ και, για τα αγωνιστικά τμήματα, έγγραφα για το δελτίο της ΕΠΟ. Η γραμματεία θα σας ενημερώσει αναλυτικά.</p></details>
+    <details><summary data-i18n="ac.q3">Η πρώτη προπόνηση χρεώνεται;</summary><p data-i18n="ac.a3">Όχι. Η πρώτη προπόνηση είναι δοκιμαστική και δωρεάν, ώστε το παιδί να γνωρίσει τον προπονητή και την ομάδα.</p></details>
+    <details><summary data-i18n="ac.q4">Τι χρειάζεται να φέρει το παιδί;</summary><p data-i18n="ac.a4">Ποδοσφαιρικά παπούτσια για συνθετικό χλοοτάπητα, επικαλαμίδες, μπουκάλι νερό και άνετα ρούχα. Η εμφάνιση του συλλόγου δίνεται μετά την εγγραφή.</p></details>
+  </div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/teams.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

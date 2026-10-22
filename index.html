@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Α.Ο. Κορωπίου 1903 · Επίσημη ιστοσελίδα</title>
+<meta name="title-en" content="AO Koropiou 1903 · Official website">
+<meta name="description" content="Η επίσημη ιστοσελίδα του Αθλητικού Ομίλου Κορωπίου 1903: αποτελέσματα, βαθμολογία, ομάδα, Ακαδημία και εισιτήρια διαρκείας.">
+<meta name="theme-color" content="#1d3768">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Α.Ο. Κορωπίου 1903 · Επίσημη ιστοσελίδα">
+<meta property="og:description" content="Η επίσημη ιστοσελίδα του Αθλητικού Ομίλου Κορωπίου 1903: αποτελέσματα, βαθμολογία, ομάδα, Ακαδημία και εισιτήρια διαρκείας.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_GB">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="home" data-hero="1">
+<a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+<div id="site-header"></div>
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <picture class="hero-photo">
+    <source type="image/webp" srcset="assets/img/stadium-800.webp 800w, assets/img/stadium-1200.webp 1200w, assets/img/stadium-1850.webp 1850w" sizes="100vw">
+    <img src="assets/img/stadium-1850.jpg" srcset="assets/img/stadium-800.jpg 800w, assets/img/stadium-1200.jpg 1200w, assets/img/stadium-1850.jpg 1850w" sizes="100vw" alt="" fetchpriority="high">
+  </picture>
+  <div class="hero-stripes" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap hero-content">
+    <img class="hero-crest" src="assets/img/crest-512.png" alt="Έμβλημα Α.Ο. Κορωπίου" width="190" height="215">
+    <div>
+      <h1 id="hero-title" data-i18n="home.h1">Αθλητικός Όμιλος<br>Κορωπίου</h1>
+      <p class="hero-motto"><span data-i18n="motto.1">Μια Γειτονιά, Μία Οικογένεια</span><span class="hero-motto-2"><span class="js-star"></span><span data-i18n="motto.2">Από το 1903 μέχρι σήμερα</span></span></p>
+      <div class="hero-actions">
+        <a class="btn btn-white" href="tickets.html" data-i18n="home.cta1">Εισιτήρια διαρκείας</a>
+        <a class="btn btn-line" href="academy.html#register" data-i18n="home.cta2">Εγγραφές Ακαδημίας</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="matchday" aria-label="Αγωνιστική εικόνα" data-i18n-attr="aria-label:home.mdAria">
+  <div class="wrap"><div class="matchday-card" id="matchday"><div class="md-cell"><p class="md-empty">…</p></div></div></div>
+</section>
+
+<section class="section" aria-labelledby="news-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="news-h" data-i18n="home.newsH">Τα νέα του συλλόγου</h2><a class="btn btn-line dark btn-sm" href="news.html" data-i18n="home.allNews">Όλα τα νέα</a></div>
+    <div id="home-news"></div>
+  </div>
+</section>
+
+<section class="section cloud" aria-labelledby="mc-h">
+  <div class="wrap">
+    <div class="section-head"><div><h2 id="mc-h" data-i18n="home.mcH">Βαθμολογία και πρόγραμμα</h2><p data-i18n="home.mcP">Ενημερώνεται αυτόματα από την ΕΠΣΑΝΑ μετά από κάθε αγωνιστική.</p></div>
+    <div class="hero-actions"><a class="btn btn-line dark btn-sm" data-ext="@results" href="https://www.epsana.gr/results/display_schedule.php?league_id=749" target="_blank" rel="noopener"><span data-i18n="home.mcAll">Αποτελέσματα στην ΕΠΣΑΝΑ</span></a><a class="btn btn-line dark btn-sm" data-ext="@standings" href="https://www.epsana.gr/results/display_ranking.php?league_id=749" target="_blank" rel="noopener"><span data-i18n="home.mcTable">Βαθμολογία στην ΕΠΣΑΝΑ</span></a></div></div>
+    <div id="home-centre"></div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="squad-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="squad-h" data-i18n="home.squadH">Η ομάδα</h2><a class="btn btn-line dark btn-sm" href="team.html" data-i18n="home.squadAll">Όλο το ρόστερ</a></div>
+    <div class="players-row" id="home-players"></div>
+  </div>
+</section>
+
+<section class="section navy band-stripes" aria-labelledby="ac-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="ac-h" data-i18n="home.acH">Η Ακαδημία του Κορωπίου</h2>
+      <p class="lead-text" style="margin-top:20px" data-i18n="home.acP">Τμήματα για αγόρια και κορίτσια από 4 έως 17 ετών, με προπονήσεις στο «Αντώνης Πρίφτης». Η πρώτη προπόνηση είναι δοκιμαστική και δωρεάν.</p>
+      <div class="hero-actions" style="margin-top:28px"><a class="btn btn-white" href="academy.html#register" data-i18n="home.acCta">Δήλωση συμμετοχής</a><a class="btn btn-line" href="academy.html" data-i18n="home.acMore">Πληροφορίες</a></div>
+    </div>
+    <ul class="age-groups" id="age-groups"></ul>
+  </div>
+</section>
+
+<section class="section" aria-label="Εισιτήρια και στήριξη">
+  <div class="wrap duo">
+    <div class="panel tickets">
+      <h3 data-i18n="home.tkH">Η θέση σου στην εξέδρα</h3>
+      <p data-i18n="home.tkP">Με ένα εισιτήριο διαρκείας βλέπεις όλους τους εντός έδρας αγώνες πρωταθλήματος και στηρίζεις την ομάδα από την πρώτη αγωνιστική.</p>
+      <a class="btn btn-white" href="tickets.html" data-i18n="home.tkCta">Αγορά εισιτηρίου διαρκείας</a>
+    </div>
+    <div class="panel support">
+      <h3 data-i18n="home.spH">Στήριξε τον σύλλογο</h3>
+      <p data-i18n="home.spP">Κάθε δωρεά πηγαίνει στην Ακαδημία, στον εξοπλισμό και στη συντήρηση του γηπέδου. Μπορείς να στηρίξεις με τραπεζική μεταφορά ή με κάρτα.</p>
+      <a class="btn btn-navy" href="support.html" data-i18n="home.spCta">Κάνε μια δωρεά</a>
+    </div>
+  </div>
+</section>
+
+<section class="section cloud" aria-labelledby="hist-h">
+  <div class="wrap">
+    <div class="history-head">
+      <div class="year-mark num" aria-hidden="true">19<span>03</span></div>
+      <div>
+        <h2 id="hist-h" data-i18n="home.hiH">Πάνω από έναν αιώνα στο Κορωπί</h2>
+        <p class="lead-text" style="margin-top:18px;color:var(--muted)" data-i18n="home.hiP">Ο Αθλητικός Όμιλος Κορωπίου ιδρύθηκε στις 30 Μαρτίου 1903 και είναι ένας από τους παλαιότερους ποδοσφαιρικούς συλλόγους της Αττικής. Τα γαλανόλευκα χρώματα και οι ρίγες του εμβλήματος συνοδεύουν γενιές Κορωπιωτών.</p>
+      </div>
+    </div>
+    <ol class="timeline">
+      <li><b class="num">1903</b><span data-i18n="tl.1903">Ίδρυση του συλλόγου, 30 Μαρτίου</span></li>
+      <li><b class="num">1940</b><span data-i18n="tl.1940">Πρωτάθλημα Μεσογείων</span></li>
+      <li><b class="num">1969–77</b><span data-i18n="tl.1969">Οκτώ σεζόν στη Β΄ Εθνική</span></li>
+      <li><b class="num">2004</b><span data-i18n="tl.2004">Πρωταθλητής ΕΠΣ Ανατολικής Αττικής</span></li>
+      <li><b class="num">2006</b><span data-i18n="tl.2006">1η θέση στον 7ο όμιλο της Δ΄ Εθνικής, άνοδος στη Γ΄ Εθνική</span></li>
+      <li><b class="num">2011</b><span data-i18n="tl.2011">Κύπελλο ΕΠΣ Ανατολικής Αττικής</span></li>
+    </ol>
+    <p style="margin-top:32px"><a class="link" href="history.html" data-i18n="home.hiMore">Η ιστορία του συλλόγου</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="st-h">
+  <div class="wrap">
+    <div class="stadium">
+      <div class="stadium-img"><picture><source type="image/webp" srcset="assets/img/stadium-1200.webp"><img src="assets/img/stadium-1200.jpg" alt="Το γήπεδο «Αντώνης Πρίφτης» με τον Υμηττό στο βάθος" data-i18n-attr="alt:home.stAlt" loading="lazy" width="1200" height="552"></picture></div>
+      <div class="stadium-info">
+        <h3 id="st-h" data-i18n="home.stH">Γήπεδο «Αντώνης Πρίφτης»</h3>
+        <p style="margin:0;color:var(--muted-dark)" data-i18n="home.stP">Η έδρα μας στο κέντρο του Κορωπίου, με θέα τον Υμηττό. Εδώ αγωνίζεται η πρώτη ομάδα και προπονούνται τα τμήματα της Ακαδημίας.</p>
+        <div class="facts"><div><b class="num">1.586</b><span data-i18n="home.stCap">θέσεις</span></div><div><b class="num">1903</b><span data-i18n="home.stYear">έτος ίδρυσης συλλόγου</span></div></div>
+        <a class="btn btn-white" href="https://www.google.com/maps/search/?api=1&query=%CE%93%CE%AE%CF%80%CE%B5%CE%B4%CE%BF%20%CE%91%CE%BD%CF%84%CF%8E%CE%BD%CE%B7%CF%82%20%CE%A0%CF%81%CE%AF%CF%86%CF%84%CE%B7%CF%82%20%CE%9A%CE%BF%CF%81%CF%89%CF%80%CE%AF" target="_blank" rel="noopener" style="align-self:flex-start" data-i18n="home.stDir">Οδηγίες πρόσβασης</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight" aria-labelledby="sp-h" style="padding-bottom:clamp(64px,9vw,120px)">
+  <div class="wrap">
+    <div class="section-head"><h2 id="sp-h" style="font-size:var(--s3)" data-i18n="home.spoH">Χορηγοί</h2><a class="link" href="sponsors.html#become" data-i18n="home.spoCta">Γίνετε χορηγός</a></div>
+    <div class="sponsor-strip" data-sponsors="6"></div>
+  </div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/teams.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

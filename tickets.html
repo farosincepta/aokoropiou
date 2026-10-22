@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Εισιτήρια διαρκείας · Α.Ο. Κορωπίου</title>
+<meta name="title-en" content="Season tickets · AO Koropiou">
+<meta name="description" content="Αγορά εισιτηρίων διαρκείας για τους εντός έδρας αγώνες του Α.Ο. Κορωπίου.">
+<meta name="theme-color" content="#1d3768">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Εισιτήρια διαρκείας · Α.Ο. Κορωπίου">
+<meta property="og:description" content="Αγορά εισιτηρίων διαρκείας για τους εντός έδρας αγώνες του Α.Ο. Κορωπίου.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_GB">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="tickets">
+<a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-head"><div class="wrap"><h1 data-i18n="tk.title">Εισιτήρια διαρκείας</h1><p data-i18n="tk.lead">Όλοι οι εντός έδρας αγώνες πρωταθλήματος στο «Αντώνης Πρίφτης», με ένα εισιτήριο.</p></div></section>
+<section class="section tight"><div class="wrap">
+  <div class="notice" id="tickets-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg><span data-i18n="tk.note">Η online πληρωμή ανοίγει σύντομα. Μέχρι τότε στείλτε μας αίτηση με τη φόρμα και θα επικοινωνήσουμε μαζί σας για την πληρωμή και την παραλαβή.</span></div>
+  <div class="plans" id="plans"></div>
+  <p class="table-note" id="prices-note" data-i18n="tk.prices">Οι τιμές είναι ενδεικτικές μέχρι την επίσημη ανακοίνωση του συλλόγου.</p>
+</div></section>
+<section class="section cloud" id="ticket-form-wrap"><div class="wrap narrow" id="ticket-form">
+  <div class="section-head" style="display:block"><h2 data-i18n="tk.formH">Αίτηση εισιτηρίου διαρκείας</h2><p data-i18n="tk.formP">Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας για την πληρωμή και την παραλαβή.</p></div>
+  <form class="form-card" data-form="tickets" data-to="sales" data-subject="Αίτηση εισιτηρίου διαρκείας" novalidate>
+    <div class="fields">
+      <div class="field"><label for="t-package" data-i18n="tk.f.package">Εισιτήριο *</label><select id="t-package" name="package" required></select></div>
+      <div class="field"><label for="t-qty" data-i18n="tk.f.qty">Αριθμός εισιτηρίων *</label><input id="t-qty" name="quantity" type="number" min="1" max="20" value="1" required></div>
+      <div class="field"><label for="t-n" data-i18n="c.f.name">Ονοματεπώνυμο *</label><input id="t-n" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="t-p" data-i18n="tk.f.phone">Κινητό τηλέφωνο *</label><input id="t-p" name="phone" type="tel" autocomplete="tel" required></div>
+      <div class="field full"><label for="t-e" data-i18n="c.f.email">Email *</label><input id="t-e" name="email" type="email" autocomplete="email" required></div>
+      <div class="field full"><label for="t-m" data-i18n="tk.f.notes">Σημειώσεις</label><textarea id="t-m" name="notes" data-i18n-attr="placeholder:tk.f.notesPh" placeholder="π.χ. ονόματα για κάθε εισιτήριο, πώς θέλετε να το παραλάβετε"></textarea></div>
+      <div class="field full"><label class="check"><input type="checkbox" name="consent" value="yes" required><span data-i18n="c.f.consent">Συμφωνώ με την <a class="link" href="privacy.html">πολιτική απορρήτου</a>. *</span></label></div>
+    </div>
+    <div class="hp" aria-hidden="true"><label>Website<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+    <div class="form-actions" style="margin-top:24px"><button class="btn btn-navy" type="submit" data-i18n="tk.f.send">Αποστολή αίτησης</button><p class="form-status" role="status" aria-live="polite"></p></div>
+  </form>
+</div></section>
+<section class="section cloud"><div class="wrap narrow">
+  <h2 style="font-size:var(--s3);margin-bottom:12px" data-i18n="tk.howH">Πώς λειτουργεί</h2>
+  <div class="faq">
+    <details open><summary data-i18n="tk.q1">Ποιους αγώνες καλύπτει;</summary><p data-i18n="tk.a1">Όλους τους εντός έδρας αγώνες πρωταθλήματος της πρώτης ομάδας για τη σεζόν 2026–27. Οι αγώνες κυπέλλου δεν περιλαμβάνονται.</p></details>
+    <details><summary data-i18n="tk.q2">Πώς παραλαμβάνω το εισιτήριο;</summary><p data-i18n="tk.a2">Μετά την αγορά λαμβάνετε επιβεβαίωση με email. Δείχνετε την επιβεβαίωση στην είσοδο του γηπέδου ή παραλαμβάνετε την κάρτα διαρκείας από τη γραμματεία.</p></details>
+    <details><summary data-i18n="tk.q3">Μπορώ να το δώσω σε άλλον;</summary><p data-i18n="tk.a3">Ναι, το εισιτήριο διαρκείας μπορεί να χρησιμοποιηθεί από άλλο πρόσωπο σε έναν αγώνα, αρκεί να ενημερωθεί η γραμματεία.</p></details>
+  </div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/teams.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
