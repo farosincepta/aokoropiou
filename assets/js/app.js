@@ -331,9 +331,14 @@
     return { data, club, ours, played, upcoming, last: played[played.length - 1] || null, next: upcoming[0] || null, row, form: played.slice(-5) };
   }
 
-  const badge = raw => raw === (window._aokClub || "ΑΟ ΚΟΡΩΠΙ")
-    ? `<span class="badge us"><img src="assets/img/crest-128.png" alt="" width="42" height="48"></span>`
-    : `<span class="badge" aria-hidden="true">${esc(teamShort(raw))}</span>`;
+  const logoOf = raw => (TEAMS[raw] && TEAMS[raw].logo) || (raw === (window._aokClub || "ΑΟ ΚΟΡΩΠΙ") ? "assets/img/crest-128.png" : "");
+  // Club logo (or short-name badge when there's no logo). size: "lg" for match boxes, "sm" for lists.
+  const badge = (raw, size = "lg") => {
+    const logo = logoOf(raw);
+    return logo
+      ? `<span class="badge logo ${size}" aria-hidden="true"><img src="${esc(logo)}" alt="" loading="lazy" width="48" height="48"></span>`
+      : `<span class="badge ${size}" aria-hidden="true">${esc(teamShort(raw))}</span>`;
+  };
   const resTag = r => `<span class="result-tag ${r}">${esc(u("res." + r))}</span>`;
   const formHTML = list => `<div class="form" aria-label="${esc(u("formAria"))}">${list.map(f => `<span class="${f.res}" title="${esc(teamName(f.home))} ${f.hs}-${f.as} ${esc(teamName(f.away))}">${esc(u("res1." + f.res))}</span>`).join("")}</div>`;
 
@@ -411,7 +416,7 @@
       <th title="${esc(u("th.gdFull"))}">${esc(u("th.gd"))}</th><th class="pts">${esc(u("th.pts"))}</th></tr></thead>
       <tbody>${rows.map(r => {
         const gd = (r.gf ?? 0) - (r.ga ?? 0);
-        return `<tr class="${r.team === a.club ? "us" : ""}"><td class="pos num">${r.pos}</td><td class="team">${esc(teamName(r.team))}</td><td class="num">${r.p ?? ""}</td>
+        return `<tr class="${r.team === a.club ? "us" : ""}"><td class="pos num">${r.pos}</td><td class="team"><span class="team-cell">${badge(r.team, "sm")}<span>${esc(teamName(r.team))}</span></span></td><td class="num">${r.p ?? ""}</td>
         ${compact ? "" : `<td class="hide-sm num">${r.w ?? ""}</td><td class="hide-sm num">${r.d ?? ""}</td><td class="hide-sm num">${r.l ?? ""}</td><td class="hide-sm num">${r.gf ?? ""}:${r.ga ?? ""}</td>`}
         <td class="num">${gd > 0 ? "+" + gd : gd}</td><td class="pts num">${r.pts}</td></tr>`;
       }).join("")}</tbody></table></div>`;
@@ -423,7 +428,7 @@
     const score = f.hs != null ? `<span class="num">${f.hs}–${f.as}</span>${f.res ? resTag(f.res) : ""}` : (f.d ? `<span class="num">${esc(fmtTime(f.d))}</span>` : `<span title="${esc(u("tbc"))}" style="color:var(--muted)">–</span>`);
     const sub = [f.d ? fmtDate(f.d, { weekday: "long" }) : "", f.venue ? venueName(f.venue) : ""].filter(Boolean).join(" · ");
     return `<li><div class="fl-date">${dateBlock}</div>
-      <div class="fl-teams">${club ? `<span class="ha" title="${esc(u(f.home_ ? "home" : "away"))}">${esc(u(f.home_ ? "homeShort" : "awayShort"))}</span>` : ""}<span class="${isUs(f.home) ? "us" : ""}">${esc(teamName(f.home))}</span> – <span class="${isUs(f.away) ? "us" : ""}">${esc(teamName(f.away))}</span>${sub ? `<small>${esc(sub)}</small>` : ""}</div>
+      <div class="fl-teams">${club ? `<span class="ha" title="${esc(u(f.home_ ? "home" : "away"))}">${esc(u(f.home_ ? "homeShort" : "awayShort"))}</span>` : ""}<span class="fl-match"><span class="fl-side${isUs(f.home) ? " us" : ""}">${badge(f.home, "sm")}${esc(teamName(f.home))}</span><span class="fl-dash">–</span><span class="fl-side${isUs(f.away) ? " us" : ""}">${badge(f.away, "sm")}${esc(teamName(f.away))}</span></span>${sub ? `<small>${esc(sub)}</small>` : ""}</div>
       <div class="fl-score">${score}</div></li>`;
   }
 
