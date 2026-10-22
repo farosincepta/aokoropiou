@@ -1,0 +1,348 @@
+{
+ "_help": "Replace these example players with the real squad, then set \"example\" to false. position: gk, df, mf or fw. dob: YYYY-MM-DD (age is calculated automatically). photo: e.g. assets/img/players/10.jpg (portrait 4:5).",
+ "example": true,
+ "players": [
+  {
+   "position": "gk",
+   "number": 1,
+   "first": {
+    "el": "Γιώργος",
+    "en": "Giorgos"
+   },
+   "last": {
+    "el": "Παπαδόπουλος",
+    "en": "Papadopoulos"
+   },
+   "dob": "1996-03-14",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "gk",
+   "number": 12,
+   "first": {
+    "el": "Νίκος",
+    "en": "Nikos"
+   },
+   "last": {
+    "el": "Αλεξίου",
+    "en": "Alexiou"
+   },
+   "dob": "2003-11-02",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "gk",
+   "number": 30,
+   "first": {
+    "el": "Στέλιος",
+    "en": "Stelios"
+   },
+   "last": {
+    "el": "Καραγιάννης",
+    "en": "Karagiannis"
+   },
+   "dob": "2007-06-21",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 2,
+   "first": {
+    "el": "Δημήτρης",
+    "en": "Dimitris"
+   },
+   "last": {
+    "el": "Βασιλείου",
+    "en": "Vasileiou"
+   },
+   "dob": "1999-01-09",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 3,
+   "first": {
+    "el": "Κώστας",
+    "en": "Kostas"
+   },
+   "last": {
+    "el": "Μιχαηλίδης",
+    "en": "Michailidis"
+   },
+   "dob": "2001-08-30",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 4,
+   "first": {
+    "el": "Αντώνης",
+    "en": "Antonis"
+   },
+   "last": {
+    "el": "Ζαφειρίου",
+    "en": "Zafeiriou"
+   },
+   "dob": "1994-05-17",
+   "photo": "",
+   "captain": true
+  },
+  {
+   "position": "df",
+   "number": 5,
+   "first": {
+    "el": "Μανώλης",
+    "en": "Manolis"
+   },
+   "last": {
+    "el": "Σταθόπουλος",
+    "en": "Stathopoulos"
+   },
+   "dob": "1998-12-03",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 15,
+   "first": {
+    "el": "Παναγιώτης",
+    "en": "Panagiotis"
+   },
+   "last": {
+    "el": "Λιάπης",
+    "en": "Liapis"
+   },
+   "dob": "2004-02-25",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 22,
+   "first": {
+    "el": "Θοδωρής",
+    "en": "Thodoris"
+   },
+   "last": {
+    "el": "Νικολάου",
+    "en": "Nikolaou"
+   },
+   "dob": "2002-09-11",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 6,
+   "first": {
+    "el": "Βασίλης",
+    "en": "Vasilis"
+   },
+   "last": {
+    "el": "Γεωργίου",
+    "en": "Georgiou"
+   },
+   "dob": "1997-04-28",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 8,
+   "first": {
+    "el": "Χρήστος",
+    "en": "Christos"
+   },
+   "last": {
+    "el": "Αθανασίου",
+    "en": "Athanasiou"
+   },
+   "dob": "1995-10-15",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 10,
+   "first": {
+    "el": "Λευτέρης",
+    "en": "Lefteris"
+   },
+   "last": {
+    "el": "Κωνσταντίνου",
+    "en": "Konstantinou"
+   },
+   "dob": "1999-07-07",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 14,
+   "first": {
+    "el": "Ηλίας",
+    "en": "Ilias"
+   },
+   "last": {
+    "el": "Δημητρίου",
+    "en": "Dimitriou"
+   },
+   "dob": "2005-03-19",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 16,
+   "first": {
+    "el": "Σπύρος",
+    "en": "Spyros"
+   },
+   "last": {
+    "el": "Οικονόμου",
+    "en": "Oikonomou"
+   },
+   "dob": "2000-11-23",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 18,
+   "first": {
+    "el": "Άγγελος",
+    "en": "Angelos"
+   },
+   "last": {
+    "el": "Πετρόπουλος",
+    "en": "Petropoulos"
+   },
+   "dob": "2006-01-30",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 21,
+   "first": {
+    "el": "Μάριος",
+    "en": "Marios"
+   },
+   "last": {
+    "el": "Τσιρίγος",
+    "en": "Tsirigos"
+   },
+   "dob": "1998-06-12",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 7,
+   "first": {
+    "el": "Γιάννης",
+    "en": "Giannis"
+   },
+   "last": {
+    "el": "Μαυρίδης",
+    "en": "Mavridis"
+   },
+   "dob": "2000-02-08",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 9,
+   "first": {
+    "el": "Αλέξανδρος",
+    "en": "Alexandros"
+   },
+   "last": {
+    "el": "Ραφαηλίδης",
+    "en": "Rafailidis"
+   },
+   "dob": "1996-09-27",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 11,
+   "first": {
+    "el": "Πέτρος",
+    "en": "Petros"
+   },
+   "last": {
+    "el": "Χατζής",
+    "en": "Chatzis"
+   },
+   "dob": "2003-05-05",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 19,
+   "first": {
+    "el": "Φώτης",
+    "en": "Fotis"
+   },
+   "last": {
+    "el": "Λαμπρόπουλος",
+    "en": "Lampropoulos"
+   },
+   "dob": "2005-12-16",
+   "photo": "",
+   "captain": false
+  }
+ ],
+ "staff": [
+  {
+   "name": {
+    "el": "Προπονητής – θα ανακοινωθεί",
+    "en": "Head coach – to be announced"
+   },
+   "role": {
+    "el": "Προπονητής",
+    "en": "Head coach"
+   }
+  },
+  {
+   "name": {
+    "el": "Θα ανακοινωθεί",
+    "en": "To be announced"
+   },
+   "role": {
+    "el": "Βοηθός προπονητή",
+    "en": "Assistant coach"
+   }
+  },
+  {
+   "name": {
+    "el": "Θα ανακοινωθεί",
+    "en": "To be announced"
+   },
+   "role": {
+    "el": "Προπονητής τερματοφυλάκων",
+    "en": "Goalkeeping coach"
+   }
+  },
+  {
+   "name": {
+    "el": "Θα ανακοινωθεί",
+    "en": "To be announced"
+   },
+   "role": {
+    "el": "Φυσικοθεραπευτής",
+    "en": "Physiotherapist"
+   }
+  }
+ ]
+}

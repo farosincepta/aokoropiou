@@ -1,0 +1,118 @@
+{
+ "_help": "Newest first is automatic. category: match, club or academy. Use \\n\\n between paragraphs. image: optional path, e.g. assets/img/news/photo.jpg. cover: shown when there is no photo.",
+ "articles": [
+  {
+   "id": "aok-panvoreiakos-2-0",
+   "date": "2026-10-18",
+   "category": "match",
+   "cover": {
+    "big": "2–0",
+    "small": {
+     "el": "Κορωπί – Πανβορειακός",
+     "en": "Koropi v Panvoreiakos"
+    }
+   },
+   "title": {
+    "el": "Τέσσερα στα τέσσερα: 2–0 επί του Πανβορειακού στο «Αντώνης Πρίφτης»",
+    "en": "Four from four: 2–0 against Panvoreiakos at the Antonis Priftis"
+   },
+   "summary": {
+    "el": "Η ομάδα συνεχίζει με το απόλυτο και κρατά τη 2η θέση, ισόβαθμη με την κορυφή.",
+    "en": "The team keeps its perfect record and stays second, level on points with the leaders."
+   },
+   "body": {
+    "el": "Με νίκη 2–0 επί του Πανβορειακού, την Κυριακή 18 Οκτωβρίου στο γήπεδο «Αντώνης Πρίφτης», ο Α.Ο. Κορωπίου έκανε το 4/4 στο ξεκίνημα του πρωταθλήματος της Β΄ Κατηγορίας ΕΠΣΑΝΑ.\n\nΗ ομάδα έχει 12 βαθμούς, με 13 γκολ υπέρ και 5 κατά, και βρίσκεται στη 2η θέση, ισόβαθμη με τον Ολυμπιακό Βάρης.\n\n## Επόμενο ραντεβού\n\nΤο Σάββατο 24 Οκτωβρίου στις 15:00 η ομάδα ταξιδεύει στη Βάρη για το ντέρμπι κορυφής της 5ης αγωνιστικής.",
+    "en": "A 2–0 win over Panvoreiakos at the Antonis Priftis Stadium on Sunday 18 October made it four wins from four for AO Koropiou at the start of the EPSANA Second Division season.\n\nThe team has 12 points, with 13 goals scored and 5 conceded, and sits second, level on points with Olympiakos Varis.\n\n## Next up\n\nOn Saturday 24 October at 15:00 the team travels to Vari for the top-of-the-table match of matchday 5."
+   }
+  },
+  {
+   "id": "preview-olympiakos-varis",
+   "date": "2026-10-20",
+   "category": "match",
+   "cover": {
+    "big": "24.10",
+    "small": {
+     "el": "Ολυμπιακός Βάρης – Κορωπί",
+     "en": "Olympiakos Varis v Koropi"
+    }
+   },
+   "title": {
+    "el": "Ντέρμπι κορυφής στη Βάρη: πρώτος με δεύτερο το Σάββατο",
+    "en": "Top-of-the-table clash in Vari on Saturday"
+   },
+   "summary": {
+    "el": "Ολυμπιακός Βάρης και Κορωπί, και οι δύο με 12 βαθμούς, αναμετρώνται για την 5η αγωνιστική.",
+    "en": "Olympiakos Varis and Koropi, both on 12 points, meet on matchday 5."
+   },
+   "body": {
+    "el": "Η 5η αγωνιστική φέρνει αντιμέτωπες τις δύο ομάδες που έχουν ξεκινήσει με το απόλυτο: τον Ολυμπιακό Βάρης (15–5 γκολ) και τον Α.Ο. Κορωπίου (13–5).\n\nΟ αγώνας διεξάγεται το Σάββατο 24 Οκτωβρίου στις 15:00 στο γήπεδο Βάρης. Καλούμε τους φιλάθλους μας να βρεθούν δίπλα στην ομάδα.",
+    "en": "Matchday 5 brings together the two teams with perfect starts: Olympiakos Varis (15–5 goals) and AO Koropiou (13–5).\n\nThe match is on Saturday 24 October at 15:00 at the Vari ground. We hope to see plenty of our supporters there."
+   }
+  },
+  {
+   "id": "dionysos-3-4",
+   "date": "2026-10-10",
+   "category": "match",
+   "cover": {
+    "big": "3–4",
+    "small": {
+     "el": "Διόνυσος – Κορωπί",
+     "en": "Dionysos v Koropi"
+    }
+   },
+   "title": {
+    "el": "Επτά γκολ και τρίποντο στον Διόνυσο",
+    "en": "Seven goals and three points at Dionysos"
+   },
+   "summary": {
+    "el": "Νίκη 4–3 εκτός έδρας σε ένα από τα πιο συναρπαστικά παιχνίδια της αγωνιστικής.",
+    "en": "A 4–3 away win in one of the matchday's most exciting games."
+   },
+   "body": {
+    "el": "Ο Α.Ο. Κορωπίου επικράτησε 4–3 του Διονύσου Αττικής εκτός έδρας στην 3η αγωνιστική, σε έναν αγώνα που κρίθηκε στις λεπτομέρειες.",
+    "en": "AO Koropiou won 4–3 away at Dionysos Attikis on matchday 3, in a match decided by fine margins."
+   }
+  },
+  {
+   "id": "triglia-4-1",
+   "date": "2026-10-03",
+   "category": "match",
+   "cover": {
+    "big": "4–1",
+    "small": {
+     "el": "Κορωπί – Τρίγλια",
+     "en": "Koropi v Triglia"
+    }
+   },
+   "title": {
+    "el": "Καθαρό 4–1 επί της Τρίγλιας στην πρώτη εντός έδρας",
+    "en": "A clear 4–1 over Triglia in the first home match"
+   },
+   "summary": {
+    "el": "Πρώτη εμφάνιση της σεζόν στο «Αντώνης Πρίφτης» και δεύτερη σερί νίκη.",
+    "en": "The season's first appearance at the Antonis Priftis and a second straight win."
+   },
+   "body": {
+    "el": "Στην πρώτη εντός έδρας αναμέτρηση της σεζόν, ο Α.Ο. Κορωπίου νίκησε 4–1 την Τρίγλια Ραφήνας και έκανε το 2/2.",
+    "en": "In the season's first home match, AO Koropiou beat Triglia Rafinas 4–1 to make it two wins from two."
+   }
+  },
+  {
+   "id": "academy-registrations",
+   "date": "2026-09-15",
+   "category": "academy",
+   "title": {
+    "el": "Ξεκίνησαν οι εγγραφές στην Ακαδημία για τη σεζόν 2026–27",
+    "en": "Academy registrations open for 2026–27"
+   },
+   "summary": {
+    "el": "Παιδιά από 4 έως 17 ετών μπορούν να γραφτούν με τη φόρμα της ιστοσελίδας.",
+    "en": "Children aged 4 to 17 can register using the form on our website."
+   },
+   "body": {
+    "el": "Η Ακαδημία του Α.Ο. Κορωπίου δέχεται εγγραφές για όλα τα τμήματα ηλικιών. Συμπληρώστε τη δήλωση συμμετοχής στη σελίδα της Ακαδημίας και η γραμματεία θα επικοινωνήσει μαζί σας για την πρώτη, δοκιμαστική προπόνηση.",
+    "en": "The AO Koropiou Academy is taking registrations for every age group. Fill in the registration form on the Academy page and the office will contact you about a first, trial session."
+   }
+  }
+ ]
+}

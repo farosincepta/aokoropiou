@@ -1,0 +1,4 @@
+{
+ "_help": "Add one entry per sponsor: {\"name\": \"Company\", \"logo\": \"assets/img/sponsors/company.png\", \"url\": \"https://...\", \"tier\": \"main|official|supporter\"}. Empty slots invite new sponsors.",
+ "sponsors": []
+}

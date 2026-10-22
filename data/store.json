@@ -1,0 +1,106 @@
+{
+ "_help": "Example products. Replace image with a real photo (square, e.g. assets/img/store/home-shirt.jpg), set price in euro, then set \"example\" to false. category: kit or fan.",
+ "example": true,
+ "products": [
+  {
+   "id": "home-shirt",
+   "category": "kit",
+   "name": {
+    "el": "Φανέλα εντός έδρας 2026–27",
+    "en": "Home shirt 2026–27"
+   },
+   "price": null,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "image": "assets/img/store/home.svg",
+   "badge": {
+    "el": "Νέα",
+    "en": "New"
+   }
+  },
+  {
+   "id": "away-shirt",
+   "category": "kit",
+   "name": {
+    "el": "Φανέλα εκτός έδρας 2026–27",
+    "en": "Away shirt 2026–27"
+   },
+   "price": null,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "image": "assets/img/store/away.svg"
+  },
+  {
+   "id": "kids-kit",
+   "category": "kit",
+   "name": {
+    "el": "Παιδική εμφάνιση",
+    "en": "Kids' kit"
+   },
+   "price": null,
+   "sizes": [
+    "4–6",
+    "7–9",
+    "10–12",
+    "13–14"
+   ],
+   "image": "assets/img/store/kids.svg"
+  },
+  {
+   "id": "training-top",
+   "category": "kit",
+   "name": {
+    "el": "Μπλούζα προπόνησης",
+    "en": "Training top"
+   },
+   "price": null,
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "image": "assets/img/store/training.svg"
+  },
+  {
+   "id": "scarf",
+   "category": "fan",
+   "name": {
+    "el": "Κασκόλ «Κορωπί 1903»",
+    "en": "“Koropi 1903” scarf"
+   },
+   "price": null,
+   "image": "assets/img/store/scarf.svg"
+  },
+  {
+   "id": "cap",
+   "category": "fan",
+   "name": {
+    "el": "Καπέλο",
+    "en": "Cap"
+   },
+   "price": null,
+   "image": "assets/img/store/cap.svg"
+  },
+  {
+   "id": "mug",
+   "category": "fan",
+   "name": {
+    "el": "Κούπα",
+    "en": "Mug"
+   },
+   "price": null,
+   "image": "assets/img/store/mug.svg"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+  "_help": "Change league_id at the start of each season (the number at the end of the EPSANA standings link). club_name must match how EPSANA writes the club.",
+  "league_id": 749,
+  "club_name": "ΑΟ ΚΟΡΩΠΙ",
+  "division": "Β Κατηγορία",
+  "season": "2026-2027"
+}
