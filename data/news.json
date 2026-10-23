@@ -1,11 +1,13 @@
 {
- "_help": "Newest first is automatic. category: match, club or academy. Use \\n\\n between paragraphs. image: optional path, e.g. assets/img/news/photo.jpg. cover: shown when there is no photo.",
+ "_help": "Newest first is automatic. category: match, club or academy. Use \\n\\n between paragraphs. image: optional path, e.g. assets/img/news/photo.jpg. cover: shown when there is no photo. For a match cover, add \"home\" and \"away\" with the team names exactly as EPSANA writes them (e.g. \"ΑΟ ΚΟΡΩΠΙ\") and both clubs' logos appear beside the score.",
  "articles": [
   {
    "id": "aok-panvoreiakos-2-0",
    "date": "2026-10-18",
    "category": "match",
    "cover": {
+    "home": "ΑΟ ΚΟΡΩΠΙ",
+    "away": "ΠΑΝΒΟΡΕΙΑΚΟΣ ΑΣ",
     "big": "2–0",
     "small": {
      "el": "Κορωπί – Πανβορειακός",
@@ -30,6 +32,8 @@
    "date": "2026-10-20",
    "category": "match",
    "cover": {
+    "home": "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ",
+    "away": "ΑΟ ΚΟΡΩΠΙ",
     "big": "24.10",
     "small": {
      "el": "Ολυμπιακός Βάρης – Κορωπί",
@@ -54,6 +58,8 @@
    "date": "2026-10-10",
    "category": "match",
    "cover": {
+    "home": "ΔΙΟΝΥΣΟΣ ΑΤΤΙΚΗΣ",
+    "away": "ΑΟ ΚΟΡΩΠΙ",
     "big": "3–4",
     "small": {
      "el": "Διόνυσος – Κορωπί",
@@ -78,6 +84,8 @@
    "date": "2026-10-03",
    "category": "match",
    "cover": {
+    "home": "ΑΟ ΚΟΡΩΠΙ",
+    "away": "ΤΡΙΓΛΙΑΣ ΡΑΦΗΝΑΣ ΑΟ",
     "big": "4–1",
     "small": {
      "el": "Κορωπί – Τρίγλια",
