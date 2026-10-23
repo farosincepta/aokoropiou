@@ -476,7 +476,10 @@
   const CATS = ["match", "club", "academy"];
   const storyImg = (n, a) => {
     if (n.image) return `<img src="${esc(n.image)}" alt="${esc(L(n.imageAlt) || "")}" loading="lazy">`;
-    if (n.cover) return `<div class="cover"><div><b class="num">${esc(n.cover.big)}</b><small>${esc(L(n.cover.small))}</small></div></div>`;
+    if (n.cover) {
+      const c = n.cover, side = t => t ? `<span class="cover-logo">${badge(t, "lg")}</span>` : "";
+      return `<div class="cover${c.home ? " has-logos" : ""}"><div class="cover-row">${side(c.home)}<b class="num">${esc(c.big)}</b>${side(c.away)}</div><small>${esc(L(c.small))}</small></div>`;
+    }
     return `<img src="assets/img/stadium-800.webp" alt="" loading="lazy">`;
   };
   const storyHTML = (n, cls = "") => `<a class="story ${cls}" href="article.html?id=${encodeURIComponent(n.id)}">
