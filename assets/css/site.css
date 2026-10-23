@@ -609,3 +609,19 @@ a.player:hover h3 .last { text-decoration: underline; text-decoration-thickness:
 }
 #home-centre .fl-match { display: flex; flex-direction: column; gap: 4px; }
 #home-centre .fl-dash { display: none; }
+
+/* v5: club logos on news match covers */
+.cover { flex-direction: column; display: flex; align-items: center; justify-content: center; }
+.cover-row { display: flex; align-items: center; justify-content: center; gap: clamp(12px, 3vw, 28px); }
+.cover-logo { display: grid; place-items: center; flex: none; width: clamp(54px, 7vw, 84px); height: clamp(54px, 7vw, 84px); border-radius: 50%; background: var(--white); box-shadow: 0 6px 18px rgba(8,18,38,.35); }
+.cover-logo .badge.lg.logo { width: 72%; height: 72%; }
+.cover-logo .badge:not(.logo) { background: transparent; }
+.cover small { margin-top: 12px; }
+.news-side .cover-logo { width: 40px; height: 40px; }
+.news-side .cover-row { gap: 8px; }
+.news-side .cover small { margin-top: 6px; }
+.article-hero .cover-logo { width: clamp(70px, 10vw, 120px); height: clamp(70px, 10vw, 120px); }
+.news-list .cover.has-logos b { font-size: clamp(2rem, 3.2vw, 3.1rem); }
+.news-list .cover-logo { width: clamp(50px, 4.6vw, 66px); height: clamp(50px, 4.6vw, 66px); }
+.news-list .cover-row { gap: clamp(10px, 1.2vw, 18px); }
+.cover { overflow: hidden; }
