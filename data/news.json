@@ -1,5 +1,5 @@
 {
- "_help": "Newest first is automatic. category: match, club or academy. Use \\n\\n between paragraphs. image: optional path, e.g. assets/img/news/photo.jpg. cover: shown when there is no photo. For a match cover, add \"home\" and \"away\" with the team names exactly as EPSANA writes them (e.g. \"ΑΟ ΚΟΡΩΠΙ\") and both clubs' logos appear beside the score.",
+ "_help": "Newest first is automatic. category: match, club or academy. Use \\n\\n between paragraphs. image: optional path, e.g. assets/img/news/photo.jpg. cover: shown when there is no photo. For a match cover, add \"home\" and \"away\" with the team names exactly as EPSANA writes them (e.g. \"ΑΟ ΚΟΡΩΠΙ\") and both clubs' logos appear beside the score. Results are added automatically: every AOK match with a score on EPSANA gets a short story. To write your own report instead, add \"round\": n to your article and the automatic one for that round is hidden.",
  "articles": [
   {
    "id": "aok-panvoreiakos-2-0",
@@ -25,7 +25,8 @@
    "body": {
     "el": "Με νίκη 2–0 επί του Πανβορειακού, την Κυριακή 18 Οκτωβρίου στο γήπεδο «Αντώνης Πρίφτης», ο Α.Ο. Κορωπίου έκανε το 4/4 στο ξεκίνημα του πρωταθλήματος της Β΄ Κατηγορίας ΕΠΣΑΝΑ.\n\nΗ ομάδα έχει 12 βαθμούς, με 13 γκολ υπέρ και 5 κατά, και βρίσκεται στη 2η θέση, ισόβαθμη με τον Ολυμπιακό Βάρης.\n\n## Επόμενο ραντεβού\n\nΤο Σάββατο 24 Οκτωβρίου στις 15:00 η ομάδα ταξιδεύει στη Βάρη για το ντέρμπι κορυφής της 5ης αγωνιστικής.",
     "en": "A 2–0 win over Panvoreiakos at the Antonis Priftis Stadium on Sunday 18 October made it four wins from four for AO Koropiou at the start of the EPSANA Second Division season.\n\nThe team has 12 points, with 13 goals scored and 5 conceded, and sits second, level on points with Olympiakos Varis.\n\n## Next up\n\nOn Saturday 24 October at 15:00 the team travels to Vari for the top-of-the-table match of matchday 5."
-   }
+   },
+   "round": 4
   },
   {
    "id": "preview-olympiakos-varis",
@@ -77,7 +78,8 @@
    "body": {
     "el": "Ο Α.Ο. Κορωπίου επικράτησε 4–3 του Διονύσου Αττικής εκτός έδρας στην 3η αγωνιστική, σε έναν αγώνα που κρίθηκε στις λεπτομέρειες.",
     "en": "AO Koropiou won 4–3 away at Dionysos Attikis on matchday 3, in a match decided by fine margins."
-   }
+   },
+   "round": 3
   },
   {
    "id": "triglia-4-1",
@@ -103,7 +105,8 @@
    "body": {
     "el": "Στην πρώτη εντός έδρας αναμέτρηση της σεζόν, ο Α.Ο. Κορωπίου νίκησε 4–1 την Τρίγλια Ραφήνας και έκανε το 2/2.",
     "en": "In the season's first home match, AO Koropiou beat Triglia Rafinas 4–1 to make it two wins from two."
-   }
+   },
+   "round": 2
   },
   {
    "id": "academy-registrations",
