@@ -25,8 +25,11 @@ CONFIG = ROOT / "data" / "epsana-config.json"
 OUT = ROOT / "data" / "epsana.json"
 BASE = "https://www.epsana.gr/results/"
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; AOKoropiou-site-sync/1.0; +https://github.com)",
-    "Accept-Language": "el-GR,el;q=0.9",
+    # A normal browser identity: EPSANA sits behind Cloudflare, which may refuse obvious bots.
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "el-GR,el;q=0.9,en;q=0.6",
+    "Referer": "https://www.epsana.gr/",
 }
 
 
@@ -41,17 +44,22 @@ def clean(text):
     return re.sub(r"\s+", " ", (text or "").replace("\xa0", " ")).strip()
 
 
-def get(url, tries=3):
+def get(url, tries=4):
     last = None
+    session = requests.Session()
     for i in range(tries):
         try:
-            r = requests.get(url, headers=HEADERS, timeout=30)
-            r.raise_for_status()
-            r.encoding = r.apparent_encoding if not r.encoding or r.encoding.lower() == "iso-8859-1" else r.encoding
-            return r.text
+            r = session.get(url, headers=HEADERS, timeout=30)
+            if r.status_code in (403, 429, 503) or "cf-chl" in r.text[:5000] or "Just a moment" in r.text[:2000]:
+                last = RuntimeError(f"EPSANA refused the request (HTTP {r.status_code}). "
+                                    "Its website protection is probably blocking GitHub's servers.")
+            else:
+                r.raise_for_status()
+                r.encoding = r.apparent_encoding if not r.encoding or r.encoding.lower() == "iso-8859-1" else r.encoding
+                return r.text
         except Exception as exc:  # network hiccup: wait and retry
             last = exc
-            time.sleep(5 * (i + 1))
+        time.sleep(10 * (i + 1))
     raise RuntimeError(f"Could not download {url}: {last}")
 
 
