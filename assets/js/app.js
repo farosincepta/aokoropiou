@@ -486,13 +486,52 @@
       <div class="story-img">${storyImg(n)}</div>
       <div><div class="story-meta"><span class="story-cat">${esc(u("cat." + n.category))}</span><time datetime="${esc(n.date)}">${esc(fmtDate(new Date(n.date), { day: "numeric", month: "long", year: "numeric" }))}</time></div>
       <h3>${esc(L(n.title))}</h3>${cls === "lead" ? `<p>${esc(L(n.summary))}</p>` : ""}</div></a>`;
+  // A short result story for every AOK match EPSANA has a score for, unless a
+  // hand-written article in data/news.json already covers that round ("round": n).
+  function autoResults(ep, manual) {
+    const an = analyse(ep);
+    if (!an) return [];
+    const covered = new Set(manual.filter(m => m.round).map(m => +m.round));
+    const latest = an.last;
+    const both = (el, en) => ({ el, en });
+    return an.played.filter(f => !covered.has(f.round) && f.date).map(f => {
+      const us = f.home_ ? f.hs : f.as, them = f.home_ ? f.as : f.hs;
+      const opp = f.home_ ? f.away : f.home;
+      const nm = (raw, l) => { const t = TEAMS[raw]; return t ? t[l] : (l === "en" ? translit(raw) : greekTitle(raw)); };
+      const score = `${f.hs}–${f.as}`;
+      const title = l => `${nm(f.home, l)} – ${nm(f.away, l)} ${score}`;
+      const resEl = { w: "Νίκη", d: "Ισοπαλία", l: "Ήττα" }[f.res], resEn = { w: "Win", d: "Draw", l: "Defeat" }[f.res];
+      const whereEl = f.home_ ? "εντός έδρας" : "εκτός έδρας", whereEn = f.home_ ? "at home" : "away";
+      const dayEl = new Intl.DateTimeFormat("el-GR", { timeZone: TZ, weekday: "long", day: "numeric", month: "long" }).format(f.d);
+      const wd = dayEl.split(" ")[0];
+      const dayAccEl = (/^(Κυριακή|Δευτέρα|Τρίτη|Τετάρτη|Πέμπτη|Παρασκευή)/.test(wd) ? "την " : "το ") + dayEl.replace(/,/g, "");
+      const dayEn = new Intl.DateTimeFormat("en-GB", { timeZone: TZ, weekday: "long", day: "numeric", month: "long" }).format(f.d);
+      const venueEl = f.venue ? (VENUES[f.venue] ? VENUES[f.venue].el : "γήπεδο " + f.venue) : "", venueEn = f.venue ? (VENUES[f.venue] ? VENUES[f.venue].en : "the " + translit(f.venue) + " ground") : "";
+      let tableEl = "", tableEn = "";
+      if (latest && f.round === latest.round && an.row) {
+        tableEl = `\n\nΜετά από ${an.row.p} αγώνες, η ομάδα βρίσκεται στην ${an.row.pos}η θέση της βαθμολογίας με ${an.row.pts} βαθμούς.`;
+        const o = (n => { const t = n % 100, d = n % 10; return n + (t >= 11 && t <= 13 ? "th" : d === 1 ? "st" : d === 2 ? "nd" : d === 3 ? "rd" : "th"); })(an.row.pos);
+        tableEn = `\n\nAfter ${an.row.p} matches, the team is ${o} in the table with ${an.row.pts} points.`;
+      }
+      return {
+        id: "result-" + f.round, auto: true, round: f.round, date: f.date.slice(0, 10), category: "match",
+        cover: { home: f.home, away: f.away, big: score, small: both(`${resEl} · ${f.round}η αγωνιστική`, `${resEn} · Matchday ${f.round}`) },
+        title: both(title("el"), title("en")),
+        summary: both(`${resEl} ${whereEl} στην ${f.round}η αγωνιστική της Β΄ Κατηγορίας ΕΠΣΑΝΑ.`, `${resEn} ${whereEn} on matchday ${f.round} of the EPSANA Second Division.`),
+        body: both(
+          `Ο αγώνας ${nm(f.home, "el")} – ${nm(f.away, "el")}, για την ${f.round}η αγωνιστική της Β΄ Κατηγορίας ΕΠΣΑΝΑ, έληξε ${score}${{ w: " με νίκη της ομάδας μας", d: " ισόπαλος", l: "" }[f.res]}. Διεξήχθη ${dayAccEl}${venueEl ? " στο " + venueEl : ""}.${tableEl}`,
+          `${nm(f.home, "en")} – ${nm(f.away, "en")}, on matchday ${f.round} of the EPSANA Second Division, finished ${score}${{ w: ", a win for AO Koropiou", d: ", a draw", l: "" }[f.res]}. It was played on ${dayEn}${venueEn ? " at " + venueEn : ""}.${tableEn}`)
+      };
+    });
+  }
   const sortedNews = list => (list || []).slice().sort((a, b) => b.date.localeCompare(a.date));
 
   async function renderNews() {
     const home = $("#home-news"), all = $("#news-list"), art = $("#article");
     if (!home && !all && !art) return;
-    const data = await load("data/news.json");
-    const list = sortedNews(data && data.articles);
+    const [data, ep] = await Promise.all([load("data/news.json"), load("data/epsana.json")]);
+    const manual = (data && data.articles) || [];
+    const list = sortedNews(manual.concat(autoResults(ep, manual)));
     if (home) {
       if (!list.length) { home.innerHTML = `<p>${esc(u("noNews"))}</p>`; }
       else home.innerHTML = `<div class="news-grid">${storyHTML(list[0], "lead")}<div class="news-side">${list.slice(1, 4).map(n => storyHTML(n)).join("")}</div></div>`;
