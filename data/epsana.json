@@ -777,10 +777,94 @@
   },
   {
    "round": 7,
+   "home": "ΓΙΑΝΝΗΣ ΠΑΘΙΑΚΑΚΗΣ",
+   "away": "ΑΟ ΠΑΙΑΝΙΑΣ",
+   "venue": "Άνοιξης Γ.Κυριάκης",
+   "date": "2026-11-07T15:00",
+   "hs": null,
+   "as": null,
+   "note": null,
+   "referees": null,
+   "game_id": null
+  },
+  {
+   "round": 7,
+   "home": "ΑΟ ΚΟΥΒΑΡΑ",
+   "away": "ΠΑΣ ΩΡΩΠΟΣ",
+   "venue": "Κουβαρά",
+   "date": "2026-11-07T15:00",
+   "hs": null,
+   "as": null,
+   "note": null,
+   "referees": null,
+   "game_id": null
+  },
+  {
+   "round": 7,
+   "home": "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ",
+   "away": "ΤΡΙΓΛΙΑΣ ΡΑΦΗΝΑΣ ΑΟ",
+   "venue": "Βάρης",
+   "date": "2026-11-07T15:00",
+   "hs": null,
+   "as": null,
+   "note": null,
+   "referees": null,
+   "game_id": null
+  },
+  {
+   "round": 7,
+   "home": "ΑΠΕΣ ΚΑΠΑΝΔΡΙΤΙΟΥ ΠΟΛΥΔΕΝΔΡΙΟΥ",
+   "away": "ΑΠΕ ΛΑΥΡΕΩΤΙΚΗ",
+   "venue": "Καπανδριτίου",
+   "date": "2026-11-07T15:00",
+   "hs": null,
+   "as": null,
+   "note": null,
+   "referees": null,
+   "game_id": null
+  },
+  {
+   "round": 7,
+   "home": "ΜΑΧΗ ΜΑΡΑΘΩΝΑ",
+   "away": "Α.Π.Ο ΝΙΚΗΦΟΡΟΣ",
+   "venue": "Νέας Μάκρης",
+   "date": "2026-11-07T15:00",
+   "hs": null,
+   "as": null,
+   "note": null,
+   "referees": null,
+   "game_id": null
+  },
+  {
+   "round": 7,
+   "home": "ΠΑΝΒΟΡΕΙΑΚΟΣ ΑΣ",
+   "away": "ΔΙΟΝΥΣΟΣ ΑΤΤΙΚΗΣ",
+   "venue": "Σταμάτας",
+   "date": "2026-11-08T15:00",
+   "hs": null,
+   "as": null,
+   "note": null,
+   "referees": null,
+   "game_id": null
+  },
+  {
+   "round": 7,
+   "home": "ΠΑΟ ΚΑΛΥΒΙΩΝ",
+   "away": "Α.Ο ΦΟΙΒΟΣ ΒΑΡΗΣ",
+   "venue": "Καλυβίων",
+   "date": "2026-11-08T15:00",
+   "hs": null,
+   "as": null,
+   "note": null,
+   "referees": null,
+   "game_id": null
+  },
+  {
+   "round": 7,
    "home": "ΑΟ ΚΟΡΩΠΙ",
    "away": "ΝΙΚΗ ΔΡΟΣΙΑΣ",
-   "venue": null,
-   "date": null,
+   "venue": "Κορωπίου Αντώνης Πρίφτης",
+   "date": "2026-11-08T15:00",
    "hs": null,
    "as": null,
    "note": null,
@@ -1069,5 +1153,5 @@
   "schedule": "https://www.epsana.gr/results/display_schedule.php?league_id=749",
   "results": "https://www.epsana.gr/results/display_results.php?league_id=749"
  },
- "updated": "2026-11-02T13:00:00Z"
+ "updated": "2026-11-02T13:20:00Z"
 }
