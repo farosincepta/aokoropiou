@@ -2,6 +2,60 @@
  "_help": "Newest first is automatic. category: match, club or academy. Use \\n\\n between paragraphs. image: optional path, e.g. assets/img/news/photo.jpg. cover: shown when there is no photo. For a match cover, add \"home\" and \"away\" with the team names exactly as EPSANA writes them (e.g. \"ΑΟ ΚΟΡΩΠΙ\") and both clubs' logos appear beside the score. Results are added automatically: every AOK match with a score on EPSANA gets a short story. To write your own report instead, add \"round\": n to your article and the automatic one for that round is hidden.",
  "articles": [
   {
+   "id": "aok-kalyvion-2-0",
+   "round": 6,
+   "date": "2026-11-01",
+   "category": "match",
+   "cover": {
+    "home": "ΑΟ ΚΟΡΩΠΙ",
+    "away": "ΠΑΟ ΚΑΛΥΒΙΩΝ",
+    "big": "2–0",
+    "small": {
+     "el": "Νίκη · 6η αγωνιστική",
+     "en": "Win · Matchday 6"
+    }
+   },
+   "title": {
+    "el": "Έξι στα έξι: 2–0 επί του Π.Α.Ο. Καλυβίων στο «Αντώνης Πρίφτης»",
+    "en": "Six from six: 2–0 against PAO Kalyvion at the Antonis Priftis"
+   },
+   "summary": {
+    "el": "Δεύτερη συνεχόμενη νίκη χωρίς παθητικό και διαφορά τριών βαθμών από τη 2η θέση.",
+    "en": "A second clean-sheet win in a row and a three-point lead at the top."
+   },
+   "body": {
+    "el": "Ο Α.Ο. Κορωπίου νίκησε 2–0 τον Π.Α.Ο. Καλυβίων την Κυριακή 1 Νοεμβρίου στο γήπεδο «Αντώνης Πρίφτης», για την 6η αγωνιστική της Β΄ Κατηγορίας ΕΠΣΑΝΑ.\n\nΉταν η έκτη νίκη σε ισάριθμους αγώνες και η δεύτερη συνεχόμενη χωρίς να δεχτεί γκολ η ομάδα μας, μετά το 1–0 στη Βάρη.\n\n## Η βαθμολογία\n\nΟ Α.Ο. Κορωπίου παραμένει στην 1η θέση με 18 βαθμούς και γκολ 16–5. Ο Διόνυσος Αττικής, που νίκησε 2–0 τον Γιάννη Παθιακάκη, ακολουθεί στη 2η θέση με 15 βαθμούς, ενώ ο Ολυμπιακός Βάρης έμεινε στην ισοπαλία 1–1 με τον Φοίβο Βάρης και είναι 3ος με 13.\n\n## Επόμενος αγώνας\n\nΤην Κυριακή 8 Νοεμβρίου στις 15:00 η ομάδα υποδέχεται τη Νίκη Δροσιάς, που βρίσκεται στην 5η θέση με 12 βαθμούς, ξανά στο «Αντώνης Πρίφτης».",
+    "en": "AO Koropiou beat PAO Kalyvion 2–0 on Sunday 1 November at the Antonis Priftis Stadium, on matchday 6 of the EPSANA Second Division.\n\nIt was the team's sixth win in six matches and a second clean sheet in a row, after the 1–0 win in Vari.\n\n## The table\n\nAO Koropiou stay 1st with 18 points and a goal record of 16–5. Dionysos Attikis, who beat Giannis Pathiakakis 2–0, are 2nd on 15 points, while Olympiakos Varis were held 1–1 by Foivos Varis and sit 3rd on 13.\n\n## Next match\n\nOn Sunday 8 November at 15:00 the team hosts Niki Drosias, 5th with 12 points, again at the Antonis Priftis Stadium."
+   }
+  },
+  {
+   "id": "olympiakos-varis-0-1",
+   "round": 5,
+   "date": "2026-10-24",
+   "category": "match",
+   "cover": {
+    "home": "ΑΠΣ ΟΛΥΜΠΙΑΚΟΣ ΒΑΡΗΣ",
+    "away": "ΑΟ ΚΟΡΩΠΙ",
+    "big": "0–1",
+    "small": {
+     "el": "Νίκη · 5η αγωνιστική",
+     "en": "Win · Matchday 5"
+    }
+   },
+   "title": {
+    "el": "Νίκη 1–0 στο ντέρμπι κορυφής της Βάρης, το Κορωπί στην 1η θέση",
+    "en": "1–0 win in the top-of-the-table clash at Vari takes Koropi top"
+   },
+   "summary": {
+    "el": "Ο Α.Ο. Κορωπίου νίκησε 1–0 τον Ολυμπιακό Βάρης εκτός έδρας και πέρασε μόνος στην κορυφή της Β΄ Κατηγορίας ΕΠΣΑΝΑ.",
+    "en": "AO Koropiou won 1–0 away at Olympiakos Varis and moved clear at the top of the EPSANA Second Division."
+   },
+   "body": {
+    "el": "Ο Α.Ο. Κορωπίου κέρδισε 1–0 τον Ολυμπιακό Βάρης στη Βάρη, το Σάββατο 24 Οκτωβρίου, στο ντέρμπι κορυφής της 5ης αγωνιστικής της Β΄ Κατηγορίας ΕΠΣΑΝΑ.\n\nΟι δύο ομάδες είχαν ξεκινήσει το πρωτάθλημα με το απόλυτο και βρίσκονταν ισόβαθμες στην κορυφή με 12 βαθμούς. Με ένα γκολ και χωρίς να δεχτεί τέρμα, η ομάδα μας έδωσε στους γηπεδούχους την πρώτη τους ήττα της σεζόν.\n\n## Μόνοι στην κορυφή\n\nΜε πέντε νίκες σε πέντε αγώνες, ο Α.Ο. Κορωπίου ανέβηκε στην 1η θέση με 15 βαθμούς, τρεις μπροστά από τον Ολυμπιακό Βάρης και τον Διόνυσο Αττικής. Η ομάδα έχει σκοράρει 14 γκολ και έχει δεχτεί μόλις 5.\n\n## Επόμενος αγώνας\n\nΗ ομάδα επιστρέφει στο «Αντώνης Πρίφτης» την Κυριακή 1 Νοεμβρίου στις 15:00 για τον αγώνα με τον Π.Α.Ο. Καλυβίων.",
+    "en": "AO Koropiou beat Olympiakos Varis 1–0 in Vari on Saturday 24 October, in the top-of-the-table clash of matchday 5 of the EPSANA Second Division.\n\nBoth teams had won all four of their opening matches and were level at the top on 12 points. With one goal and a clean sheet, our team handed the hosts their first defeat of the season.\n\n## Alone at the top\n\nWith five wins from five, AO Koropiou moved to 1st place on 15 points, three ahead of Olympiakos Varis and Dionysos Attikis. The team has scored 14 goals and conceded only 5.\n\n## Next match\n\nThe team returns to the Antonis Priftis Stadium on Sunday 1 November at 15:00 to face PAO Kalyvion."
+   }
+  },
+  {
    "id": "aok-panvoreiakos-2-0",
    "date": "2026-10-18",
    "category": "match",
