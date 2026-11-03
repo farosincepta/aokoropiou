@@ -1,49 +1,19 @@
 {
- "_help": "Replace these example players with the real squad, then set \"example\" to false. position: gk, df, mf or fw. dob: YYYY-MM-DD (age is calculated automatically). photo: e.g. assets/img/players/10.jpg (portrait 4:5).",
- "example": true,
+ "_help": "Squad 2026-27. position: gk, df, mf or fw. dob: birth year (e.g. \"1998\") or full date YYYY-MM-DD for an exact age. photo: e.g. assets/img/players/10.jpg (portrait 4:5). captain: true to mark the captain.",
+ "example": false,
  "players": [
   {
    "position": "gk",
    "number": 1,
    "first": {
-    "el": "Γιώργος",
-    "en": "Giorgos"
+    "el": "Γεώργιος",
+    "en": "Georgios"
    },
    "last": {
-    "el": "Παπαδόπουλος",
-    "en": "Papadopoulos"
+    "el": "Μαλέσιος",
+    "en": "Malesios"
    },
-   "dob": "1996-03-14",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "gk",
-   "number": 12,
-   "first": {
-    "el": "Νίκος",
-    "en": "Nikos"
-   },
-   "last": {
-    "el": "Αλεξίου",
-    "en": "Alexiou"
-   },
-   "dob": "2003-11-02",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "gk",
-   "number": 30,
-   "first": {
-    "el": "Στέλιος",
-    "en": "Stelios"
-   },
-   "last": {
-    "el": "Καραγιάννης",
-    "en": "Karagiannis"
-   },
-   "dob": "2007-06-21",
+   "dob": "1998",
    "photo": "",
    "captain": false
   },
@@ -51,14 +21,14 @@
    "position": "df",
    "number": 2,
    "first": {
-    "el": "Δημήτρης",
-    "en": "Dimitris"
+    "el": "Φαμπίο",
+    "en": "Fabio"
    },
    "last": {
-    "el": "Βασιλείου",
-    "en": "Vasileiou"
+    "el": "Νανάι",
+    "en": "Nanai"
    },
-   "dob": "1999-01-09",
+   "dob": "2006",
    "photo": "",
    "captain": false
   },
@@ -66,14 +36,14 @@
    "position": "df",
    "number": 3,
    "first": {
-    "el": "Κώστας",
-    "en": "Kostas"
+    "el": "Μαρσέλ",
+    "en": "Marcel"
    },
    "last": {
-    "el": "Μιχαηλίδης",
-    "en": "Michailidis"
+    "el": "Πιέτρι",
+    "en": "Pietri"
    },
-   "dob": "2001-08-30",
+   "dob": "2002",
    "photo": "",
    "captain": false
   },
@@ -81,59 +51,29 @@
    "position": "df",
    "number": 4,
    "first": {
-    "el": "Αντώνης",
-    "en": "Antonis"
+    "el": "Χαράλαμπος",
+    "en": "Charalambos"
    },
    "last": {
-    "el": "Ζαφειρίου",
-    "en": "Zafeiriou"
+    "el": "Γεωργακόπουλος",
+    "en": "Georgakopoulos"
    },
-   "dob": "1994-05-17",
+   "dob": "1997",
    "photo": "",
-   "captain": true
+   "captain": false
   },
   {
    "position": "df",
    "number": 5,
    "first": {
-    "el": "Μανώλης",
-    "en": "Manolis"
+    "el": "Θεοφάνης",
+    "en": "Theofanis"
    },
    "last": {
-    "el": "Σταθόπουλος",
-    "en": "Stathopoulos"
+    "el": "Μπενέκος",
+    "en": "Mbenekos"
    },
-   "dob": "1998-12-03",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "df",
-   "number": 15,
-   "first": {
-    "el": "Παναγιώτης",
-    "en": "Panagiotis"
-   },
-   "last": {
-    "el": "Λιάπης",
-    "en": "Liapis"
-   },
-   "dob": "2004-02-25",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "df",
-   "number": 22,
-   "first": {
-    "el": "Θοδωρής",
-    "en": "Thodoris"
-   },
-   "last": {
-    "el": "Νικολάου",
-    "en": "Nikolaou"
-   },
-   "dob": "2002-09-11",
+   "dob": "1995",
    "photo": "",
    "captain": false
   },
@@ -141,104 +81,14 @@
    "position": "mf",
    "number": 6,
    "first": {
-    "el": "Βασίλης",
-    "en": "Vasilis"
+    "el": "Ευθύμιος",
+    "en": "Efthymios"
    },
    "last": {
-    "el": "Γεωργίου",
-    "en": "Georgiou"
+    "el": "Κάγιας",
+    "en": "Kagias"
    },
-   "dob": "1997-04-28",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "mf",
-   "number": 8,
-   "first": {
-    "el": "Χρήστος",
-    "en": "Christos"
-   },
-   "last": {
-    "el": "Αθανασίου",
-    "en": "Athanasiou"
-   },
-   "dob": "1995-10-15",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "mf",
-   "number": 10,
-   "first": {
-    "el": "Λευτέρης",
-    "en": "Lefteris"
-   },
-   "last": {
-    "el": "Κωνσταντίνου",
-    "en": "Konstantinou"
-   },
-   "dob": "1999-07-07",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "mf",
-   "number": 14,
-   "first": {
-    "el": "Ηλίας",
-    "en": "Ilias"
-   },
-   "last": {
-    "el": "Δημητρίου",
-    "en": "Dimitriou"
-   },
-   "dob": "2005-03-19",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "mf",
-   "number": 16,
-   "first": {
-    "el": "Σπύρος",
-    "en": "Spyros"
-   },
-   "last": {
-    "el": "Οικονόμου",
-    "en": "Oikonomou"
-   },
-   "dob": "2000-11-23",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "mf",
-   "number": 18,
-   "first": {
-    "el": "Άγγελος",
-    "en": "Angelos"
-   },
-   "last": {
-    "el": "Πετρόπουλος",
-    "en": "Petropoulos"
-   },
-   "dob": "2006-01-30",
-   "photo": "",
-   "captain": false
-  },
-  {
-   "position": "mf",
-   "number": 21,
-   "first": {
-    "el": "Μάριος",
-    "en": "Marios"
-   },
-   "last": {
-    "el": "Τσιρίγος",
-    "en": "Tsirigos"
-   },
-   "dob": "1998-06-12",
+   "dob": "1993",
    "photo": "",
    "captain": false
   },
@@ -246,14 +96,29 @@
    "position": "fw",
    "number": 7,
    "first": {
-    "el": "Γιάννης",
-    "en": "Giannis"
+    "el": "Διονύσιος",
+    "en": "Dionysios"
    },
    "last": {
-    "el": "Μαυρίδης",
-    "en": "Mavridis"
+    "el": "Γεράνιος",
+    "en": "Geranios"
    },
-   "dob": "2000-02-08",
+   "dob": "2009",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 8,
+   "first": {
+    "el": "Δημήτριος",
+    "en": "Dimitrios"
+   },
+   "last": {
+    "el": "Κουτσικώνας",
+    "en": "Koutsikonas"
+   },
+   "dob": "2006",
    "photo": "",
    "captain": false
   },
@@ -261,14 +126,29 @@
    "position": "fw",
    "number": 9,
    "first": {
-    "el": "Αλέξανδρος",
-    "en": "Alexandros"
+    "el": "Παναγιώτης",
+    "en": "Panagiotis"
    },
    "last": {
-    "el": "Ραφαηλίδης",
-    "en": "Rafailidis"
+    "el": "Βασιλόπουλος",
+    "en": "Vasilopoulos"
    },
-   "dob": "1996-09-27",
+   "dob": "1994",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 10,
+   "first": {
+    "el": "Θεόδωρος",
+    "en": "Theodoros"
+   },
+   "last": {
+    "el": "Πετράκης",
+    "en": "Petrakis"
+   },
+   "dob": "1999",
    "photo": "",
    "captain": false
   },
@@ -276,14 +156,119 @@
    "position": "fw",
    "number": 11,
    "first": {
-    "el": "Πέτρος",
-    "en": "Petros"
+    "el": "Γεράσιμος",
+    "en": "Gerasimos"
    },
    "last": {
-    "el": "Χατζής",
-    "en": "Chatzis"
+    "el": "Μπουρμπούλης Μοσχόνας",
+    "en": "Bourboulis Moschonas"
    },
-   "dob": "2003-05-05",
+   "dob": "2000",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 12,
+   "first": {
+    "el": "Χρήστος",
+    "en": "Christos"
+   },
+   "last": {
+    "el": "Μάγγας",
+    "en": "Mangas"
+   },
+   "dob": "2003",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 13,
+   "first": {
+    "el": "Πρίαμος",
+    "en": "Priamos"
+   },
+   "last": {
+    "el": "Γκίνης",
+    "en": "Gkinis"
+   },
+   "dob": "2004",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 14,
+   "first": {
+    "el": "Αντώνη",
+    "en": "Antoni"
+   },
+   "last": {
+    "el": "Μποράι",
+    "en": "Borai"
+   },
+   "dob": "2010",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 15,
+   "first": {
+    "el": "Ιωάννης",
+    "en": "Ioannis"
+   },
+   "last": {
+    "el": "Φράγκιας",
+    "en": "Fragkias"
+   },
+   "dob": "2003",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 16,
+   "first": {
+    "el": "Γρηγόριος",
+    "en": "Grigorios"
+   },
+   "last": {
+    "el": "Κέρκυρας",
+    "en": "Kerkyras"
+   },
+   "dob": "2010",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 17,
+   "first": {
+    "el": "Δημήτριος",
+    "en": "Dimitrios"
+   },
+   "last": {
+    "el": "Σαπλαούρας",
+    "en": "Saplaouras"
+   },
+   "dob": "2006",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 18,
+   "first": {
+    "el": "Σταμάτιος",
+    "en": "Stamatios"
+   },
+   "last": {
+    "el": "Γκλατζής",
+    "en": "Gklatzis"
+   },
+   "dob": "2007",
    "photo": "",
    "captain": false
   },
@@ -291,14 +276,29 @@
    "position": "fw",
    "number": 19,
    "first": {
-    "el": "Φώτης",
-    "en": "Fotis"
+    "el": "Χρυσόστομος",
+    "en": "Chrysostomos"
    },
    "last": {
-    "el": "Λαμπρόπουλος",
-    "en": "Lampropoulos"
+    "el": "Παπαδόπουλος",
+    "en": "Papadopoulos"
    },
-   "dob": "2005-12-16",
+   "dob": "2009",
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "gk",
+   "number": 20,
+   "first": {
+    "el": "Αθανάσιος",
+    "en": "Athanasios"
+   },
+   "last": {
+    "el": "Μανδάσης",
+    "en": "Mandasis"
+   },
+   "dob": "1989",
    "photo": "",
    "captain": false
   }
