@@ -437,7 +437,7 @@
   function renderHomeCentre(a) {
     const host = $("#home-centre"); if (!host) return;
     if (!a) { host.innerHTML = ""; return; }
-    const recent = a.played.slice(-2), coming = a.upcoming.slice(0, 3);
+    const recent = a.played.slice(-1), coming = a.upcoming.slice(0, 3); // latest result first, then what is next
     host.innerHTML = `<div class="mc-grid">
       <div>${standingsHTML(a, true)}${stamp(a)}</div>
       <div><h3 style="margin-bottom:14px">${esc(u("fixturesResults"))}</h3><ul class="fixture-list">${[...recent, ...coming].map(f => fixtureLi(f, a.club)).join("")}</ul>
