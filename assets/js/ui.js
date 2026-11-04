@@ -1,6 +1,7 @@
 /* Interface strings used by app.js, in both languages. */
 window.AOK_UI = {
   el: {
+    academyEmailLabel: "Email Ακαδημίας",
     newsLead: "Αγώνες, ανακοινώσεις του συλλόγου και τα νέα της Ακαδημίας.", "catLead.match": "Τα νέα από τους αγώνες της πρώτης ομάδας.", "catLead.club": "Ανακοινώσεις και νέα του συλλόγου.", "catLead.academy": "Τα νέα της Ακαδημίας και των τμημάτων υποδομής.",
     epsanaCtaH: "Όλα τα αποτελέσματα της σεζόν", epsanaCtaP: "Το πλήρες πρόγραμμα και τα αποτελέσματα της Β΄ Κατηγορίας στην ιστοσελίδα της ΕΠΣΑΝΑ.",
     "tab.store": "Κατάστημα", "nav.store": "Όλα τα προϊόντα", "store.cat.kit": "Εμφανίσεις", "store.cat.fan": "Είδη φιλάθλων", "nav.order": "Παραγγελία",
@@ -47,6 +48,7 @@ window.AOK_UI = {
     addressLabel: "Διεύθυνση", phoneLabel: "Τηλέφωνο", mobileLabel: "Κινητό", hoursLabel: "Γραμματεία"
   },
   en: {
+    academyEmailLabel: "Academy email",
     newsLead: "Match reports, club announcements and Academy news.", "catLead.match": "News from the first team's matches.", "catLead.club": "Club announcements and news.", "catLead.academy": "News from the Academy and youth groups.",
     epsanaCtaH: "Every result this season", epsanaCtaP: "The full schedule and results of the Second Division on the EPSANA website.",
     "tab.store": "Store", "nav.store": "All products", "store.cat.kit": "Kit", "store.cat.fan": "Fan items", "nav.order": "Place an order",

@@ -4,14 +4,24 @@
    Anything left empty is hidden or replaced by a sensible fallback.
    ===================================================================== */
 window.AOK_CONFIG = {
-  // Email that receives the Contact and Academy forms.
-  // After the first form submission, FormSubmit sends an activation email
-  // to this address — click the link once and the forms start working.
+  // Forms are delivered by Web3Forms (web3forms.com). Each address has its own
+  // access key, created while logged in to Web3Forms with that address.
+  // The keys are meant to be public; the email addresses below are only shown
+  // on the site and used as a fallback link if sending fails.
+  formKeys: {
+    info: "08a75b60-83af-4438-b8b5-dcb7a17bd735",     // info@aokoropiou.gr: Contact form
+    sales: "ee21bd44-d1ef-41e1-b7e1-d5d18564f1ed",    // sales@aokoropiou.gr: tickets, sponsorship, store
+    academy: "935adb60-6cfb-4ae9-9052-49e49344e091"   // academy@aokoropiou.gr: Academy form and Academy questions
+  },
+
+  // Email shown for general contact (Contact form, except Academy questions).
   clubEmail: "info@aokoropiou.gr",
 
-  // Email that receives season-ticket requests, sponsorship enquiries and
-  // store orders. Needs the same one-time FormSubmit activation.
+  // Email shown for season tickets, sponsorship and store orders.
   salesEmail: "sales@aokoropiou.gr",
+
+  // Email shown for everything about the Academy.
+  academyEmail: "academy@aokoropiou.gr",
 
   // Contact details shown on the site (TODO)
   phone: "+30 699 697 1765",

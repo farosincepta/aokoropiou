@@ -780,22 +780,30 @@
         });
         if (!ok) { status.className = "form-status bad"; status.textContent = u("fixFields"); return; }
         if (form.querySelector(".hp input") && form.querySelector(".hp input").value) return; // bot
-        const to = form.dataset.to === "sales" ? (CFG.salesEmail || CFG.clubEmail) : CFG.clubEmail;
-        if (!to) { status.className = "form-status bad"; status.textContent = u("formNotSetup"); return; }
+        // Academy registrations, and Contact messages with the Academy subject, go to the Academy address
+        const topicOpt = form.querySelector("[name='topic']") && form.querySelector("[name='topic']").selectedOptions[0];
+        const isAcademy = form.dataset.form === "academy" || (topicOpt && topicOpt.dataset.route === "academy");
+        // Each address has its own Web3Forms access key (see config.js)
+        const box = form.dataset.to === "sales" ? "sales" : isAcademy ? "academy" : "info";
+        const to = { info: CFG.clubEmail, sales: CFG.salesEmail, academy: CFG.academyEmail }[box] || CFG.clubEmail;
+        const key = (CFG.formKeys || {})[box];
+        if (!key) { status.className = "form-status bad"; status.textContent = u("formNotSetup"); return; }
         const btn = form.querySelector("[type=submit]"); btn.disabled = true;
         status.className = "form-status"; status.textContent = u("sending");
         const fd = new FormData(form); const payload = {};
         fd.forEach((v, k) => { if (k !== "_gotcha") payload[k] = v; });
-        payload._subject = form.dataset.subject + (payload.child_name ? " – " + payload.child_name : payload.name ? " – " + payload.name : "");
-        payload._template = "table";
-        payload._language = lang;
-        if (payload.email) payload._replyto = payload.email; else if (payload.parent_email) payload._replyto = payload.parent_email;
+        payload.access_key = key;
+        payload.subject = form.dataset.subject + (payload.child_name ? " – " + payload.child_name : payload.name ? " – " + payload.name : "");
+        payload.from_name = "aok.farosincepta.com";
+        payload.language = lang === "en" ? "English" : "Ελληνικά";
+        const reply = payload.email || payload.parent_email;
+        if (reply) payload.replyto = reply;
         try {
-          const r = await fetch("https://formsubmit.co/ajax/" + encodeURIComponent(to), {
+          const r = await fetch("https://api.web3forms.com/submit", {
             method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(payload)
           });
           const j = await r.json().catch(() => ({}));
-          if (!r.ok || j.success === "false" || j.success === false) throw new Error(j.message || r.status);
+          if (!r.ok || j.success === false || j.success === "false") throw new Error(j.message || r.status);
           form.reset(); if (out) out.hidden = true;
           status.className = "form-status ok"; status.textContent = u({ academy: "sentAcademy", tickets: "sentTickets", store: "sentStore" }[form.dataset.form] || "sent");
         } catch (err) {
@@ -821,6 +829,7 @@
       CFG.phone && ["phone", u("phoneLabel"), `<a href="tel:${esc(CFG.phone.replace(/\s/g, ""))}">${esc(CFG.phone)}</a>`],
       CFG.mobile && ["phone", u("mobileLabel"), `<a href="tel:${esc(CFG.mobile.replace(/\s/g, ""))}">${esc(CFG.mobile)}</a>`],
       CFG.clubEmail && ["mail", "Email", `<a href="mailto:${esc(CFG.clubEmail)}">${esc(CFG.clubEmail)}</a>`],
+      CFG.academyEmail && ["mail", u("academyEmailLabel"), `<a href="mailto:${esc(CFG.academyEmail)}">${esc(CFG.academyEmail)}</a>`],
       CFG.officeHours && ["clock", u("hoursLabel"), esc(L(CFG.officeHours))]
     ].filter(Boolean);
     host.innerHTML = items.map(([i, l, v]) => `<li>${ICON[i]}<div><span>${esc(l)}</span>${v.startsWith("<a") ? v : `<b>${v}</b>`}</div></li>`).join("");
