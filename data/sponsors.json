@@ -1,4 +1,160 @@
 {
- "_help": "Add one entry per sponsor: {\"name\": \"Company\", \"logo\": \"assets/img/sponsors/company.png\", \"url\": \"https://...\", \"tier\": \"main|official|supporter\"}. Empty slots invite new sponsors.",
- "sponsors": []
+ "_help": "One entry per sponsor: name, logo (in assets/img/sponsors/), and url (optional: the sponsor's website or Facebook page; leave \"\" for no link). Shown in this order.",
+ "sponsors": [
+  {
+   "name": "Aisha",
+   "logo": "assets/img/sponsors/aisha.webp",
+   "url": ""
+  },
+  {
+   "name": "Aluset",
+   "logo": "assets/img/sponsors/aluset.webp",
+   "url": ""
+  },
+  {
+   "name": "Andreou New Gen",
+   "logo": "assets/img/sponsors/andreou-new-gen.webp",
+   "url": ""
+  },
+  {
+   "name": "Bennett Βιομηχανία Φαρμάκων",
+   "logo": "assets/img/sponsors/bennett.webp",
+   "url": ""
+  },
+  {
+   "name": "BGI Europe",
+   "logo": "assets/img/sponsors/bgi-europe.webp",
+   "url": ""
+  },
+  {
+   "name": "Coffe Eat",
+   "logo": "assets/img/sponsors/coffe-eat.webp",
+   "url": ""
+  },
+  {
+   "name": "Coffee Berry",
+   "logo": "assets/img/sponsors/coffee-berry.webp",
+   "url": ""
+  },
+  {
+   "name": "Coffeepoint",
+   "logo": "assets/img/sponsors/coffeepoint.webp",
+   "url": ""
+  },
+  {
+   "name": "El Maestro",
+   "logo": "assets/img/sponsors/el-maestro.webp",
+   "url": ""
+  },
+  {
+   "name": "HelioStyle",
+   "logo": "assets/img/sponsors/heliostyle.webp",
+   "url": ""
+  },
+  {
+   "name": "Jackal Bar",
+   "logo": "assets/img/sponsors/jackal-bar.webp",
+   "url": ""
+  },
+  {
+   "name": "MOT & AU",
+   "logo": "assets/img/sponsors/mot-au.webp",
+   "url": ""
+  },
+  {
+   "name": "RenoCraft",
+   "logo": "assets/img/sponsors/renocraft.webp",
+   "url": ""
+  },
+  {
+   "name": "TAG Coffee Experts",
+   "logo": "assets/img/sponsors/tag-coffee.webp",
+   "url": ""
+  },
+  {
+   "name": "Tartarouga",
+   "logo": "assets/img/sponsors/tartarouga.webp",
+   "url": ""
+  },
+  {
+   "name": "The Brothers Market Bar",
+   "logo": "assets/img/sponsors/the-brothers.webp",
+   "url": ""
+  },
+  {
+   "name": "Tranquillo",
+   "logo": "assets/img/sponsors/tranquillo.webp",
+   "url": ""
+  },
+  {
+   "name": "Vecanink Tattoo",
+   "logo": "assets/img/sponsors/vecanink-tattoo.webp",
+   "url": ""
+  },
+  {
+   "name": "VPumps",
+   "logo": "assets/img/sponsors/vpumps.webp",
+   "url": ""
+  },
+  {
+   "name": "Βουλκανιζατέρ Γούλας",
+   "logo": "assets/img/sponsors/goulas.webp",
+   "url": ""
+  },
+  {
+   "name": "Γιασαφάκης – Χρώματα αυτοκινήτων",
+   "logo": "assets/img/sponsors/giasafakis.webp",
+   "url": ""
+  },
+  {
+   "name": "Γραφεία Τελετών Γκούνη",
+   "logo": "assets/img/sponsors/gkouni.webp",
+   "url": ""
+  },
+  {
+   "name": "Ζαχαροπλαστείο Σουρλαντζή",
+   "logo": "assets/img/sponsors/zacharoplasteio-sourlantzi.webp",
+   "url": ""
+  },
+  {
+   "name": "Κουκουμέλες",
+   "logo": "assets/img/sponsors/koukoumeles.webp",
+   "url": ""
+  },
+  {
+   "name": "Κρεοπωλείο Στουραΐτης",
+   "logo": "assets/img/sponsors/kreopoleio-stouraitis.webp",
+   "url": ""
+  },
+  {
+   "name": "Κρεοπωλείο Φάρμα Κυριακού",
+   "logo": "assets/img/sponsors/kreopoleio-kyriakou.webp",
+   "url": ""
+  },
+  {
+   "name": "Ν. Λέκκας",
+   "logo": "assets/img/sponsors/n-lekkas.webp",
+   "url": ""
+  },
+  {
+   "name": "Πανσιόν Σκύλων «Πετράκη»",
+   "logo": "assets/img/sponsors/pansion-petraki.webp",
+   "url": ""
+  },
+  {
+   "name": "Ρεκτιφιέ Τσεβάς",
+   "logo": "assets/img/sponsors/tsevas.webp",
+   "url": ""
+  },
+  {
+   "name": "Ροκανάς Α.Ε.",
+   "logo": "assets/img/sponsors/rokanas.webp",
+   "url": ""
+  },
+  {
+   "name": "Φαρμακείο Λάμπρου",
+   "logo": "assets/img/sponsors/farmakeio-lamprou.webp",
+   "url": ""
+  }
+ ]
 }
