@@ -659,8 +659,16 @@
     const list = (data && data.sponsors) || [];
     hosts.forEach(h => {
       const slots = Math.max(0, (+h.dataset.sponsors || 6) - list.length);
-      h.innerHTML = list.map(s => `<a href="${esc(s.url || "#")}" target="_blank" rel="noopener" title="${esc(s.name)}"><img src="${esc(s.logo)}" alt="${esc(s.name)}" loading="lazy"></a>`).join("")
-        + Array.from({ length: slots }, () => `<a class="sponsor-slot" href="sponsors.html#become">${esc(u("yourLogo"))}</a>`).join("");
+      const tile = sp => {
+        const img = `<img src="${esc(sp.logo)}" alt="${esc(sp.name)}" loading="lazy">`;
+        return sp.url
+          ? `<a class="sponsor" href="${esc(sp.url)}" target="_blank" rel="noopener" title="${esc(sp.name)}">${img}</a>`
+          : `<div class="sponsor" title="${esc(sp.name)}">${img}</div>`;
+      };
+      // the Sponsors page always ends with one "your logo here" tile inviting new sponsors
+      const invite = h.hasAttribute("data-invite") ? Math.max(slots, 1) : slots;
+      h.innerHTML = list.map(tile).join("")
+        + Array.from({ length: invite }, () => `<a class="sponsor-slot" href="sponsors.html#become">${esc(u("yourLogo"))}</a>`).join("");
     });
   }
 
