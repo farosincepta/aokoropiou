@@ -55,7 +55,8 @@ Everything the club needs to supply is in this one file (look for `TODO`):
 
 | Setting | What it does |
 |---|---|
-| `clubEmail` | **info@aokoropiou.gr** — receives the Contact and Academy forms. |
+| `formKeys` | The three Web3Forms access keys (see section 5). |
+| `clubEmail` | **info@aokoropiou.gr**, shown on the site. |
 | `salesEmail` | **sales@aokoropiou.gr** — receives season-ticket requests, sponsorship enquiries and store orders. |
 | `epsanaResults`, `epsanaStandings` | The EPSANA pages that the "Results" and "League table" links open in a new tab. Change the number at the end each season. |
 | `storeUrl` | Optional link to an external online shop. Empty = products from `data/store.json` with an order form. |
@@ -70,17 +71,19 @@ Everything the club needs to supply is in this one file (look for `TODO`):
 **Stripe Payment Links** or **PayPal Donate**, connected to the club's bank account, and paste it
 into `donateUrl`. The same services work for `seasonTicketUrl`.
 
-## 5. Activate the forms (one time)
+## 5. Forms (Web3Forms)
 
-The forms use **FormSubmit** (free, no account):
+The forms are delivered by **Web3Forms** (web3forms.com, free up to 250 submissions a month).
+Each club address has its own access key, set in `assets/js/config.js` under `formKeys`:
 
-1. Publish the site (both emails are already set in `config.js`).
-2. Submit the **Contact** form once yourself → FormSubmit emails an **activation link to info@aokoropiou.gr** — click it.
-3. Submit the **season-ticket request** form once → an activation link goes to **sales@aokoropiou.gr** — click it.
-   From then on every Academy registration and message arrives by email, as a table, with
-   *Reply* going straight to the parent or sender.
-4. Optional: FormSubmit's activation email also gives a random alias; you can paste that alias
-   into `clubEmail` instead of the real address to hide it from spam bots.
+| Key | Address | Forms |
+|---|---|---|
+| `info` | info@aokoropiou.gr | Contact form (all subjects except Academy) |
+| `sales` | sales@aokoropiou.gr | Season-ticket requests, sponsorship enquiries, store orders |
+| `academy` | academy@aokoropiou.gr | Academy registration, and Contact messages with the subject "Academy" |
+
+To replace a key: log in to web3forms.com **with that address**, open its form, copy the access key
+and paste it into `config.js`. A key created while logged in with another address sends to that other address.
 
 ## 6. Updating content
 
