@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><rect width="600" height="600" fill="#efeee9"/>
+<g transform="rotate(-18 300 300)"><rect x="70" y="250" width="460" height="100" fill="#111111"/>
+<rect x="70" y="250" width="460" height="16" fill="#ffd100"/><rect x="70" y="334" width="460" height="16" fill="#ffd100"/>
+<text x="300" y="318" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="900" font-size="46" fill="#ffd100" letter-spacing="6">ΔΟΞΑ</text>
+<g fill="#ffd100"><rect x="50" y="256" width="20" height="10"/><rect x="50" y="274" width="20" height="10"/><rect x="50" y="292" width="20" height="10"/><rect x="50" y="310" width="20" height="10"/><rect x="50" y="328" width="20" height="10"/><rect x="530" y="256" width="20" height="10"/><rect x="530" y="274" width="20" height="10"/><rect x="530" y="292" width="20" height="10"/><rect x="530" y="310" width="20" height="10"/><rect x="530" y="328" width="20" height="10"/></g></g></svg>
