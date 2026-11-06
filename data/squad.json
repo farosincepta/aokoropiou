@@ -1,0 +1,219 @@
+{
+ "_help": "Squad 2026-27. position: gk, df, mf or fw. number: shirt number. name: null to show only number and position, or {\"el\": \"...\", \"en\": \"...\"}. captain: true for the captain. Set placeholder to false once the real squad is in.",
+ "placeholder": true,
+ "players": [
+  {
+   "position": "gk",
+   "number": 1,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "gk",
+   "number": 12,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "gk",
+   "number": 25,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 2,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 3,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 4,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 5,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 13,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 15,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "df",
+   "number": 21,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 6,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 8,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 10,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 14,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 16,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 18,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 20,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "mf",
+   "number": 23,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 7,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 9,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 11,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 17,
+   "name": null,
+   "photo": "",
+   "captain": false
+  },
+  {
+   "position": "fw",
+   "number": 19,
+   "name": null,
+   "photo": "",
+   "captain": false
+  }
+ ],
+ "staff": [
+  {
+   "role": {
+    "el": "Προπονητής",
+    "en": "Head coach"
+   },
+   "name": {
+    "el": "Θα ανακοινωθεί",
+    "en": "To be announced"
+   }
+  },
+  {
+   "role": {
+    "el": "Βοηθός προπονητή",
+    "en": "Assistant coach"
+   },
+   "name": {
+    "el": "Θα ανακοινωθεί",
+    "en": "To be announced"
+   }
+  },
+  {
+   "role": {
+    "el": "Προπονητής τερματοφυλάκων",
+    "en": "Goalkeeping coach"
+   },
+   "name": {
+    "el": "Θα ανακοινωθεί",
+    "en": "To be announced"
+   }
+  },
+  {
+   "role": {
+    "el": "Φυσιοθεραπευτής",
+    "en": "Physio"
+   },
+   "name": {
+    "el": "Θα ανακοινωθεί",
+    "en": "To be announced"
+   }
+  },
+  {
+   "role": {
+    "el": "Έφορος",
+    "en": "Team manager"
+   },
+   "name": {
+    "el": "Θα ανακοινωθεί",
+    "en": "To be announced"
+   }
+  }
+ ]
+}

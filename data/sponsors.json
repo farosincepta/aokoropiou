@@ -1,0 +1,4 @@
+{
+ "_help": "One entry per sponsor: name, logo (in assets/img/sponsors/), url (optional). Shown in this order. Empty list = an invitation to become a sponsor.",
+ "sponsors": []
+}

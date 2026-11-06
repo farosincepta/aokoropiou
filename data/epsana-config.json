@@ -1,0 +1,7 @@
+{
+ "_help": "Change league_id at the start of each season (the number at the end of the EPSANA link). club_name must match how EPSANA writes the club.",
+ "league_id": 748,
+ "club_name": "ΑΕ ΔΟΞΑ ΚΟΡΩΠΙΟΥ",
+ "division": "Γ Κατηγορία",
+ "season": "2026-2027"
+}

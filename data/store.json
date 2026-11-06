@@ -1,0 +1,110 @@
+{
+ "_help": "Products. category: kit or fan. price in euro (0 = 'price soon'). image: square picture. Set placeholder to false when real photos and prices are in.",
+ "placeholder": true,
+ "products": [
+  {
+   "id": "home-shirt",
+   "category": "kit",
+   "name": {
+    "el": "Εμφάνιση εντός έδρας",
+    "en": "Home shirt"
+   },
+   "price": 0,
+   "image": "assets/img/store/home.svg",
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "label": {
+    "el": "Νέα",
+    "en": "New"
+   }
+  },
+  {
+   "id": "away-shirt",
+   "category": "kit",
+   "name": {
+    "el": "Εμφάνιση εκτός έδρας",
+    "en": "Away shirt"
+   },
+   "price": 0,
+   "image": "assets/img/store/away.svg",
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ]
+  },
+  {
+   "id": "kids-kit",
+   "category": "kit",
+   "name": {
+    "el": "Παιδική εμφάνιση",
+    "en": "Kids' kit"
+   },
+   "price": 0,
+   "image": "assets/img/store/kids.svg",
+   "sizes": [
+    "4-6",
+    "7-9",
+    "10-12",
+    "13-14"
+   ]
+  },
+  {
+   "id": "training-top",
+   "category": "kit",
+   "name": {
+    "el": "Μπλούζα προπόνησης",
+    "en": "Training top"
+   },
+   "price": 0,
+   "image": "assets/img/store/training.svg",
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ]
+  },
+  {
+   "id": "scarf",
+   "category": "fan",
+   "name": {
+    "el": "Κασκόλ",
+    "en": "Scarf"
+   },
+   "price": 0,
+   "image": "assets/img/store/scarf.svg",
+   "sizes": null
+  },
+  {
+   "id": "cap",
+   "category": "fan",
+   "name": {
+    "el": "Καπέλο",
+    "en": "Cap"
+   },
+   "price": 0,
+   "image": "assets/img/store/cap.svg",
+   "sizes": null
+  },
+  {
+   "id": "mug",
+   "category": "fan",
+   "name": {
+    "el": "Κούπα",
+    "en": "Mug"
+   },
+   "price": 0,
+   "image": "assets/img/store/mug.svg",
+   "sizes": null
+  }
+ ]
+}

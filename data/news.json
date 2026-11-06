@@ -1,0 +1,22 @@
+{
+ "_help": "Newest first is automatic. category: match, club or academy. Paragraphs separated by \\n\\n; a paragraph starting with '## ' is a heading. image: optional photo path. cover: shown when there's no photo; for a match add home and away with names exactly as on EPSANA. Every Doxa result on EPSANA gets an automatic short story; to replace one with your own report, add \"round\": n to your article.",
+ "articles": [
+  {
+   "id": "new-website",
+   "date": "2026-11-05",
+   "category": "club",
+   "title": {
+    "el": "Η νέα ιστοσελίδα της Δόξας",
+    "en": "Doxa's new website"
+   },
+   "summary": {
+    "el": "Πρόγραμμα, αποτελέσματα, βαθμολογία και τα νέα του συλλόγου, σε ελληνικά και αγγλικά.",
+    "en": "Fixtures, results, the table and club news, in Greek and English."
+   },
+   "body": {
+    "el": "Η Α.Ε. Δόξα Κορωπίου παρουσιάζει τη νέα της ιστοσελίδα.\n\n## Τι θα βρείτε\n\nΤο πρόγραμμα και τα αποτελέσματα της ομάδας στη Γ΄ Κατηγορία της ΕΠΣΑΝΑ, τη βαθμολογία, το ρόστερ, πληροφορίες για την Ακαδημία, τα εισιτήρια διαρκείας και το κατάστημα του συλλόγου.\n\nΤα αποτελέσματα και η βαθμολογία ενημερώνονται από την ιστοσελίδα της ΕΠΣΑΝΑ.\n\n## Γράψτε μας\n\nΓια οτιδήποτε αφορά τον σύλλογο, χρησιμοποιήστε τη φόρμα επικοινωνίας. Αν έχετε φωτογραφίες ή υλικό από την ιστορία της Δόξας από το 1981 μέχρι σήμερα, θα χαρούμε να το δούμε.",
+    "en": "AO Doxa Koropiou presents its new website.\n\n## What you'll find\n\nThe team's fixtures and results in the EPSANA Third Division, the table, the squad, Academy information, season tickets and the club shop.\n\nResults and the table are updated from the EPSANA website.\n\n## Write to us\n\nFor anything about the club, use the contact form. If you have photos or material from Doxa's history, from 1981 to today, we'd love to see it."
+   }
+  }
+ ]
+}
