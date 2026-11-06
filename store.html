@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Κατάστημα · Δόξα Κορωπίου</title>
+<meta name="doxa:title-en" content="Shop · Doxa Koropiou">
+<meta name="description" content="Εμφανίσεις και είδη φιλάθλων της Δόξας Κορωπίου.">
+<meta name="theme-color" content="#ffd100">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Δόξα Κορωπίου">
+<meta property="og:title" content="Κατάστημα · Δόξα Κορωπίου">
+<meta property="og:description" content="Εμφανίσεις και είδη φιλάθλων της Δόξας Κορωπίου.">
+<meta property="og:image" content="https://aokusatsc.com/assets/img/og-image.jpg">
+<meta property="og:locale" content="el_GR">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@600;700;800;900&family=Fira+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/doxa.css?v=1">
+</head>
+<body data-view="store">
+<a class="jump" href="#content" data-en="Skip to content">Μετάβαση στο περιεχόμενο</a>
+<div id="masthead"></div>
+<main id="content">
+<section class="pagehead"><div class="shell"><p class="kicker" data-en="Doxa Koropiou">Δόξα Κορωπίου</p><h1 data-en="Shop">Κατάστημα</h1><p class="lead" data-en="Kit and supporter gear in yellow and black. Order here and collect from the club.">Εμφανίσεις και είδη φιλάθλων στα κίτρινα και τα μαύρα. Παραγγείλτε εδώ και παραλάβετε από τον σύλλογο.</p></div></section>
+<section class="section-tight"><div class="shell">
+  <nav class="filters" id="store-cats" aria-label="Κατηγορίες" data-en-aria-label="Categories"></nav>
+  <div id="products"></div>
+</div></section>
+<section class="section section-grey" id="order"><div class="shell narrow">
+  <form class="formbox" data-send="office" data-kind="store" data-subject="Παραγγελία από το κατάστημα" novalidate>
+    <p class="kicker dark" data-en="Shop">Κατάστημα</p>
+    <h2 data-en="Place an order">Παραγγελία</h2>
+    <p data-en="No payment online. We'll contact you about availability, payment and collection.">Δεν γίνεται πληρωμή online. Θα επικοινωνήσουμε μαζί σας για τη διαθεσιμότητα, την πληρωμή και την παραλαβή.</p>
+    <div class="fields">
+      <div class="field"><label for="o-item" data-en="Product *">Προϊόν *</label><select id="o-item" name="product" required></select></div>
+      <div class="field"><label for="o-size" data-en="Size">Μέγεθος</label><select id="o-size" name="size"><option value="—">—</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option value="Παιδικό" data-en="Kids">Παιδικό</option></select></div>
+      <div class="field"><label for="o-q" data-en="Quantity">Ποσότητα</label><input id="o-q" name="quantity" type="number" min="1" value="1"></div>
+      <div class="field"><label for="o-n" data-en="Full name *">Ονοματεπώνυμο *</label><input id="o-n" name="name" type="text" required autocomplete="name"></div>
+      <div class="field"><label for="o-p" data-en="Phone *">Τηλέφωνο *</label><input id="o-p" name="phone" type="tel" required autocomplete="tel"></div>
+      <div class="field"><label for="o-e" data-en="Email *">Email *</label><input id="o-e" name="email" type="email" required autocomplete="email"></div>
+      <div class="field full"><label for="o-m" data-en="Notes">Σημειώσεις</label><textarea id="o-m" name="message"></textarea></div>
+      <div class="field full"><label class="check"><input type="checkbox" name="consent" value="Ναι" required><span data-en="I agree to the &lt;a href=&quot;privacy.html&quot;&gt;privacy policy&lt;/a&gt;. *">Συμφωνώ με την <a href="privacy.html">πολιτική απορρήτου</a>. *</span></label></div><div class="trap" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+    </div>
+    <div class="formfoot"><button class="btn btn-black" type="submit" data-en="Send order">Αποστολή παραγγελίας</button><p class="formmsg" role="status" aria-live="polite"></p></div>
+  </form>
+</div></section>
+</main>
+<div id="sitefoot"></div>
+<script src="assets/js/config.js?v=1"></script>
+<script src="assets/js/clubs.js?v=1"></script>
+<script src="assets/js/text.js?v=1"></script>
+<script src="assets/js/main.js?v=1"></script>
+</body>
+</html>

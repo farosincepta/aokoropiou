@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Δόξα Κορωπίου · Επίσημη ιστοσελίδα</title>
+<meta name="doxa:title-en" content="Doxa Koropiou · Official website">
+<meta name="description" content="Η επίσημη ιστοσελίδα της Α.Ε. Δόξα Κορωπίου: αγώνες, βαθμολογία, ομάδα, Ακαδημία και εισιτήρια.">
+<meta name="theme-color" content="#ffd100">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Δόξα Κορωπίου">
+<meta property="og:title" content="Δόξα Κορωπίου · Επίσημη ιστοσελίδα">
+<meta property="og:description" content="Η επίσημη ιστοσελίδα της Α.Ε. Δόξα Κορωπίου: αγώνες, βαθμολογία, ομάδα, Ακαδημία και εισιτήρια.">
+<meta property="og:image" content="https://aokusatsc.com/assets/img/og-image.jpg">
+<meta property="og:locale" content="el_GR">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@600;700;800;900&family=Fira+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/doxa.css?v=1">
+</head>
+<body data-view="home">
+<a class="jump" href="#content" data-en="Skip to content">Μετάβαση στο περιεχόμενο</a>
+<div id="masthead"></div>
+<main id="content">
+<section class="hero" aria-labelledby="hero-h">
+  <picture class="hero-photo">
+    <source type="image/webp" srcset="assets/img/papasideris-800.webp 800w, assets/img/papasideris-1200.webp 1200w, assets/img/papasideris-1788.webp 1788w" sizes="100vw">
+    <img src="assets/img/papasideris-1788.jpg" srcset="assets/img/papasideris-800.jpg 800w, assets/img/papasideris-1200.jpg 1200w, assets/img/papasideris-1788.jpg 1788w" sizes="100vw" alt="" fetchpriority="high">
+  </picture>
+  <div class="shell hero-in">
+    <div>
+      <p class="kicker" data-en="AO Doxa Koropiou · Est. 1981">Α.Ε. Δόξα Κορωπίου · 1981</p>
+      <h1 id="hero-h" data-en="Writing <em>history together</em>">Μαζί γράφουμε <em>ιστορία</em></h1>
+      <div class="hero-meta" id="hero-meta"></div>
+      <div class="hero-actions">
+        <a class="btn btn-yellow" href="matches.html" data-en="Fixtures and results">Πρόγραμμα και αποτελέσματα</a>
+        <a class="btn btn-ghost-light" href="tickets.html" data-en="Season tickets">Εισιτήρια διαρκείας</a>
+      </div>
+    </div>
+    <aside class="hero-next" id="hero-next" aria-label="Επόμενος αγώνας" data-en-aria-label="Next match" hidden></aside>
+  </div>
+</section>
+
+<section class="section section-black" aria-labelledby="rail-h" style="margin-top:-3.5vw;padding-top:calc(3.5vw + 56px)">
+  <div class="shell">
+    <div class="sechead"><div><p class="kicker" data-en="Third Division · EPSANA">Γ΄ Κατηγορία · ΕΠΣΑΝΑ</p><h2 id="rail-h" data-en="Matches">Αγώνες</h2></div>
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><a class="arrowlink" href="matches.html" data-en="All fixtures">Όλο το πρόγραμμα</a>
+      <div class="rail-btns"><button type="button" data-scroll="prev" data-target="rail" aria-label="Προηγούμενοι" data-en-aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></button><button type="button" data-scroll="next" data-target="rail" aria-label="Επόμενοι" data-en-aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></button></div></div></div>
+    <div class="rail" id="rail" tabindex="0" aria-label="Αγώνες της Δόξας" data-en-aria-label="Doxa matches"></div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="news-h">
+  <div class="shell">
+    <div class="sechead"><h2 id="news-h" data-en="Latest news">Τελευταία νέα</h2><a class="arrowlink" href="news.html" data-en="All news">Όλα τα νέα</a></div>
+    <div class="cards cards-home" id="home-news"></div>
+  </div>
+</section>
+
+<section class="section section-grey" aria-labelledby="tbl-h">
+  <div class="shell">
+    <div class="sechead"><h2 id="tbl-h" data-en="The table">Βαθμολογία</h2><a class="arrowlink" href="matches.html?tab=table" data-en="Full table">Πλήρης βαθμολογία</a></div>
+    <div class="snap" id="snapshot"></div>
+  </div>
+</section>
+
+<section class="section section-black" aria-labelledby="sq-h">
+  <div class="shell">
+    <div class="sechead"><div><p class="kicker" data-en="2026–27">2026–27</p><h2 id="sq-h" data-en="The squad">Η ομάδα</h2></div>
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><a class="arrowlink" href="team.html" data-en="Full squad">Όλο το ρόστερ</a>
+      <div class="rail-btns"><button type="button" data-scroll="prev" data-target="squad-rail" aria-label="Προηγούμενοι" data-en-aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></button><button type="button" data-scroll="next" data-target="squad-rail" aria-label="Επόμενοι" data-en-aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></button></div></div></div>
+    <div class="rail" id="squad-rail" tabindex="0" aria-label="Ρόστερ" data-en-aria-label="Squad"></div>
+  </div>
+</section>
+
+<section class="section-tight" aria-label="Περισσότερα" data-en-aria-label="More" style="padding-top:4px;padding-bottom:4px;background:var(--k)">
+  <div class="tiles">
+    <a class="tile tile-y" href="academy.html"><p class="kicker dark" data-en="Ages 4–17">4–17 ετών</p><h3 data-en="The Academy">Η Ακαδημία</h3><p data-en="Football for boys and girls. The first session is a free trial.">Ποδόσφαιρο για αγόρια και κορίτσια. Η πρώτη προπόνηση είναι δοκιμαστική.</p><span class="go"><span data-en="Register">Εγγραφή</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></span></a>
+    <a class="tile tile-photo" href="tickets.html"><img src="assets/img/priftis-1200.jpg" alt="" loading="lazy"><p class="kicker" data-en="Antonis Priftis">«Αντώνης Πρίφτης»</p><h3 data-en="Season tickets">Εισιτήρια διαρκείας</h3><p data-en="Every home league match, one ticket.">Όλοι οι εντός έδρας αγώνες, ένα εισιτήριο.</p><span class="go"><span data-en="See packages">Δες τα πακέτα</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></span></a>
+    <a class="tile tile-k" href="store.html"><p class="kicker" data-en="Shop">Κατάστημα</p><h3 data-en="Wear the yellow">Φόρα τα κίτρινα</h3><p data-en="Shirts, scarves and supporter gear.">Εμφανίσεις, κασκόλ και είδη φιλάθλων.</p><span class="go" style="color:var(--y)"><span data-en="To the shop">Στο κατάστημα</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></span></a>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="gr-h">
+  <div class="shell">
+    <div class="sechead"><h2 id="gr-h" data-en="Our grounds">Τα γήπεδά μας</h2><a class="arrowlink" href="stadium.html" data-en="Grounds and directions">Γήπεδα και πρόσβαση</a></div>
+    <div class="grounds">
+      <article class="ground"><div class="ground-img"><picture><source type="image/webp" srcset="assets/img/priftis-1200.webp"><img src="assets/img/priftis-1200.jpg" alt="Το γήπεδο «Αντώνης Πρίφτης»" data-en-alt="The Antonis Priftis Stadium" loading="lazy" width="1200" height="552"></picture><span class="tag" data-en="Home ground">Έδρα</span></div>
+        <div class="ground-txt"><h3 data-en="Antonis Priftis">«Αντώνης Πρίφτης»</h3><p data-en="Doxa's home league matches are played here, in the centre of Koropi.">Εδώ δίνει η Δόξα τους εντός έδρας αγώνες πρωταθλήματος, στο κέντρο του Κορωπίου.</p><a class="arrowlink" href="stadium.html#priftis" data-en="Directions">Οδηγίες πρόσβασης</a></div></article>
+      <article class="ground"><div class="ground-img"><picture><source type="image/webp" srcset="assets/img/papasideris-1200.webp"><img src="assets/img/papasideris-1200.jpg" alt="Το στάδιο Γ.Σ. Παπασιδέρης" data-en-alt="The Papasideris Stadium" loading="lazy" width="1200" height="591"></picture><span class="tag" data-en="Second ground">Δεύτερο γήπεδο</span></div>
+        <div class="ground-txt"><h3 data-en="Papasideris Stadium">Στάδιο Γ.Σ. Παπασιδέρης</h3><p data-en="Doxa's second ground, with Mount Hymettus as the backdrop.">Το δεύτερο γήπεδο της Δόξας, με φόντο τον Υμηττό.</p><a class="arrowlink" href="stadium.html#papasideris" data-en="Directions">Οδηγίες πρόσβασης</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight section-yellow" aria-labelledby="sp-h">
+  <div class="shell band">
+    <div><h2 id="sp-h" data-en="Put your name next to ours">Βάλε το όνομά σου δίπλα στο δικό μας</h2><p data-en="Sponsorship packages for local businesses, from the shirt to matchday.">Πακέτα χορηγίας για τις επιχειρήσεις της περιοχής, από την εμφάνιση μέχρι την αγωνιστική.</p></div>
+    <a class="btn btn-black" href="sponsors.html" data-en="Become a sponsor">Γίνε χορηγός</a>
+  </div>
+</section>
+</main>
+<div id="sitefoot"></div>
+<script src="assets/js/config.js?v=1"></script>
+<script src="assets/js/clubs.js?v=1"></script>
+<script src="assets/js/text.js?v=1"></script>
+<script src="assets/js/main.js?v=1"></script>
+</body>
+</html>
