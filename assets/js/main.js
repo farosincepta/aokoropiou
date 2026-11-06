@@ -174,7 +174,7 @@
 </div></div>
 <header class="mast" id="mast">
   <div class="shell mast-in">
-    <a class="crest-link" href="index.html" aria-label="${h(t("homeLink"))}"><img src="assets/img/crest-128.png" alt="" width="84" height="84"></a>
+    <a class="crest-link" href="index.html" aria-label="${h(t("homeLink"))}"><img src="assets/img/doxa-crest-128.png" alt="" width="84" height="84"></a>
     <a class="wordmark" href="index.html" tabindex="-1" aria-hidden="true"><b>${h(t("short"))}</b><span>${h(t("place"))}</span></a>
     <nav class="mainnav" aria-label="${h(t("mainNav"))}"><ul>
       ${NAV.map(n => `<li><button type="button" class="mainnav-btn" data-menu="${n.id}" aria-expanded="false" aria-controls="mega"${n.id === here ? ' data-here="1"' : ""}>${h(n[lang])}${SVG.down}</button></li>`).join("")}
@@ -185,7 +185,7 @@
   <div class="mega" id="mega" hidden></div>
 </header>
 <div class="mnav" id="mnav" hidden>
-  <div class="mnav-head"><img src="assets/img/crest-64.png" alt="" width="44" height="44"><b>${h(t("short"))}</b><button type="button" class="mnav-close">${SVG.x}<span class="vh">${h(t("close"))}</span></button></div>
+  <div class="mnav-head"><img src="assets/img/doxa-crest-64.png" alt="" width="44" height="44"><b>${h(t("short"))}</b><button type="button" class="mnav-close">${SVG.x}<span class="vh">${h(t("close"))}</span></button></div>
   <ul class="mnav-list">
     <li><a class="mnav-home" href="index.html">${h(t("homePage"))}</a></li>
     ${NAV.map(n => `<li><button type="button" class="mnav-sec" aria-expanded="${n.id === here}" aria-controls="ms-${n.id}">${h(n[lang])}${SVG.down}</button>
@@ -265,7 +265,7 @@
     const col = id => { const n = NAV.find(x => x.id === id); return `<div class="foot-col"><h2>${h(n[lang])}</h2><ul>${n.links.map(([href, el, en]) => `<li>${link(href, lang === "en" ? en : el)}</li>`).join("")}</ul></div>`; };
     host.innerHTML = `
 <footer class="foot">
-  <div class="foot-motto"><div class="shell foot-motto-in"><img src="assets/img/crest-128.png" alt="" width="96" height="96" loading="lazy"><p>${h(t("motto"))}</p></div></div>
+  <div class="foot-motto"><div class="shell foot-motto-in"><img src="assets/img/doxa-crest-128.png" alt="" width="96" height="96" loading="lazy"><p>${h(t("motto"))}</p></div></div>
   <div class="shell foot-grid">
     <div class="foot-about">
       <p class="foot-name">${h(t("full"))}</p>
@@ -463,7 +463,7 @@
       const c = n.cover;
       return `<div class="cover"><div class="cover-row">${c.home ? mark(c.home, "xl") : ""}<b>${h(c.big)}</b>${c.away ? mark(c.away, "xl") : ""}</div><span>${h(pick(c.small))}</span></div>`;
     }
-    return `<div class="cover cover-plain"><img src="assets/img/crest-256.png" alt="" loading="lazy" width="120" height="120"></div>`;
+    return `<div class="cover cover-plain"><img src="assets/img/doxa-crest-256.png" alt="" loading="lazy" width="120" height="120"></div>`;
   };
   const card = (n, big) => `<a class="card${big ? " card-lead" : ""}" href="article.html?id=${encodeURIComponent(n.id)}">
       <div class="card-media">${cover(n)}<span class="tag">${h(t("cat." + n.category))}</span></div>

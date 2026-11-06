@@ -2,7 +2,7 @@
    logo: optional square transparent PNG in assets/img/teams/. Without one,
    the club gets a lettered badge. Unknown clubs are transliterated automatically. */
 window.DOXA_CLUBS = {
-  "ΑΕ ΔΟΞΑ ΚΟΡΩΠΙΟΥ":       { el: "Δόξα Κορωπίου",          en: "Doxa Koropiou",          tag: "ΔΟΞ", tagEn: "DOX", logo: "assets/img/crest-128.png" },
+  "ΑΕ ΔΟΞΑ ΚΟΡΩΠΙΟΥ":       { el: "Δόξα Κορωπίου",          en: "Doxa Koropiou",          tag: "ΔΟΞ", tagEn: "DOX", logo: "assets/img/doxa-crest-128.png" },
   "ΣΤΑΜΑΤΑΣ ΑΟ":            { el: "Α.Ο. Σταμάτας",          en: "AO Stamatas",            tag: "ΣΤΑ", tagEn: "STA" },
   "ΑΕ ΠΙΚΕΡΜΙΟΥ":           { el: "Α.Ε. Πικερμίου",         en: "AE Pikermiou",           tag: "ΠΙΚ", tagEn: "PIK" },
   "ΝΕΟΙ ΟΡΙΖΟΝΤΕΣ":         { el: "Νέοι Ορίζοντες",         en: "Neoi Orizontes",         tag: "ΝΕΟ", tagEn: "NEO" },
