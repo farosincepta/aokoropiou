@@ -32,7 +32,7 @@ In **Porkbun → Domain → DNS**, delete any default "parking" records for the 
 
 Then in GitHub **Settings → Pages → Custom domain** type `www.yourdomain.gr`, Save, wait for the
 DNS check, and tick **Enforce HTTPS** (can take up to an hour). GitHub creates the `CNAME` file for you.
-Also update `siteUrl` in `assets/js/config.js`.
+The live address is https://aokoropiou.gr (DNS at Papaki: four A records to GitHub Pages and a www CNAME to farosincepta.github.io; the email records for Zoho are separate and must stay).
 
 ## 3. How the EPSANA updates work
 
