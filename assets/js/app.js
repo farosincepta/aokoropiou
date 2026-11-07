@@ -794,7 +794,7 @@
         fd.forEach((v, k) => { if (k !== "_gotcha") payload[k] = v; });
         payload.access_key = key;
         payload.subject = form.dataset.subject + (payload.child_name ? " – " + payload.child_name : payload.name ? " – " + payload.name : "");
-        payload.from_name = "aok.farosincepta.com";
+        payload.from_name = "aokoropiou.gr";
         payload.language = lang === "en" ? "English" : "Ελληνικά";
         const reply = payload.email || payload.parent_email;
         if (reply) payload.replyto = reply;

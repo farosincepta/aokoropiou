@@ -80,5 +80,5 @@ window.AOK_CONFIG = {
   donateUrl: "",
 
   // Shown in footers and structured data
-  siteUrl: "https://www.aokoropi.gr"   // TODO: your Porkbun domain
+  siteUrl: "https://aokoropiou.gr"
 };
